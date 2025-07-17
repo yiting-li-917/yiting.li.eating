@@ -5,7 +5,7 @@ yiting.li.eating/
  ├── index.html  
  ├── cv.html  
  ├── gallery.html   
- ├── updates.jason  
+ ├── updates.json  
  ├── css/   
 |     └── style.css  
  ├── images/   
