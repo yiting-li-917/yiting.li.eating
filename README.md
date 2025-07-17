@@ -4,8 +4,8 @@ This is my personal website:
 yiting.li.eating/  
  ├── index.html  
  ├── cv.html  
- ├── gallery.html 
- ├── updates.jason
+ ├── gallery.html   
+ ├── updates.jason  
  ├── css/   
 |     └── style.css  
  ├── images/   
