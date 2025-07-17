@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yiting Li</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #234f3f;
+      --text-color: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: var(--text-color);
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 3rem 2rem 1rem;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+    }
+
+    header p {
+      font-weight: 300;
+      margin-top: 0.5rem;
+    }
+
+    .intro {
+      max-width: 600px;
+      margin: 1.5rem auto 0;
+      text-align: center;
+      font-weight: 300;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 1rem;
+      border-radius: 12px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .buttons a {
+      padding: 0.75rem 1.5rem;
+      background-color: var(--primary-color);
+      color: white;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+
+    .buttons a:hover {
+      background-color: #1b3e32;
+    }
+
+    .updates {
+      max-width: 700px;
+      margin: 4rem auto 2rem;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .updates h2 {
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .update-item {
+      margin-bottom: 1rem;
+      font-weight: 300;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 1rem;
+      font-size: 0.85rem;
+      color: #ccc;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Your Name</h1>
+    <p>Atmospheric Scientist • Photographer • Explorer</p>
+  </header>
+
+  <div class="intro">
+    <p>This is a short paragraph introducing yourself, your background, and your interests.</p>
+  </div>
+
+  <div class="buttons">
+    <a href="cv.html">My CV</a>
+    <a href="gallery.html">Photo Gallery</a>
+  </div>
+
+  <div class="updates">
+    <h2>Latest Updates</h2>
+    <div id="update-container">
+      <p>Loading updates...</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Your Name. All rights reserved.
+  </footer>
+
+  <script>
+    fetch('updates.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        const container = document.getElementById('update-container');
+        container.innerHTML = '';
+        if (!Array.isArray(data) || data.length === 0) {
+          container.innerHTML = '<p>No updates available.</p>';
+          return;
+        }
+        data.forEach(update => {
+          const item = document.createElement('div');
+          item.className = 'update-item';
+          item.innerHTML = `Updated <strong>${update.category}</strong> – ${update.message}`;
+          container.appendChild(item);
+        });
+      })
+      .catch(error => {
+        document.getElementById('update-container').innerHTML = '<p>Could not load updates.</p>';
+        console.error('Error loading updates:', error);
+      });
+  </script>
+</body>
+</html>
