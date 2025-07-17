@@ -7,11 +7,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-color: #117a65;
+      --primary-color: #234f3f;
       --text-color: #ffffff;
     }
 
-    body {
+    html, body {
       margin: 0;
       padding: 0;
       font-family: 'Montserrat', sans-serif;
@@ -20,42 +20,50 @@
       background-position: center;
       background-repeat: no-repeat;
       color: var(--text-color);
-      min-height: 100vh;
+      height: 100%;
+      overflow: hidden;
     }
 
-    header {
-      padding: 3rem 2rem 1rem;
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 2rem;
+      box-sizing: border-box;
+      background-color: rgba(0, 0, 0, 0.4);
       text-align: center;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
     }
 
     header p {
       font-weight: 300;
       margin-top: 0.5rem;
+      font-size: 1rem;
     }
 
     .intro {
-      max-width: 800px;
-      margin: 1rem auto 0;
-      text-align: center;
+      margin: 1rem 0;
+      max-width: 600px;
       font-weight: 300;
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 1rem;
-      border-radius: 12px;
+      font-size: 0.95rem;
     }
 
     .buttons {
       display: flex;
       justify-content: center;
       gap: 1rem;
-      margin: 2rem auto;
-      position: relative;
-      z-index: 1;
+      margin: 1rem 0;
+      flex-wrap: wrap;
     }
 
     .buttons a {
-      padding: 0.5rem 1.5rem;
+      padding: 0.5rem 1rem;
       background-color: var(--primary-color);
       color: white;
       border-radius: 12px;
@@ -69,77 +77,67 @@
     }
 
     .updates {
-      max-width: 1200px;
-      margin: 2rem auto 1rem;
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 0.5rem 1rem;
-      border-radius: 12px;
-      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      font-weight: 300;
+      max-width: 600px;
     }
 
     .updates h2 {
+      font-size: 1.1rem;
       font-weight: 500;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     .update-item {
-      margin-bottom: 1rem;
-      font-weight: 300;
+      margin-bottom: 0.5rem;
     }
 
     footer {
-      text-align: center;
-      margin-top: 4rem;
-      padding: 1rem;
-      font-size: 0.85rem;
+      margin-top: 1rem;
+      font-size: 0.75rem;
       color: #ccc;
-      background-color: rgba(0, 0, 0, 0.4);
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Yiting Li</h1>
-    <p>Modeler • Photographer • Cat Lover</p>
-  </header>
+  <div class="container">
+    <header>
+      <h1>Yiting Li</h1>
+      <p>Atmospheric Scientist • Modeler • Photographer • Cat Lover</p>
+    </header>
 
-  <div class="intro">
-    <p>Ten years experience on Chemical Transport Model (CTM).</p>
-    <p>Always seeking solutions for air pollutions, public health and environmental inequity</p>
-    <p>Chacha and Sissy's friend</p>
-  </div>
-
-  <div class="buttons">
-    <a href="cv.html">Modeler</a>
-    <a href="gallery.html">Photographer</a>
-  </div>
-
-  <div class="updates">
-    <h2>Latest Updates</h2>
-    <div id="update-container">
-      <p>Loading updates...</p>
+    <div class="intro">
+      <p>15yr experience on atmospheric science/environmental engineering.</p>
+      <p>10yr experience on Chemical Transport Model (CTM).</p>
+      <p>Always seeking solutions to air pollutions, climate changes, public health and enviornmental inequity.</p>
+      <p>All-time photographing.</p>
+      <p>Chacha and Sissy's friend.</p>
     </div>
-  </div>
 
-  <footer>
-    © 2025 Yiting Li. All rights reserved.
-  </footer>
+    <div class="buttons">
+      <a href="cv.html">Modeler</a>
+      <a href="gallery.html">Photographer</a>
+    </div>
+
+    <div class="updates">
+      <h2>Latest Updates</h2>
+      <div id="update-container">
+        <p>Loading updates...</p>
+      </div>
+    </div>
+
+    <footer>
+      © 2025 Your Name. All rights reserved.
+    </footer>
+  </div>
 
   <script>
     fetch('updates.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-      })
+      .then(response => response.json())
       .then(data => {
         const container = document.getElementById('update-container');
         container.innerHTML = '';
-        if (!Array.isArray(data) || data.length === 0) {
-          container.innerHTML = '<p>No updates available.</p>';
-          return;
-        }
         data.forEach(update => {
           const item = document.createElement('div');
           item.className = 'update-item';
@@ -154,3 +152,4 @@
   </script>
 </body>
 </html>
+
