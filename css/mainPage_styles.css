@@ -42,7 +42,7 @@ header p {
   font-weight: 200;
   max-width: 1200px;
   margin: 3px auto 3px auto; /* 上 10px，下 20px，左右 auto */
-  font-style: italic; /* 设置斜体 */
+  /*font-style: italic;*/ /* 设置斜体 */
 }
 
 .buttons a {
