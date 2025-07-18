@@ -21,6 +21,7 @@ body, html {
 }
 
 header h1 {
+  font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
   font-size: 48px; /* 3rem = 48px */
   font-weight: 700;
   margin: 20px 0 12px 0; /* 上 12px，下 20px，左右 0px */
@@ -29,6 +30,7 @@ header h1 {
 }
 
 header p {
+  font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
   font-size: 18.5px; /* 1.2rem = 19.2px */
   font-weight: 300;
   margin: 6px auto 30px auto; /* 上 6px，下 10px，左右 0px */
@@ -44,6 +46,7 @@ header p {
 }
 
 .buttons a {
+  font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
   display: inline-block;
   margin: 30px 30px; /* 1rem = 16px 上下外边距 */
   padding: 12px; /* 0.75rem = 12px, 1.5rem = 24px */
@@ -60,6 +63,7 @@ header p {
 }
 
 .updates {
+  font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
   font-size: 15px; /* 1rem = 16px */
   margin-top: 40px 0 24px 0; /* 上 40px，下 24px，左右 0 */
   background-color: rgba(0, 0, 0, 0.5);
@@ -69,12 +73,14 @@ header p {
   font-weight: 300; /* 让更新区块文字不加粗 */
 }
 .updates h2 {
+  font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
   font-size: 18px; /* 1.2rem = 19.2px */
   margin-top: 5; /* 去掉顶部额外间距 */
   font-weight: 400; /* 正常字体粗细 */
 }
 
 footer {
+  font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
   margin-top: 32px; /* 2rem = 32px */
   font-size: 12.8px; /* 0.8rem = 12.8px */
   color: #ddd;
