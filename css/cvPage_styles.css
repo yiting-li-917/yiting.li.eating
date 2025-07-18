@@ -4,14 +4,14 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background: url('../images/background.jpg') no-repeat center center fixed;
+    background: url('../images/background.jpeg') no-repeat center center fixed;
     background-size: cover;   /* 让背景铺满屏幕 */
     color: #333;
 }
 
 .cv-container {
     background-color: rgba(255,255,255,0.6); /* 半透明白色背景 */
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 50px auto;
     padding: 20px;
     border-radius: 10px;
