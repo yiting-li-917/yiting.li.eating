@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/cvPage_styles.css">
+</head>
+<body>
+    <div class="cv-container">
+        <h1>Your Name <a href="pdfs/full_cv.pdf" class="pdf-button" download>Download CV</a></h1>
+        <p class="note">(Placeholder: Add your full CV PDF as <code>pdfs/full_cv.pdf</code>. Currently, this link downloads an empty placeholder file.)</p>
+        <p><strong>ORCID:</strong> <a href="https://orcid.org/0000-0002-5356-8930" class="doi-link">https://orcid.org/0000-0002-5356-8930</a></p>
+        <p><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=2T0VWRYAAAAJ&hl=en" class="doi-link">Google Scholar</a></p>
 
+        <div class="cv-section">
+            <h2>Projects</h2>
+            <h3>1. Alternative Jet Fuel in California - Modeling LCFS Policy Scenarios and Air Quality Impact Considerations in the 2030 timeframe <a href="OregionProject-details.html" class="details-button">Details</a></h3>
+            <p>Jan 2020 - Nov 2023</p>
+            <p>- Developed 2030 emissions under two energy scenarios based on CARB inventories.</p>
+            <p>- Trying to understand the air quality impact trade-off s when sustainable aviation fuel (SAF) consumption is rapidly expanded over next decades.</p>
+        </div>
+
+        <div class="cv-section">
+            <h2>Publications</h2>
+              <div class="publication-item">
+                <p><strong>Authors:</strong> Zhao, Yusheng, Yiting Li, Anikender Kumar, Qi Ying, Francois Vandenberghe, and Michael J. Kleeman.</p>
+                <p><strong>Title:</strong> "Separately resolving NOx and VOC contributions to ozone formation."</p>
+                <p><strong>Journal:</strong> <em>Atmospheric Environment</em>, <strong>Volume:</strong> 285 (2022): 119224.</p>
+                <a href="https://doi.org/10.xxxx/xxxxx" class="download-button">DOI Link</a>
+              </div>
+        </div>
+
+        <a href="index.html" class="back-button">Back to Home</a>
+    </div>
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">↑</button>
+    <footer>
+        &copy; <span id="year"></span> Your Name. All rights reserved.
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        window.onscroll = function() { scrollFunction(); };
+        function scrollFunction() {
+            const btn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
