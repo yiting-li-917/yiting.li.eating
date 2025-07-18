@@ -29,8 +29,8 @@ header h1 {
 }
 
 header p {
-  font-size: 19.2px; /* 1.2rem = 19.2px */
-  font-weight: 400;
+  font-size: 18.5px; /* 1.2rem = 19.2px */
+  font-weight: 300;
   margin: 6px auto 30px auto; /* 上 6px，下 10px，左右 0px */
 }
 
