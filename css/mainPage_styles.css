@@ -64,27 +64,27 @@ header p {
 
 .updates {
   font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
-  font-size: 15px; /* 1rem = 16px */
+  font-size: 12px; /* 1rem = 16px */
   margin-top: 40px 0 24px 0; /* 上 40px，下 24px，左右 0 */
   background-color: rgba(0, 0, 0, 0.5);
   padding: 8px 25px; /* 上下8px, 左右20px, 减少h2与边框距离 */
   padding: 16px; /* 1rem = 16px */
   border-radius: 12px;
   max-width: 90%;
-  font-weight: 300; /* 让更新区块文字不加粗 */
+  font-weight: 200; /* 让更新区块文字不加粗 */
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 添加阴影效果 */
 }
 .updates h2 {
   font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
-  font-size: 18px; /* 1.2rem = 19.2px */
+  font-size: 16px; /* 1.2rem = 19.2px */
   margin-top: 0; /* 去掉顶部额外间距 */
-  font-weight: 400; /* 正常字体粗细 */
+  font-weight: 300; /* 正常字体粗细 */
 }
 
 footer {
   font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
   margin-top: 32px; /* 2rem = 32px */
-  font-size: 12.8px; /* 0.8rem = 12.8px */
+  font-size: 12px; /* 0.8rem = 12.8px */
   color: #ddd;
 }
