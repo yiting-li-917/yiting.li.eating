@@ -1,3 +1,11 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
 .cv-container {
     background-color: rgba(0,0,0,0.7);
     color: #fff;
@@ -9,36 +17,48 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     text-align: left;
 }
+
 .cv-container h1, .cv-container h2, .cv-container h3 {
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 10px;
 }
+
 .cv-container p, .cv-container li {
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 10px;
 }
+
 .cv-section {
     margin-bottom: 30px;
 }
+
 .doi-link {
     color: #ffeecc;
     text-decoration: underline;
 }
+
 .download-button, .details-button, .pdf-button {
     display: inline-block;
     margin-left: 10px;
-    padding: 4px 10px;
+    padding: 6px 12px;
     border-radius: 15px;
     background-color: #2f5933;
-    color: white;
+    color: red;
     font-size: 12px;
     text-decoration: none;
-    transition: background 0.3s, transform 0.3s;
+    border: 1px solid red;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s, border-color 0.3s, color 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
+
 .download-button:hover, .details-button:hover, .pdf-button:hover {
     background-color: #3e7a47;
+    border-color: #ff6666;
     transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    color: #ff6666;
 }
+
 .back-button {
     display: inline-block;
     margin-top: 20px;
@@ -51,10 +71,31 @@
     font-family: 'Montserrat', sans-serif;
     transition: background 0.3s, transform 0.3s;
 }
+
 .back-button:hover {
     background-color: #3e7a47;
     transform: scale(1.05);
 }
+
+.publications {
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.publications h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.publication-item p {
+    margin: 8px 0;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
 #scrollTopBtn {
     display: none;
     position: fixed;
@@ -71,10 +112,12 @@
     font-size: 16px;
     transition: background 0.3s, transform 0.3s;
 }
+
 #scrollTopBtn:hover {
     background-color: #3e7a47;
     transform: scale(1.1);
 }
+
 footer {
     width: 100%;
     padding: 8px 0;
@@ -87,11 +130,13 @@ footer {
     left: 0;
     background: rgba(0, 0, 0, 0.3);
 }
+
 .note {
     font-size: 12px;
     margin-top: 5px;
     color: #ccc;
 }
+
 @media (max-width: 768px) {
     .cv-container {
         margin: 50px 10px 80px 10px;
