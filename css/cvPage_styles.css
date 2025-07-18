@@ -1,55 +1,79 @@
+/* css/cv.css */
+
 body, html {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background: url('../images/background.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background-color: #f4f4f4;
     color: #333;
 }
 
 .cv-container {
-    background-color: rgba(255,255,255,0.8);
-    color: #333;
-    max-width: 900px;
-    margin: 100px auto;
+    background-color: rgba(255,255,255,0.9);
+    max-width: 1000px;
+    margin: 50px auto;
     padding: 30px;
     border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     line-height: 1.6;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    text-align: left;
 }
 
-.cv-container h1, .cv-container h2, .cv-container h3 {
+h1, h2, h3 {
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
-.doi-link {
-    color: #2f5933;
-    text-decoration: underline;
+p {
+    margin-bottom: 10px;
 }
 
-.download-button, .details-button, .pdf-button {
+/* Link buttons (ORCID, Google Scholar) */
+.link-button {
     display: inline-block;
-    margin-left: 10px;
+    margin: 5px 10px;
     padding: 6px 12px;
     border-radius: 15px;
     background-color: #2f5933;
-    color: red;
+    color: white;
     font-size: 12px;
     text-decoration: none;
-    border: 1px solid red;
-    transition: background 0.3s, transform 0.3s, box-shadow 0.3s, border-color 0.3s, color 0.3s;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: background 0.3s;
 }
-
-.download-button:hover, .details-button:hover, .pdf-button:hover {
+.link-button:hover {
     background-color: #3e7a47;
-    border-color: #ff6666;
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    color: #ff6666;
 }
 
+/* Download button */
+.download-button {
+    background-color: #2f5933;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.download-button:hover {
+    background-color: #3e7a47;
+}
+
+/* Projects & Publications layout */
+.projects-publications {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.projects-publications .cv-section {
+    flex: 1 1 45%;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Back button */
 .back-button {
     display: inline-block;
     margin-top: 20px;
@@ -61,33 +85,12 @@ body, html {
     font-weight: 500;
     transition: background 0.3s, transform 0.3s;
 }
-
 .back-button:hover {
     background-color: #3e7a47;
     transform: scale(1.05);
 }
 
-.publications {
-    background-color: rgba(255,255,255,0.8);
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-
-.publication-item {
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.contact-section {
-    background-color: rgba(255,255,255,0.8);
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 30px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-
+/* Scroll to top button */
 #scrollTopBtn {
     display: none;
     position: fixed;
@@ -103,7 +106,6 @@ body, html {
     font-size: 16px;
     transition: background 0.3s, transform 0.3s;
 }
-
 #scrollTopBtn:hover {
     background-color: #3e7a47;
     transform: scale(1.1);
@@ -113,25 +115,27 @@ footer {
     width: 100%;
     padding: 8px 0;
     font-size: 12px;
-    color: #ddd;
+    color: #555;
     text-align: center;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.05);
     margin-top: 40px;
 }
 
-.note {
-    font-size: 12px;
-    margin-top: 5px;
-    color: #666;
-}
-
+/* Responsive */
 @media (max-width: 768px) {
-    .cv-container {
-        margin: 50px 10px;
-        padding: 20px;
+    .projects-publications {
+        flex-direction: column;
+        padding: 0 10px;
     }
-    footer {
-        font-size: 10px;
-        padding: 6px 0;
+    .projects-publications .cv-section {
+        flex: 1 1 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    .link-button, .download-button, .back-button {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 8px 0;
     }
 }
