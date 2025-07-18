@@ -2,15 +2,16 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #f4f4f4;
+    background: url('../images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: #333;
 }
 
 .cv-container {
-    background-color: rgba(0,0,0,0.7);
-    color: #fff;
+    background-color: rgba(255,255,255,0.8);
+    color: #333;
     max-width: 900px;
-    margin: 100px auto 100px auto;
+    margin: 100px auto;
     padding: 30px;
     border-radius: 10px;
     line-height: 1.6;
@@ -19,21 +20,11 @@ body, html {
 }
 
 .cv-container h1, .cv-container h2, .cv-container h3 {
-    font-family: 'Montserrat', sans-serif;
     margin-bottom: 10px;
-}
-
-.cv-container p, .cv-container li {
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 10px;
-}
-
-.cv-section {
-    margin-bottom: 30px;
 }
 
 .doi-link {
-    color: #ffeecc;
+    color: #2f5933;
     text-decoration: underline;
 }
 
@@ -68,7 +59,6 @@ body, html {
     background-color: #2f5933;
     color: white;
     font-weight: 500;
-    font-family: 'Montserrat', sans-serif;
     transition: background 0.3s, transform 0.3s;
 }
 
@@ -78,22 +68,24 @@ body, html {
 }
 
 .publications {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(255,255,255,0.8);
     padding: 20px;
     border-radius: 8px;
     margin-top: 20px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-.publications h2 {
-    margin-bottom: 15px;
-    font-size: 20px;
+.publication-item {
+    font-size: 14px;
+    line-height: 1.5;
 }
 
-.publication-item p {
-    margin: 8px 0;
-    line-height: 1.4;
-    font-size: 14px;
+.contact-section {
+    background-color: rgba(255,255,255,0.8);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 #scrollTopBtn {
@@ -101,7 +93,6 @@ body, html {
     position: fixed;
     bottom: 60px;
     right: 20px;
-    z-index: 99;
     border: none;
     outline: none;
     background-color: #2f5933;
@@ -124,22 +115,19 @@ footer {
     font-size: 12px;
     color: #ddd;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    position: fixed;
-    bottom: 0;
-    left: 0;
     background: rgba(0, 0, 0, 0.3);
+    margin-top: 40px;
 }
 
 .note {
     font-size: 12px;
     margin-top: 5px;
-    color: #ccc;
+    color: #666;
 }
 
 @media (max-width: 768px) {
     .cv-container {
-        margin: 50px 10px 80px 10px;
+        margin: 50px 10px;
         padding: 20px;
     }
     footer {
