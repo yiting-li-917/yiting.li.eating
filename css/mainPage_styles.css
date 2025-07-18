@@ -61,6 +61,9 @@ header p {
   border-radius: 12px;
   max-width: 100%;
 }
+.updates h2 {
+  margin-top: 5; /* 去掉顶部额外间距 */
+}
 
 footer {
   margin-top: 32px; /* 2rem = 32px */
