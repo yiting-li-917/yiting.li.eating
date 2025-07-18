@@ -31,17 +31,16 @@
         <p>Loading updates...</p>
       </div>
     </div>
-
+    
     <footer>
       &copy; <span id="year"></span> Yiting Li. All rights reserved.
     </footer>
-
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
   </div>
 
   <script>
+    // automatically update the year of copyright
+     document.getElementById('year').textContent = new Date().getFullYear();
+    // automatically update content, invoke updates.json. update json everytime
     fetch('updates.json')
       .then(response => response.json())
       .then(data => {
