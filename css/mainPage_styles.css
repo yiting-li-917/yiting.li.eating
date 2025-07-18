@@ -33,9 +33,9 @@ header p {
 }
 
 .intro p {
-  font-size: 12px; /* 1rem = 16px */
+  font-size: 15px; /* 1rem = 16px */
   max-width: 1200px;
-  margin: 15px auto 15px auto; /* 上 10px，下 20px，左右 auto */
+  margin: 3px auto 3px auto; /* 上 10px，下 20px，左右 auto */
 }
 
 .buttons a {
