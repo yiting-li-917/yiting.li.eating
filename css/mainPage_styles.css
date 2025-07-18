@@ -35,6 +35,7 @@ header p {
 }
 
 .intro p {
+  font-family: "Shadows Into Light", cursive; /* 使用 Shadows Into Light 字体 */
   font-size: 15px; /* 1rem = 16px */
   font-weight: 200;
   max-width: 1200px;
