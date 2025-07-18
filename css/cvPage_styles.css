@@ -1,0 +1,104 @@
+.cv-container {
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    max-width: 900px;
+    margin: 100px auto 100px auto;
+    padding: 30px;
+    border-radius: 10px;
+    line-height: 1.6;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    text-align: left;
+}
+.cv-container h1, .cv-container h2, .cv-container h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+}
+.cv-container p, .cv-container li {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+}
+.cv-section {
+    margin-bottom: 30px;
+}
+.doi-link {
+    color: #ffeecc;
+    text-decoration: underline;
+}
+.download-button, .details-button, .pdf-button {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 4px 10px;
+    border-radius: 15px;
+    background-color: #2f5933;
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+.download-button:hover, .details-button:hover, .pdf-button:hover {
+    background-color: #3e7a47;
+    transform: scale(1.05);
+}
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    background-color: #2f5933;
+    color: white;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    transition: background 0.3s, transform 0.3s;
+}
+.back-button:hover {
+    background-color: #3e7a47;
+    transform: scale(1.05);
+}
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #2f5933;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.3s;
+}
+#scrollTopBtn:hover {
+    background-color: #3e7a47;
+    transform: scale(1.1);
+}
+footer {
+    width: 100%;
+    padding: 8px 0;
+    font-size: 12px;
+    color: #ddd;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+.note {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #ccc;
+}
+@media (max-width: 768px) {
+    .cv-container {
+        margin: 50px 10px 80px 10px;
+        padding: 20px;
+    }
+    footer {
+        font-size: 10px;
+        padding: 6px 0;
+    }
+}
