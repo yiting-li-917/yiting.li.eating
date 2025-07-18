@@ -83,8 +83,53 @@ header p {
 }
 
 footer {
-  font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
-  margin-top: 32px; /* 2rem = 32px */
-  font-size: 12px; /* 0.8rem = 12.8px */
+  width: 100%;
+  padding: 8px 0;
+  font-size: 12px; /* 默认字体大小略微缩小 */
   color: #ddd;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3); /* 半透明背景以便可读 */
 }
+
+/* phone display */
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+  header h1 {
+    font-size: 32px;
+    margin: 10px auto 15px auto;
+    line-height: 1.2;
+  }
+  header p {
+    font-size: 16px;
+    margin: 4px auto 10px auto;
+    line-height: 1.3;
+  }
+  .intro p {
+    font-size: 14px;
+    max-width: 90%;
+    margin: 12px auto 20px auto; /* 手机端上下间距优化 */
+    line-height: 1.6;
+  }
+  .buttons a {
+    padding: 10px 22px;
+    margin: 10px 8px;
+    font-size: 14px;
+  }
+  footer {
+    font-size: 10px;
+    padding: 6px 0;
+  }
+}
+
+@media (max-height: 700px) {
+  footer {
+    font-size: 10px;
+  }
+}
+
