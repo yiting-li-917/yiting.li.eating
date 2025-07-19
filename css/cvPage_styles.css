@@ -73,7 +73,10 @@ p {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
+.publications .download-button {
+    padding: 3px 8px;
+    font-size: 0.75rem;
+}
 /* Back button */
 .back-button {
     display: inline-block;
