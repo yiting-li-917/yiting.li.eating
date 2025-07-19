@@ -71,6 +71,8 @@ header p {
 }
 
 .buttons a:active {
+  background-color: #dfeae9;
+  color: #496246;
   transform: scale(0.95); /* 点击时轻微缩小反馈 */
 }
 
@@ -79,7 +81,7 @@ header p {
   font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
   font-size: 14px; /* 1rem = 16px */
   margin-top: 60px 0 24px 0; /* 上 40px，下 24px，左右 0 */
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.25);
   padding: 8px 25px; /* 上下8px, 左右20px, 减少h2与边框距离 */
   padding: 16px; /* 1rem = 16px */
   border-radius: 12px;
@@ -138,7 +140,7 @@ footer {
     max-width: 90%;
     font-size: 12px;  /* 缩小字体 */
     margin-top: 30px; /* 增加按钮与latest updates之间的距离 */
-    background-color: rgba(0, 0, 0, 0.15); /* 手机端更轻的透明度 */
+    background-color: rgba(0, 0, 0, 0.2); /* 手机端更轻的透明度 */
   }
   footer {
     font-size: 10px;
