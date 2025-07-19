@@ -43,6 +43,7 @@ p {
 .download-cv:hover {
     background-color: #97a78c;
     color: #496246;
+    transform: scale(1.1);
 }
 
 /* Link buttons (ORCID, Google Scholar) */
@@ -60,6 +61,7 @@ p {
 .link-button:hover {
     background-color: #97a78c;
     color: #496246;
+    transform: scale(1.1);
 }
 /* doi link*/
 .doi-link {
@@ -82,6 +84,7 @@ p {
 .download-button:hover {
     background-color: #97a78c;
     color: #496246;
+    transform: scale(1.1);
 }
 
 /* Projects & Publications layout */
@@ -110,8 +113,8 @@ p {
 .back-button {
     display: inline-block;
     margin-top: 20px;
-    padding: 10px 20px;
-    border-radius: 25px;
+    padding: 5px 5px;
+    border-radius: 22px;
     text-decoration: none;
     background-color: #496246;
     color: white;
