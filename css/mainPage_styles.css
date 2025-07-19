@@ -63,12 +63,15 @@ header p {
 }
 
 .buttons a:hover,
-.buttons a:focus,
-.buttons a:active {
+.buttons a:focus {
   background-color: #dfeae9;
   color: #496246;
   transform: scale(1.1);
   outline: none; /* 移除默认点击边框 */
+}
+
+.buttons a:active {
+  transform: scale(0.95); /* 点击时轻微缩小反馈 */
 }
 
 /* updates sections : related to updates.json */
