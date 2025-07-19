@@ -22,7 +22,7 @@ body, html {
 
 header h1 {
   font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
-  font-size: 48px; /* 3rem = 48px */
+  font-size: 56px; /* 3rem = 48px */
   font-weight: 700;
   margin: 20px 0 12px 0; /* 上 12px，下 20px，左右 0px */
   /*color: #ffeecc;*/ /* 让文字颜色更亮 */
@@ -31,15 +31,15 @@ header h1 {
 
 header p {
   font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
-  font-size: 18.5px; /* 1.2rem = 19.2px */
-  font-weight: 300;
+  font-size: 20px; /* 1.2rem = 19.2px */
+  font-weight: 350;
   margin: 6px auto 30px auto; /* 上 6px，下 10px，左右 0px */
 }
 
 .intro p {
   font-family: "Shadows Into Light", cursive; /* 使用 Shadows Into Light 字体 */
-  font-size: 15px; /* 1rem = 16px */
-  font-weight: 200;
+  font-size: 16px; /* 1rem = 16px */
+  font-weight: 250;
   max-width: 1200px;
   margin: 2px auto 2px auto; /* 上 10px，下 20px，左右 auto */
   /*font-style: italic;*/ /* 设置斜体 */
@@ -52,14 +52,15 @@ header p {
   padding: 12px; /* 0.75rem = 12px, 1.5rem = 24px */
   border-radius: 22px;
   text-decoration: none;
-  background-color: #2f5933;
-  color: white;
+  background-color: #442727;
+  color: #D2C682;
   font-weight: 600;
   transition: background 0.3s;
 }
 
 .buttons a:hover {
-  background-color: #3e7a47;
+  background-color: #E9E7D9;
+  color: #442727; /* 悬停时字体变为黄色 */
 }
 
 .updates {
