@@ -59,26 +59,31 @@ header p {
   background-color: #496246;
   color: #dfeae9;
   transition: background 0.3s;
+  -webkit-tap-highlight-color: transparent; /* 去除手机端点击高亮 */
 }
 
-.buttons a:hover {
+.buttons a:hover,
+.buttons a:focus,
+.buttons a:active {
   background-color: #dfeae9;
   color: #496246;
   transform: scale(1.1);
+  outline: none; /* 移除默认点击边框 */
 }
+
 /* updates sections : related to updates.json */
 .updates {
   font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
   font-size: 14px; /* 1rem = 16px */
   margin-top: 60px 0 24px 0; /* 上 40px，下 24px，左右 0 */
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 8px 25px; /* 上下8px, 左右20px, 减少h2与边框距离 */
   padding: 16px; /* 1rem = 16px */
   border-radius: 12px;
-  max-width: 120%;
+  max-width: 100%;
   font-weight: 200; /* 让更新区块文字不加粗 */
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 添加阴影效果 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
 }
 .updates h2 {
   font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
@@ -97,8 +102,7 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  background: transparent；
-  /*background: rgba(0, 0, 0, 0.3); /* 半透明背景以便可读 */
+  background: transparent;
 }
 
 /* phone display */
@@ -131,6 +135,7 @@ footer {
     max-width: 90%;
     font-size: 12px;  /* 缩小字体 */
     margin-top: 30px; /* 增加按钮与latest updates之间的距离 */
+    background-color: rgba(0, 0, 0, 0.15); /* 手机端更轻的透明度 */
   }
   footer {
     font-size: 10px;
