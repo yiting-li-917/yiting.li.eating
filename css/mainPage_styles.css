@@ -59,8 +59,8 @@ header p {
 }
 
 .buttons a:hover {
-  background-color: #dfeae9;
-  color: #496246; /* 悬停时字体变为黄色 */
+  background-color: #97a78c;
+  color: #496246;
   transform: scale(1.1);
 }
 
