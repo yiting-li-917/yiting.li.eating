@@ -59,7 +59,14 @@ p {
 .link-button:hover {
     background-color: #3e7a47;
 }
-
+/* doi link*/
+.doi-link {
+    color: #1a0dab;
+    text-decoration: underline;
+}
+.doi-link:hover {
+    color: #0c0080;
+}
 /* Download button */
 .download-button {
     background-color: #2f5933;
