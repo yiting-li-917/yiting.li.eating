@@ -28,6 +28,21 @@ p {
     margin-bottom: 10px;
 }
 
+/*download cv buttons*/
+.download-cv {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    background-color: #2f5933;
+    color: white;
+    text-decoration: none;
+}
+.download-cv:hover {
+    background-color: #3e7a47;
+}
+
 /* Link buttons (ORCID, Google Scholar) */
 .link-button {
     display: inline-block;
