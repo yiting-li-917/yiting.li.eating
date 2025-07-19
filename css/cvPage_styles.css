@@ -34,14 +34,15 @@ p {
     margin: 5px 10px;
     padding: 6px 12px;
     border-radius: 15px;
-    background-color: #2f5933;
+    background-color: #496246;
     color: white;
     font-size: 12px;
     text-decoration: none;
     transition: background 0.3s;
 }
 .download-cv:hover {
-    background-color: #3e7a47;
+    background-color: #97a78c;
+    color: #496246
 }
 
 /* Link buttons (ORCID, Google Scholar) */
@@ -50,14 +51,15 @@ p {
     margin: 5px 10px;
     padding: 6px 12px;
     border-radius: 15px;
-    background-color: #2f5933;
+    background-color: #496246;
     color: white;
     font-size: 12px;
     text-decoration: none;
     transition: background 0.3s;
 }
 .link-button:hover {
-    background-color: #3e7a47;
+    background-color: #97a78c;
+    color: #496246
 }
 /* doi link*/
 .doi-link {
@@ -69,7 +71,7 @@ p {
 }
 /* Download button */
 .download-button {
-    background-color: #2f5933;
+    background-color: #496246;
     color: white;
     border: none;
     padding: 6px 12px;
@@ -78,7 +80,8 @@ p {
     transition: background 0.3s;
 }
 .download-button:hover {
-    background-color: #3e7a47;
+    background-color: #97a78c;
+    color: #496246
 }
 
 /* Projects & Publications layout */
@@ -110,13 +113,14 @@ p {
     padding: 10px 20px;
     border-radius: 25px;
     text-decoration: none;
-    background-color: #2f5933;
+    background-color: #496246;
     color: white;
     font-weight: 500;
     transition: background 0.3s, transform 0.3s;
 }
 .back-button:hover {
-    background-color: #3e7a47;
+    background-color: #97a78c;
+    color: #496246
     transform: scale(1.05);
 }
 
@@ -128,7 +132,7 @@ p {
     right: 20px;
     border: none;
     outline: none;
-    background-color: #2f5933;
+    background-color: #496246;
     color: white;
     cursor: pointer;
     padding: 10px 15px;
@@ -137,7 +141,8 @@ p {
     transition: background 0.3s, transform 0.3s;
 }
 #scrollTopBtn:hover {
-    background-color: #3e7a47;
+    background-color: #97a78c;
+    color: #496246
     transform: scale(1.1);
 }
 
