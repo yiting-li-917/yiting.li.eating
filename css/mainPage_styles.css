@@ -113,18 +113,18 @@ footer {
   }
   header p {
     font-size: 16px;
-    margin: 4px auto 10px auto;
+    margin: 4px auto 20px auto;
     line-height: 1.3;
   }
   .intro p {
     font-size: 14px;
     max-width: 90%;
-    margin: 12px auto 12px auto; /* 手机端上下间距优化 */
+    margin: 2px auto 2px auto; /* 手机端上下间距优化 */
     line-height: 1.2;
   }
   .buttons a {
     padding: 10px 20px;
-    margin: 10px 8px;
+    margin: 20px 8px;
     font-size: 14px;
   }
   .updates {
