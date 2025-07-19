@@ -52,15 +52,15 @@ header p {
   padding: 12px; /* 0.75rem = 12px, 1.5rem = 24px */
   border-radius: 22px;
   text-decoration: none;
-  background-color: #442727;
-  color: #E9E7D9;
+  background-color: #496246;
+  color: #dfeae9;
   font-weight: 600;
   transition: background 0.3s;
 }
 
 .buttons a:hover {
-  background-color: #E9E7D9;
-  color: #442727; /* 悬停时字体变为黄色 */
+  background-color: #dfeae9;
+  color: #496246; /* 悬停时字体变为黄色 */
 }
 
 .updates {
