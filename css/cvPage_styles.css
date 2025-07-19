@@ -42,7 +42,7 @@ p {
 }
 .download-cv:hover {
     background-color: #97a78c;
-    color: #496246
+    color: #496246;
 }
 
 /* Link buttons (ORCID, Google Scholar) */
@@ -59,7 +59,7 @@ p {
 }
 .link-button:hover {
     background-color: #97a78c;
-    color: #496246
+    color: #496246;
 }
 /* doi link*/
 .doi-link {
@@ -81,7 +81,7 @@ p {
 }
 .download-button:hover {
     background-color: #97a78c;
-    color: #496246
+    color: #496246;
 }
 
 /* Projects & Publications layout */
@@ -120,7 +120,7 @@ p {
 }
 .back-button:hover {
     background-color: #97a78c;
-    color: #496246
+    color: #496246;
     transform: scale(1.05);
 }
 
@@ -142,7 +142,7 @@ p {
 }
 #scrollTopBtn:hover {
     background-color: #97a78c;
-    color: #496246
+    color: #496246;
     transform: scale(1.1);
 }
 
