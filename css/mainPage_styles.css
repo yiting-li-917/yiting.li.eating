@@ -101,7 +101,7 @@ footer {
 /* phone display */
 @media (max-width: 768px) {
   .container {
-    padding: 16px;
+    padding: 14px;
   }
   header h1 {
     font-size: 32px;
@@ -117,7 +117,7 @@ footer {
     font-size: 14px;
     max-width: 90%;
     margin: 12px auto 20px auto; /* 手机端上下间距优化 */
-    line-height: 1.6;
+    line-height: 1.2;
   }
   .buttons a {
     padding: 10px 22px;
