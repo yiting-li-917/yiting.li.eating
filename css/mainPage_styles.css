@@ -49,8 +49,8 @@ header p {
   font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
   display: inline-block;
   margin: 30px 30px; /* 1rem = 16px 上下外边距 */
-  padding: 12px; /* 0.75rem = 12px, 1.5rem = 24px */
-  border-radius: 22px;
+  padding: 10px; /* 0.75rem = 12px, 1.5rem = 24px */
+  border-radius: 21px;
   text-decoration: none;
   background-color: #496246;
   color: #dfeae9;
