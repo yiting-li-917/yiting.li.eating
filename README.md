@@ -6,10 +6,15 @@ yiting.li.eating/
  ├── modeler.html  
  ├── gallery.html   
  ├── updates.json  
- ├── css/   
+ ├── css/  /* page styles */ 
 |     └── mainStyles.css  
 |     └── cvStyles.css  
 |     └── galleryStyles.css  
  ├── images/   
 |     └── photo1.jpg  
+ ├── pdf/   
+|     └── cv  
+|     └── paper pdf  
+ ├── icon/   
+|     └── ...
 
