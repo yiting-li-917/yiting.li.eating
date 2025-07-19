@@ -66,12 +66,12 @@ header p {
 .updates {
   font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
   font-size: 12px; /* 1rem = 16px */
-  margin-top: 60px 0 24px 0; /* 上 40px，下 24px，左右 0 */
+  margin-top: 120px 0 24px 0; /* 上 40px，下 24px，左右 0 */
   background-color: rgba(0, 0, 0, 0.5);
   padding: 8px 25px; /* 上下8px, 左右20px, 减少h2与边框距离 */
   padding: 16px; /* 1rem = 16px */
   border-radius: 12px;
-  max-width: 90%;
+  max-width: 120%;
   font-weight: 200; /* 让更新区块文字不加粗 */
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 添加阴影效果 */
