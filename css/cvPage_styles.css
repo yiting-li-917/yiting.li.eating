@@ -96,6 +96,9 @@ p {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+.publication-item {
+    margin-top: 20px;
+}
 .publications .download-button {
     padding: 3px 8px;
     font-size: 0.55rem;
