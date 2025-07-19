@@ -41,7 +41,7 @@ header p {
   font-size: 20px; /* 1rem = 16px */
   font-weight: 250;
   /*max-width: 1500px;*/
-  margin: 2px auto 2px auto; /* 上 10px，下 20px，左右 auto */
+  margin: 2px auto 0px auto; /* 上 10px，下 20px，左右 auto */
   /*font-style: italic;*/ /* 设置斜体 */
 }
 
