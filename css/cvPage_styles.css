@@ -43,6 +43,7 @@ p {
 .download-cv:hover {
     background-color: #97a78c;
     color: #496246;
+    font-size: 12px;
     transform: scale(1.1);
 }
 
@@ -61,6 +62,7 @@ p {
 .link-button:hover {
     background-color: #97a78c;
     color: #496246;
+    font-size: 12px;
     transform: scale(1.1);
 }
 /* doi link*/
@@ -112,7 +114,7 @@ p {
 .back-button {
     display: inline-block;
     margin-top: 20px;
-    padding: 5px 5px;
+    padding: 8px 8px;
     border-radius: 22px;
     text-decoration: none;
     background-color: #496246;
@@ -123,6 +125,7 @@ p {
 .back-button:hover {
     background-color: #97a78c;
     color: #496246;
+    font-weight: 500;
     transform: scale(1.05);
 }
 
@@ -145,6 +148,7 @@ p {
 #scrollTopBtn:hover {
     background-color: #97a78c;
     color: #496246;
+    font-weight: 300;
     transform: scale(1.1);
 }
 
