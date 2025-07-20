@@ -114,7 +114,7 @@ h4 .details-button {
     -webkit-tap-highlight-color: transparent;
 }
 
-h4 .details-button: hover {
+h4 .details-button:hover {
     background-color: #496246;
     color: #97a78c;
     border: none;
