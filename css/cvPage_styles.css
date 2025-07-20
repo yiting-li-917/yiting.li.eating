@@ -259,9 +259,16 @@ footer {
         padding: 15px;
         text-align: center;
     }
+    .header-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 8px; /* 调整间距更均衡 */
+        flex-wrap: nowrap;
+    }
     .header-buttons a {
-        font-size: 0.8rem; /* 更小按钮尺寸 */
-        padding: 8px 16px;
+        font-size: 11px; /* 稍微大一些便于点击 */
+        padding: 6px 10px;
+        margin: 0 2px;
     }
     .projects-publications {
         flex-direction: column;
@@ -281,7 +288,7 @@ footer {
     }
     h4 .details-button {
         padding: 2px 5px; /* 手机端更小 */
-        font-size: 0.7rem; /* 缩小字体 */
+        font-size: 0.65rem; /* 缩小字体 */
         margin: 4px; /* 增加间距防止拥挤 */
     }
     .download-button {
