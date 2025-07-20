@@ -26,10 +26,10 @@ h1, h2 {
 /* project period */
 h3 {
     color: #496246;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     font-style: italic;   /* 斜体 */
-    margin-bottom: 1px;
+    margin-bottom: 5px;
 }
 /* project name + details button */
 h4 {
@@ -42,6 +42,7 @@ h4 {
 h4 .details-button {
     display: inline-block;   /* 让按钮在标题后面 */
     margin-left: 8px;        /* 与标题保持一点间距 */
+    font-weight: 400;
     font-size: 14px;         /* 按钮字体相对小些 */
     padding: 6px 12px;
     border-radius: 15px;
