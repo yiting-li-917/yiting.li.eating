@@ -254,20 +254,32 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .header-block {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+    }
+    .header-left img {
+        height: 50px;
+    }
+    .header-right {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .header-right h1 {
+        font-size: 20px;
+    }
+    .header-buttons a {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
     .projects-publications {
         flex-direction: column;
-        padding: 0 10px;
-    }
-    .projects-section, .publications-section {
-        flex: 1 1 100%;
-        padding: 15px;
+        padding: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        background: rgba(255,255,255,0.95);
+        border-radius: 8px;
         margin-bottom: 20px;
-    }
-    .link-button, .download-button {
-        display: block;
-        width: 100%;
-        text-align: center;
-        margin: 8px 0;
     }
     .back-button {
         left: 50%;
