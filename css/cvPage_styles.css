@@ -68,10 +68,11 @@ p::before {
     font-weight: bold;
 }
 p {
-    margin: 2px 0;   /* 控制段落之间的间距 */
-    line-height: 1.1;     /* 控制行间距（1.2倍字体高度） */
-    text-indent: -10px;      /* 让 '•' 悬挂缩进 */
-    padding-left: 20px;      /* 内容与左侧有空隙 */
+    font-size: 12px;
+    margin: 4px 0;   /* 控制段落之间的间距 */
+    line-height: 1.2;     /* 控制行间距（1.2倍字体高度） */
+    text-indent: -2px;      /* 让 '•' 悬挂缩进 */
+    padding-left: 15px;      /* 内容与左侧有空隙 */
     position: relative;
 }
 
