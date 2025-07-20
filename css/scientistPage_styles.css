@@ -205,7 +205,7 @@ p::before {
     display: inline-block;
     position: fixed;
     left: 40px;
-    bottom: 40px;
+    bottom: 60px;
     text-align: center; /* center to the Button */
     width: fit-content;
     padding: 10px 20px;
