@@ -53,6 +53,7 @@ p {
     font-size: 12px;
     text-decoration: none;
     transition: background 0.3s;
+    -webkit-tap-highlight-color: transparent; /* 移动端去除点击高亮 */
 }
 .download-cv:hover,
 .link-button:hover {
