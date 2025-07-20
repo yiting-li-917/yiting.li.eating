@@ -99,13 +99,13 @@ h4 .details-button {
     position: relative;
     top: -2px;
     font-weight: 400;
-    font-size: 0.45rem;
+    font-size: 0.5rem;
     padding: 2px 4px;
     border-radius: 5px;
     /* background-color: #496246; */
     /* border: none;*/
     background-color: transparent;  /* 无背景色 */
-    border: 1.5px solid #496246;      /* 添加边框 */
+    border: 1.4px solid #496246;      /* 添加边框 */
     /* color: white; */
     color: #496246;
     box-shadow: none;          /* 去掉阴影 */
