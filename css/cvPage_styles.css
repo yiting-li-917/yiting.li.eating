@@ -29,7 +29,8 @@ p {
 }
 
 /* download cv buttons, Link buttons (ORCID, Google Scholar) */
-.download-cv .link-button {
+.download-cv，
+.link-button {
     display: inline-block;
     margin: 5px 10px;
     padding: 6px 12px;
@@ -40,7 +41,8 @@ p {
     text-decoration: none;
     transition: background 0.3s;
 }
-.download-cv .link-button:hover {
+.download-cv，
+.link-button:hover {
     background-color: #97a78c;
     color: #496246;
     font-size: 12px;
