@@ -89,6 +89,28 @@ p {
     background-color: #97a78c;
     color: #496246;
 }
+.publications .download-button {
+    padding: 3px 8px;
+    font-size: 0.55rem;
+}
+/* Download PDF button */
+.details-button {
+    background-color: #496246;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.details-button:hover {
+    background-color: #97a78c;
+    color: #496246;
+}
+.publications .details-button {
+    padding: 3px 8px;
+    font-size: 0.55rem;
+}
 
 /* Projects & Publications layout */
 .projects-publications {
@@ -108,10 +130,7 @@ p {
 .publication-item {
     margin-top: 20px;
 }
-.publications .download-button {
-    padding: 3px 8px;
-    font-size: 0.55rem;
-}
+
 /* Back button */
 .back-button {
     display: inline-block;
