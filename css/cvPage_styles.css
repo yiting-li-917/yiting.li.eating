@@ -120,12 +120,14 @@ p {
     background-color: #496246;
     color: white;
     font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 按钮阴影 */
     transition: background 0.3s, transform 0.3s;
 }
 .back-button:hover {
     background-color: #dfeae9;
     color: #496246;
     font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 按钮阴影 */
     transform: scale(1.05);
 }
 
