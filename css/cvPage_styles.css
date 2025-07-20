@@ -9,21 +9,42 @@ body, html {
 
 /* Header block */
 .header-block {
-    background-color: rgba(255, 255, 255, 0.7);
-    max-width: 1200px;
-    margin: 30px auto 20px auto;
+    max-width: 1000px;
+    margin: 20px auto;
     padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
-.header-block h1 {
-    font-weight: 700;
-    margin-bottom: 10px;
+.header-left img {
+    height: 60px;
 }
-.header-block .download-cv,
-.header-block .link-button {
-    margin: 5px;
+.header-right {
+    text-align: right;
+    flex-grow: 1;
+    margin-left: 20px;
+}
+.header-right h1 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+}
+.header-buttons a {
+    margin: 0 5px;
+    padding: 6px 12px;
+    border-radius: 15px;
+    background-color: #496246;
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.header-buttons a:hover {
+    background-color: #97a78c;
+    color: #496246;
 }
 
 /* Projects & Publications layout */
