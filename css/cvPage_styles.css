@@ -313,5 +313,9 @@ footer {
         bottom: 10px;
         padding: 8px 16px;
         font-size: 14px;
-    }            
+    }  
+    .footer {
+        position: static;  /* 让footer变为文档流的一部分 */
+        margin-top: 20px;  /* 给footer和上面内容一些间距 */
+    }
 }
