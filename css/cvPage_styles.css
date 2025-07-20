@@ -279,6 +279,10 @@ footer {
     .projects-publications h2 {
         font-size: 20px;
     }
+    h4 .details-button {
+        padding: 2px 5px; /* 手机端更小 */
+        font-size: 0.7rem; /* 缩小字体 */
+    }
     .download-button {
         padding: 4px 8px;
         font-size: 0.7rem; /* 更小按钮尺寸 */
