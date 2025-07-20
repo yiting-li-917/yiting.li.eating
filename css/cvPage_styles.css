@@ -44,7 +44,7 @@ h4 .details-button {
     margin-left: 8px;        /* 与标题保持一点间距 */
     font-weight: 400;
     font-size: 0.45rem;         /* 按钮字体相对小些 */
-    padding: 3px 3px;
+    padding: 3px 6px;
     border-radius: 15px;
     background-color: #496246;
     color: white;
