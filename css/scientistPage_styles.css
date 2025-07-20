@@ -102,16 +102,22 @@ h4 .details-button {
     font-size: 0.45rem;
     padding: 3px 6px;
     border-radius: 15px;
-    background-color: #496246;
-    color: white;
-    border: none;
+    /* background-color: #496246; */
+    /* border: none;*/
+    background-color: transparent;  /* 无背景色 */
+    border: 2px solid #496246;      /* 添加边框 */
+    /* color: white; */
+    color: #496246;
+    box-shadow: none;          /* 去掉阴影 */
     text-decoration: none;
-    transition: background 0.3s;
+    transition: background 0.3s; color 0.3s;
+    -webkit-tap-highlight-color: transparent;
 }
 
-h4 .details-button:hover {
+h4 .details-button: hover {
     background-color: #97a78c;
     color: #496246;
+    border: none;
 }
 
 /* project bullet point */
