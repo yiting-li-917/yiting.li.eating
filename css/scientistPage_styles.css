@@ -151,7 +151,7 @@ p::before {
     font-weight: 550;
     text-decoration: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s;
+    transition: all 0.3s ease;       /* 平滑过渡 */
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -184,7 +184,7 @@ p::before {
     padding: 6px 12px;
     border-radius: 15px;
     text-decoration: none;
-    transition: background 0.3s;
+    transition: all 0.3s ease;       /* 平滑过渡 */
 }
 
 .download-button:hover {
