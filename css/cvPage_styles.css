@@ -43,6 +43,9 @@ h4 {
 h4 .details-button {
     display: inline-block;   /* 让按钮在标题后面 */
     margin-left: 8px;        /* 与标题保持一点间距 */
+    vertical-align: baseline; /* 或 baseline/top，根据需要调整 */
+    position: relative;
+    top: -2px;  /* 上移 2 像素，可根据需求微调 */
     font-weight: 400;
     font-size: 0.45rem;         /* 按钮字体相对小些 */
     padding: 3px 6px;
@@ -64,11 +67,11 @@ p::before {
     content: "•";
     position: absolute;
     left: 0;
-    color: #496246;      /* 绿色 bullet */
+    color: inherit;     /* 使用默认文字颜色 */
     font-weight: bold;
 }
 p {
-    font-size: 12px;
+    font-size: 14px;
     margin: 4px 0;   /* 控制段落之间的间距 */
     line-height: 1.2;     /* 控制行间距（1.2倍字体高度） */
     text-indent: -2px;      /* 让 '•' 悬挂缩进 */
@@ -111,6 +114,9 @@ p {
 /* Download PDF button */
 .download-button {
     background-color: #496246;
+    vertical-align: baseline; /* 或 baseline/top，根据需要调整 */
+    position: relative;
+    top: -1px;  /* 上移 2 像素，可根据需求微调 */
     color: white;
     border: none;
     padding: 6px 12px;
