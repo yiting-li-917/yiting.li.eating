@@ -31,13 +31,36 @@ h3 {
     font-style: italic;   /* 斜体 */
     margin-bottom: 1px;
 }
-/* project bullet point */
+/* project name + details button */
 h4 {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 2px;
+    display: inline; /* 或 block，但 a 会自动跟在后面 */
+}
+/* project details button */
+h4 .details-button {
+    display: inline-block;   /* 让按钮在标题后面 */
+    margin-left: 8px;        /* 与标题保持一点间距 */
+    font-size: 14px;         /* 按钮字体相对小些 */
+    padding: 6px 12px;
+    border-radius: 15px;
+    background-color: #496246;
+    color: white;
+    border: none;
+    text-decoration: none;
+    transition: background 0.3s;
 }
 
+h4 .details-button:hover {
+    background-color: #97a78c;
+    color: #496246;
+}
+h4 .details-button {
+    padding: 3px 8px;
+    font-size: 0.55rem;
+}
+/* project bullet point */
 p {
     margin-bottom: 2px;   /* 控制段落之间的间距 */
     line-height: 1.1;     /* 控制行间距（1.2倍字体高度） */
@@ -90,24 +113,6 @@ p {
     color: #496246;
 }
 .publications .download-button {
-    padding: 3px 8px;
-    font-size: 0.55rem;
-}
-/* project details button */
-.details-button {
-    background-color: #496246;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 15px;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-.details-button:hover {
-    background-color: #97a78c;
-    color: #496246;
-}
-.cv-section .details-button {
     padding: 3px 8px;
     font-size: 0.55rem;
 }
