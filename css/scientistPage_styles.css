@@ -116,8 +116,8 @@ h4 .details-button {
 
 h4 .details-button:hover {
     background-color: #496246;
-    color: #97a78c;
-    border: none;
+    color: #fff; /* 更明显 */
+    border: 1.4px solid #496246; /* 保留边框 */
     transform: scale(1.05);
 }
 
