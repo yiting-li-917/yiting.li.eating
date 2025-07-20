@@ -18,6 +18,7 @@ body, html {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     line-height: 1.5;
 }
+/* --------------------- font first! -------------------------- */
 /* header name, section name */
 h1, h2 {
     font-weight: 600;
@@ -38,7 +39,7 @@ h4 {
     margin-bottom: 2px;
     display: inline; /* 或 block，但 a 会自动跟在后面 */
 }
-/* project details button */
+/* ---------------- project details button ------------------ */
 h4 .details-button {
     display: inline-block;   /* 让按钮在标题后面 */
     margin-left: 8px;        /* 与标题保持一点间距 */
@@ -60,18 +61,21 @@ h4 .details-button:hover {
 
 /* project bullet point */
 p::before {
-    content: "• ";
+    content: "•";
+    position: absolute;
+    left: 0;
     color: #496246;      /* 绿色 bullet */
     font-weight: bold;
 }
 p {
-    margin-bottom: 2px;   /* 控制段落之间的间距 */
+    margin: 2px 0;   /* 控制段落之间的间距 */
     line-height: 1.1;     /* 控制行间距（1.2倍字体高度） */
     text-indent: -10px;      /* 让 '•' 悬挂缩进 */
     padding-left: 20px;      /* 内容与左侧有空隙 */
+    position: relative;
 }
 
-/* download cv buttons, Link buttons (ORCID, Google Scholar) */
+/* ---------------------- download cv buttons, Link buttons (ORCID, Google Scholar) ---------------------- */
 .download-cv,
 .link-button {
     display: inline-block;
@@ -122,7 +126,7 @@ p {
     font-size: 0.55rem;
 }
 
-/* Projects & Publications layout */
+/* ------------------ Projects & Publications layout ----------------------- */
 .projects-publications {
     display: flex;
     gap: 20px;
