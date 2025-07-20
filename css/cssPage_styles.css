@@ -1,0 +1,244 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: url('../images/modelerBG.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+/* Header block */
+.header-block {
+    background-color: rgba(255, 255, 255, 0.6);
+    max-width: 1100px;
+    margin: 30px auto 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.header-block h1 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.header-block .download-cv,
+.header-block .link-button {
+    margin: 5px;
+}
+
+/* Projects & Publications layout */
+.projects-publications {
+    display: flex;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.projects-section {
+    flex: 2; /* 占比2 */
+    background: rgba(255,255,255,0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.publications-section {
+    flex: 1; /* 占比1 */
+    background: rgba(255,255,255,0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* project period */
+h3 {
+    color: #496246;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+/* project name + details button */
+h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    display: inline;
+}
+
+/* project details button */
+h4 .details-button {
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: baseline;
+    position: relative;
+    top: -2px;
+    font-weight: 400;
+    font-size: 0.45rem;
+    padding: 3px 6px;
+    border-radius: 15px;
+    background-color: #496246;
+    color: white;
+    border: none;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+h4 .details-button:hover {
+    background-color: #97a78c;
+    color: #496246;
+}
+
+/* project bullet point */
+p {
+    font-size: 14px;
+    margin: 4px 0;
+    line-height: 1.2;
+    text-indent: -2px;
+    padding-left: 15px;
+    position: relative;
+}
+
+p::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: inherit;
+    font-weight: bold;
+}
+
+/* download cv and link buttons */
+.download-cv,
+.link-button {
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 8px 18px;
+    border-radius: 30px;
+    background: #496246;
+    color: white;
+    font-size: 12px;
+    font-weight: 550;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.download-cv:hover,
+.link-button:hover {
+    background: #97a78c;
+    color: #2f3e2f;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* doi link */
+.doi-link {
+    color: #1a0dab;
+    text-decoration: underline;
+}
+
+.doi-link:hover {
+    color: #0c0080;
+}
+
+/* Download PDF button */
+.download-button {
+    background-color: #496246;
+    vertical-align: baseline;
+    position: relative;
+    top: -1px;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.download-button:hover {
+    background-color: #97a78c;
+    color: #496246;
+}
+
+.publications .download-button {
+    padding: 3px 8px;
+    font-size: 0.55rem;
+}
+
+.publication-item {
+    margin-top: 20px;
+}
+
+/* Back button */
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 8px;
+    border-radius: 22px;
+    text-decoration: none;
+    background-color: #496246;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.back-button:hover {
+    background-color: #dfeae9;
+    color: #496246;
+    transform: scale(1.05);
+}
+
+/* Scroll to top button */
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    border: none;
+    outline: none;
+    background-color: #496246;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#scrollTopBtn:hover {
+    background-color: #dfeae9;
+    color: #496246;
+    transform: scale(1.1);
+}
+
+footer {
+    width: 100%;
+    padding: 8px 0;
+    font-size: 12px;
+    color: #555;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.05);
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .projects-publications {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    .projects-section, .publications-section {
+        flex: 1 1 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    .link-button, .download-button, .back-button {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 8px 0;
+    }
+}
