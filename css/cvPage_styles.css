@@ -59,9 +59,16 @@ h4 .details-button:hover {
 }
 
 /* project bullet point */
+p::before {
+    content: "• ";
+    color: #496246;      /* 绿色 bullet */
+    font-weight: bold;
+}
 p {
     margin-bottom: 2px;   /* 控制段落之间的间距 */
     line-height: 1.1;     /* 控制行间距（1.2倍字体高度） */
+    text-indent: -10px;      /* 让 '•' 悬挂缩进 */
+    padding-left: 20px;      /* 内容与左侧有空隙 */
 }
 
 /* download cv buttons, Link buttons (ORCID, Google Scholar) */
