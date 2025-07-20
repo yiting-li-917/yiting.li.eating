@@ -251,7 +251,7 @@ p::before {
 }
 
 footer {
-    position: fixed;
+    position: static;  /* 让footer变为文档流的一部分 */
     bottom: 0;
     width: 100%;
     padding: 8px 0;
@@ -321,5 +321,6 @@ footer {
         right: auto !important;
         width: 100%;
         margin-top: 20px;  /* 给footer和上面内容一些间距 */
+        font-size: 8px;
     }
 }
