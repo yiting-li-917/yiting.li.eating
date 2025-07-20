@@ -41,7 +41,7 @@ p {
     text-decoration: none;
     transition: background 0.3s;
 }
-.download-cv，
+.download-cv:hover,
 .link-button:hover {
     background-color: #97a78c;
     color: #496246;
