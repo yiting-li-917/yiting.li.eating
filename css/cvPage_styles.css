@@ -42,25 +42,28 @@ p {
 }
 
 /* download cv buttons, Link buttons (ORCID, Google Scholar) */
-.download-cv，
+.download-cv,
 .link-button {
     display: inline-block;
     margin: 5px 10px;
-    padding: 6px 12px;
-    border-radius: 15px;
-    background-color: #496246;
+    padding: 8px 18px;
+    border-radius: 30px; /* 更圆的按钮 */
+    background: linear-gradient(135deg, #496246, #5f7a5b); /* 渐变背景 */
     color: white;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 600;
     text-decoration: none;
-    transition: background 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 按钮阴影 */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
     -webkit-tap-highlight-color: transparent; /* 移动端去除点击高亮 */
 }
+
 .download-cv:hover,
 .link-button:hover {
-    background-color: #97a78c;
-    color: #496246;
-    font-size: 12px;
-    transform: scale(1.1);
+    background: linear-gradient(135deg, #97a78c, #b5c7aa);
+    color: #2f3e2f;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* 悬停更立体 */
 }
 /* doi link*/
 .doi-link {
