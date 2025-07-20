@@ -202,7 +202,6 @@ p::before {
 }
 
 .back-button {
-    font-family: "Bitcount Prop Single", system-ui; /* 使用 Bitcount Prop Single 字体 */
     display: inline-block;
     position: fixed;
     left: 20px;
@@ -229,7 +228,6 @@ p::before {
 
 /* Scroll to top button */
 #scrollTopBtn {
-    font-family: "Bitcount Prop Single", system-ui; /* 使用 Bitcount Prop Single 字体 */
     display: none;
     position: fixed;
     bottom: 60px;
