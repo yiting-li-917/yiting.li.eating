@@ -75,6 +75,7 @@ header p {
   background-color: #dfeae9;
   color: #496246;
   transform: scale(0.95); /* 点击时轻微缩小反馈 */
+  -webkit-tap-highlight-color: transparent；
 }
 
 /* updates sections : related to updates.json */
