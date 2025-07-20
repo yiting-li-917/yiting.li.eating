@@ -10,15 +10,23 @@ body, html {
 /* Header block */
 .header-block {
     max-width: 1200px;
-    margin: 20px 0 10px 0;
-    padding: 5px;
+    margin: 20px auto;
+    padding: 20px;
     box-sizing: border-box;
     display: flex;
-    text-align: center;
+    align-items: center;
+    justify-content: center; /* 水平居中内容 */
     gap: 20px; /* Yiting Li 和按钮的间距 */
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.projects-publications {
+    display: flex;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
 }
 
 .header-block h1 {
@@ -42,13 +50,6 @@ body, html {
 }
 
 /* Projects & Publications layout */
-.projects-publications {
-    display: flex;
-    gap: 20px;
-    margin: 20px auto;
-    max-width: 1200px;
-}
-
 .projects-section {
     flex: 1.5; /* 占比2 */
     background: rgba(255,255,255,0.7);
