@@ -311,7 +311,7 @@ footer {
     .back-button {
         left: 50%;
         transform: translateX(-50%);
-        bottom: 20px;
+        bottom: 15px;
         padding: 8px 16px;
         font-size: 14px;
     }  
