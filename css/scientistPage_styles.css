@@ -315,7 +315,7 @@ footer {
     }
     h4 .details-button {
         padding: 2px 5px; /* 手机端更小 */
-        font-size: 0.65rem; /* 缩小字体 */
+        font-size: 0.6rem; /* 缩小字体 */
         margin: 4px; /* 增加间距防止拥挤 */
     }
     /* publication, looks like citation */
