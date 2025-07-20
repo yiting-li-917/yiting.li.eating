@@ -25,7 +25,7 @@ a[href^="tel"] {
     justify-content: center; /* 水平居中内容 */
     gap: 20px; /* Yiting Li 和按钮的间距 */
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 24px;
+    border-radius: 30px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
