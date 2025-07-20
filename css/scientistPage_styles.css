@@ -302,10 +302,12 @@ footer {
     /* project period */
     h3 {
         font-size: 16px;
+        margin: 8px auto 3px auto; 
     }
     /* project name + details button */
     h4 {
         font-size: 14px;
+        margin: 2px auto 5px auto; 
     }
     h4 .details-button {
         padding: 2px 5px; /* 手机端更小 */
