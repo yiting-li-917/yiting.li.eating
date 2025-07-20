@@ -28,6 +28,7 @@ h3 {
     color: #496246;
     font-size: 20px;
     font-weight: 600;
+    font-style: italic;   /* 斜体 */
     margin-bottom: 5px;
 }
 /* project bullet point */
@@ -38,7 +39,8 @@ h4 {
 }
 
 p {
-    margin-bottom: 2px;
+    margin-bottom: 2px;   /* 控制段落之间的间距 */
+    line-height: 1.1;     /* 控制行间距（1.2倍字体高度） */
 }
 
 /* download cv buttons, Link buttons (ORCID, Google Scholar) */
