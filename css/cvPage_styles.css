@@ -172,6 +172,10 @@ p::before {
 }
 
 /* Back button */
+.back-container {
+    text-align: center; /* 容器居中对齐 */
+}
+
 .back-button {
     display: inline-block;
     text-align: center; /* center to the page */
