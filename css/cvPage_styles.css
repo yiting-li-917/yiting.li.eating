@@ -320,7 +320,7 @@ footer {
         left: auto !important;
         right: auto !important;
         width: 100%;
-        margin-top: 20px;  /* 给footer和上面内容一些间距 */
+        margin-top: 10px;  /* 给footer和上面内容一些间距 */
         font-size: 8px;
     }
 }
