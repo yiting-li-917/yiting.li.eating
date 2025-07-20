@@ -15,7 +15,7 @@ body, html {
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    text-align: right;
+    text-align: left;
     gap: 20px; /* Yiting Li 和按钮的间距 */
     background-color: rgba(0, 0, 0, 0.25);
     border-radius: 8px;
