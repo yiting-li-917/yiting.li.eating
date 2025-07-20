@@ -32,7 +32,8 @@ a[href^="tel"] {
 .projects-publications {
     display: flex;
     gap: 20px;
-    margin: 20px 5px 35px 5px;
+    padding: 5px
+    margin: 20px auto 35px auto;
     max-width: 1200px;
 }
 
