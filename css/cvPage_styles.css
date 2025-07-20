@@ -10,7 +10,7 @@ body, html {
 /* Header block */
 .header-block {
     max-width: 1200px;
-    margin-left: 20px;
+    margin: 20px 0 10px 0;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
@@ -23,7 +23,7 @@ body, html {
 
 .header-block h1 {
     color: #fff;
-    margin: 0 0 10px 0;
+    margin: 10px 0 10px 0;
     font-size: 24px;
 }
 .header-buttons a {
