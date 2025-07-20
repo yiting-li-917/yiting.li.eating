@@ -30,6 +30,7 @@ body, html {
     flex-grow: 1;
     justify-content: flex-end;
     margin-left: 20px;
+    color: #fff;
 }
 .header-right h1 {
     margin: 0 0 10px 0;
