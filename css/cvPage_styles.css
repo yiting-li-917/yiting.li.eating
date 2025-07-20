@@ -190,8 +190,10 @@ p::before {
     padding: 3px 8px;
     font-size: 0.45rem;
 }
-
+/* publication, looks like citation */
 .publication-item {
+    font-size: 14px;
+    line-height: 1.2;
     margin-top: 20px;
 }
 
