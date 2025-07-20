@@ -260,7 +260,7 @@ footer {
         text-align: center;
     }
     .header-buttons a {
-        font-size: 14px;
+        font-size: 0.8rem; /* 更小按钮尺寸 */
         padding: 8px 16px;
     }
     .projects-publications {
@@ -281,7 +281,7 @@ footer {
     }
     .download-button {
         padding: 4px 8px;
-        font-size: 0.6rem; /* 更小按钮尺寸 */
+        font-size: 0.7rem; /* 更小按钮尺寸 */
     }
     .back-button {
         left: 50%;
