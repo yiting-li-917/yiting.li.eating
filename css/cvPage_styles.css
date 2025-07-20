@@ -10,25 +10,20 @@ body, html {
 /* Header block */
 .header-block {
     max-width: 1000px;
-    margin: 20px auto;
+    margin-left: 20px;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    text-align: left;
+    gap: 15px; /* Yiting Li 和按钮的间距 */
+    justify-content: flex-end;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
-.header-content {
-    display: flex;
-    text-align: left;
-    gap: 15px; /* Yiting Li 和按钮的间距 */
-    flex-grow: 1;
-    justify-content: flex-end;
-    margin-left: 20px;
-}
-.header-content h1 {
+
+.header-block h1 {
     color: #fff;
     margin: 0 0 10px 0;
     font-size: 24px;
