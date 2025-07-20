@@ -196,10 +196,12 @@ p::before {
 
 .back-button {
     display: inline-block;
-    text-align: center; /* center to the page */
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    text-align: center; /* center to the Button */
     width: fit-content;
-    margin-top: 20px;
-    padding: 8px 8px;
+    padding: 10px 20px;
     border-radius: 22px;
     text-decoration: none;
     background-color: #496246;
