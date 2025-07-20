@@ -271,6 +271,18 @@ footer {
         border-radius: 8px;
         margin-bottom: 20px;
     }
+    .projects-section, .publications-section {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+    .projects-publications h2 {
+        font-size: 20px;
+    }
+    .download-button {
+        padding: 4px 8px;
+        font-size: 0.6rem; /* 更小按钮尺寸 */
+    }
     .back-button {
         left: 50%;
         transform: translateX(-50%);
