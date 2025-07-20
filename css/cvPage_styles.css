@@ -20,10 +20,7 @@ body, html {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
-.header-left img {
-    height: 40px;
-}
-.header-right {
+.header-content {
     display: flex;
     text-align: left;
     gap: 15px; /* Yiting Li 和按钮的间距 */
@@ -31,7 +28,7 @@ body, html {
     justify-content: flex-end;
     margin-left: 20px;
 }
-.header-right h1 {
+.header-content h1 {
     color: #fff;
     margin: 0 0 10px 0;
     font-size: 24px;
