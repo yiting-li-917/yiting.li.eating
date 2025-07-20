@@ -209,6 +209,7 @@ p::before {
     font-weight: 500;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background 0.3s, transform 0.3s;
+    z-index: 1000;
 }
 
 .back-button:hover {
@@ -232,6 +233,7 @@ p::before {
     border-radius: 50%;
     font-size: 16px;
     transition: background 0.3s, transform 0.3s;
+    z-index: 1000;
 }
 
 #scrollTopBtn:hover {
@@ -261,10 +263,17 @@ footer {
         padding: 15px;
         margin-bottom: 20px;
     }
-    .link-button, .download-button, .back-button {
+    .link-button, .download-button {
         display: block;
         width: 100%;
         text-align: center;
         margin: 8px 0;
     }
+    .back-button {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+        padding: 8px 16px;
+        font-size: 14px;
+    }            
 }
