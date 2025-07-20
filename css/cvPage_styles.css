@@ -14,7 +14,7 @@ a[href^="tel"] {
     cursor: default;
 }
 
-/* Header block */
+/* Header block : Yiting Li + three button */
 .header-block {
     max-width: 1200px;
     margin: 20px auto;
