@@ -118,7 +118,7 @@ h4 .details-button: hover {
     background-color: #496246;
     color: #97a78c;
     border: none;
-    outline: none;
+    transform: scale(1.05);
 }
 
 /* project bullet point */
