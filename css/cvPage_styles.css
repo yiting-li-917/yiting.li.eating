@@ -127,6 +127,12 @@ p {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+/* let project details button next to project name */
+.project-header {
+  display: flex;
+  align-items: center;    /* 垂直居中 */
+  gap: 10px;              /* h4 和按钮之间的间距 */
+}
 .publication-item {
     margin-top: 20px;
 }
