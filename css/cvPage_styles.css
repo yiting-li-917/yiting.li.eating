@@ -6,6 +6,13 @@ body, html {
     background-size: cover;
     color: #333;
 }
+/* 禁用数字链接样式 */
+a[href^="tel"] {
+    text-decoration: none;
+    color: inherit;
+    pointer-events: none;
+    cursor: default;
+}
 
 /* Header block */
 .header-block {
