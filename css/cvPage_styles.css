@@ -44,7 +44,7 @@ h4 .details-button {
     margin-left: 8px;        /* 与标题保持一点间距 */
     font-weight: 400;
     font-size: 14px;         /* 按钮字体相对小些 */
-    padding: 6px 12px;
+    padding: 6px 6px;
     border-radius: 15px;
     background-color: #496246;
     color: white;
@@ -57,10 +57,7 @@ h4 .details-button:hover {
     background-color: #97a78c;
     color: #496246;
 }
-h4 .details-button {
-    padding: 3px 8px;
-    font-size: 0.55rem;
-}
+
 /* project bullet point */
 p {
     margin-bottom: 2px;   /* 控制段落之间的间距 */
