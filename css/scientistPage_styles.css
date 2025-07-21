@@ -67,7 +67,7 @@ a[href^="tel"] {
     border-radius: 15px;
     background-color: var(--main-cold1);
     color: var(--main-warm1);
-    font-size: 14px;
+    font-size: 12px;
     transition: background 0.3s ease, transform 0.3s ease;
     display: flex;
     align-items: center;
