@@ -24,17 +24,16 @@ a[href^="tel"] {
 
 /* Header block : Yiting Li + three button */
 .header-block {
-    max-width: 1200px;
-    margin: 30px auto 10px auto;
+    text-align: center;
+    margin: 30px auto 20px auto;
     padding: 5px;
-    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center; /* 水平居中内容 */
     gap: 20px; /* Yiting Li 和按钮的间距 */
-    background-color: rgba(255,255,255,0.8);
+    /*background-color: rgba(255,255,255,0.8);
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);*/
 }
 /* same width as header-block */
 .projects-publications {
@@ -46,9 +45,9 @@ a[href^="tel"] {
 }
 
 .header-block h1 {
-    color: var(--main-warm1);
+    color: var(--main-cold1);
     margin: 10px 0 10px 0;
-    font-size: 28px;
+    font-size: 32px;
 }
 /* ---new ---/
 /* 默认按钮样式 */
