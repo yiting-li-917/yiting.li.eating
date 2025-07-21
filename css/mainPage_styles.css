@@ -25,6 +25,10 @@ body, html {
   padding: 34px; /* 2rem = 32px */
   box-sizing: border-box;
 }
+/* move up some content, but keep updates and copyright, background at the same place */
+.content-wrapper {
+  transform: translateY(-30px); /* 只上移主要内容 */
+}
 /* Yiting Li */
 header h1 {
   font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
