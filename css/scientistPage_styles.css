@@ -26,7 +26,7 @@ a[href^="tel"] {
 .header-block {
     max-width: 1050px;
     text-align: center;
-    margin: 35px auto 10px auto;
+    margin: 45px auto 10px auto;
     padding: 5px auto;
     display: flex;
     flex-direction: row;
@@ -337,12 +337,10 @@ footer {
         flex-direction: column;
         align-items: center; 
         justify-content: center; 
-        margin: 5px;
+        margin: 10px;
         padding: 5px;
-        gap: 5px; /* Yiting Li 和按钮的间距 */
+        gap: 8px; /* Yiting Li 和按钮的间距 */
         text-align: center;
-        background-color: rgba(0, 0, 0, 0.1);
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
     .header-block h1 {
         color: var(--main-warm1);
