@@ -347,7 +347,7 @@ footer {
     .header-block h1 {
         color: var(--main-warm1);
         text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5), 0 0 3px var(--main-cold1); /* 多彩阴影 */
-        font-size: 24px;
+        font-size: 26px;
         margin: 2px;
     }
     .contact-buttons .btn-text {
