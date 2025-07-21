@@ -1,8 +1,16 @@
+:root {
+    --main-warm1: #DCC9A9; /*more colorful: choose*/
+    --main-warm2: #C1AB85; 
+    --main-warm-dark: #C94E44;
+    --main-cold1: #4E6851; /*more colorful: choose*/
+    --main-cold2: #3E6868;
+}
+
 body, html {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background: url('../images/modelerBG.jpg') no-repeat center center fixed;
+    background: url('../images/mainBG.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
 }
@@ -46,19 +54,19 @@ a[href^="tel"] {
     margin: 0 5px;
     padding: 6px 12px;
     border-radius: 15px;
-    background-color: #496246;
-    color: white;
+    background-color: var(--main-cold1);
+    color: var(--main-warm1);
     font-size: 12px;
     text-decoration: none;
     transition: background 0.3s;
 }
 .header-buttons a:hover {
-    background-color: #97a78c;
-    color: #496246;
+    background-color: var(--main-warm1);
+    color: var(--main-cold1);
 }
 
 /* Projects & Publications layout */
-.projects-section {
+.projects {
     flex: 1.5; /* 占比2 */
     background: rgba(255,255,255,0.7);
     padding: 20px 20px;
@@ -66,7 +74,7 @@ a[href^="tel"] {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.publications-section {
+.publications {
     flex: 1; /* 占比1 */
     background: rgba(255,255,255,0.7);
     padding: 20px;
@@ -192,7 +200,7 @@ p::before {
     color: #496246;
 }
 
-.publications-section .download-button {
+.publications .download-button {
     padding: 3px 8px;
     font-size: 0.45rem;
 }
@@ -291,7 +299,7 @@ footer {
         margin-top: 5px;
         margin-bottom: 5px;
     }
-    .projects-section, .publications-section {
+    .projects, .publications {
         flex: 1 1 100%;
         margin-bottom: 20px;
         padding: 15px;
