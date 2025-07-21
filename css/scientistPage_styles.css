@@ -299,14 +299,14 @@ footer {
     position: absolute;
     top: 20px;
     right: 35px;
-    color: var(--main-cold1);
+    color: var(--main-warm1);
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
 }
 .close:hover {
-    color: var(--main-warm1);
+    color: var(--main-cold1);
 }
 
 /* Responsive */
