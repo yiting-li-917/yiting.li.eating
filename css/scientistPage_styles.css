@@ -24,10 +24,10 @@ a[href^="tel"] {
 
 /* Header block : Yiting Li + three button */
 .header-block {
-    max-width: 1000px;
+    max-width: 1050px;
     text-align: center;
     margin: 35px auto 10px auto;
-    padding: 5px 20px 5px 20px;
+    padding: 5px auto;
     display: flex;
     flex-direction: row;
     align-items: flex-end; /* 底边对齐 */
