@@ -206,7 +206,7 @@ p::before {
     color: white;
     border: none;
     padding: 6px 12px;
-    border-radius: 15px;
+    border-radius: 12px;
     text-decoration: none;
     transition: all 0.3s ease;       /* 平滑过渡 */
 }
@@ -220,6 +220,9 @@ p::before {
 .publications .pdf-button {
     padding: 3px 8px;
     font-size: 0.45rem;
+}
+.pdf-button a i {
+    margin-right: 1px;
 }
 /* publication, looks like citation */
 /* auto count pulication number */
@@ -405,6 +408,9 @@ footer {
         padding: 4px 8px;
         font-size: 0.7rem; /* 更小按钮尺寸 */
         margin: 4px; /* 增加间距防止拥挤 */
+    }
+    .pdf-button .btn-text {
+        display: none; /* 隐藏文字 */
     }
     .back-container {
         margin: 20px 0;
