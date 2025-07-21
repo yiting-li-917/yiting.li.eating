@@ -1,7 +1,7 @@
 :root {
-    --main-orange: #BB6830;
-    --main-orange-dark: #A95C29;
-    --main-green: #496246;
+    --main-orange: #B47B4C;
+    --main-orange-dark: #904525;
+    --main-blue: #071B2A;
 }
 
 body, html {
@@ -13,7 +13,7 @@ body, html {
 }
 
 .container {
-  background: url('../images/mainBG.jpg') no-repeat center center fixed;
+  background: url('../images/modelerBG.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   color: #fff;
