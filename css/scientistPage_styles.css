@@ -31,6 +31,7 @@ a[href^="tel"] {
     display: flex;
     flex-direction: row;
     align-items: flex-end; /* 底边对齐 */
+    justify-content: flex-start; /* 左对齐 */
     gap: 20px; /* Yiting Li 和按钮的间距 */
 }
 /* same width as header-block */
