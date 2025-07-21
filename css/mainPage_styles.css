@@ -1,9 +1,9 @@
 :root {
-    --main-warm: #DCC9A9; 
+    --main-warm1: #DCC9A9; /*more colorful*/
     --main-warm2: #C1AB85; 
     --main-warm-dark: #C94E44;
-    --main-cold1: #3E6868;
-    --main-cold2: #4E6851;
+    --main-cold1: #4E6851;
+    --main-cold2: #3E6868;
 }
 
 body, html {
@@ -38,7 +38,7 @@ header h1 {
     font-weight: 750;
     margin: 15px 0 12px 0; /* 上 12px，下 20px，左右 0px */
     color: var(--main-warm2);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* 增加立体感 */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* 增加立体感 */
 }
 /* Atmopsheric scientist. modeler. photographer. cat lover */
 header p {
@@ -71,7 +71,7 @@ header p {
   font-weight: 550;
     /* 玻璃质感得button */
   background-color: var(--main-cold2); 
-  color: var(--main-warm);
+  color: var(--main-warm2);
   border: 1.5px solid var(--main-cold2);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 按钮阴影 */
   transition: all 0.3s ease;
@@ -81,7 +81,7 @@ header p {
 .buttons a:hover,
 .buttons a:focus {
   background-color: var(--main-cold1);
-  color: var(--main-warm);
+  color: var(--main-warm1);
   border: 1.5px solid var(--main-cold1);
   transform: scale(1.05);
 }
@@ -89,7 +89,7 @@ header p {
 .buttons a:active {
   background-color: var(--main-cold1);
   border: 1.5px solid var(--main-cold1);
-  color: var(--main-warm);
+  color: var(--main-warm1);
   transform: scale(0.95); /* 点击时轻微缩小反馈 */
   -webkit-tap-highlight-color: transparent；
 }
