@@ -79,8 +79,8 @@ header p {
 }
 
 .buttons a:active {
-  background-color: #dfeae9;
-  color: #496246;
+  background-color: var(--main-orange);
+  color: #fff;
   transform: scale(0.95); /* 点击时轻微缩小反馈 */
   -webkit-tap-highlight-color: transparent；
 }
