@@ -80,12 +80,12 @@ header p {
 
 .buttons a:hover,
 .buttons a:focus {
-  background: color-mix(in srgb, var(--main-orange-dark) 70%, transparent);
+  background: color-mix(in srgb, var(--main-orange) 70%, transparent);
   transform: scale(1.05);
 }
 
 .buttons a:active {
-  background-color: var(--main-orange-dark);
+  background-color: var(--main-orange);
   color: #fff;
   transform: scale(0.95); /* 点击时轻微缩小反馈 */
   -webkit-tap-highlight-color: transparent；
