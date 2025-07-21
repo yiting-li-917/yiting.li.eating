@@ -217,7 +217,7 @@ p::before {
     border: 1.4px solid var(--main-cold1);      /* 添加边框 */
 }
 
-.publications .download-button {
+.publications .pdf-button {
     padding: 3px 8px;
     font-size: 0.45rem;
 }
@@ -401,7 +401,7 @@ footer {
     .publication-item {
         font-size: 14px;
     }
-    .download-button {
+    .pdf-button {
         padding: 4px 8px;
         font-size: 0.7rem; /* 更小按钮尺寸 */
         margin: 4px; /* 增加间距防止拥挤 */
