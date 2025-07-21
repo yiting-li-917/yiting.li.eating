@@ -58,7 +58,7 @@ header p {
 
 /* two button nagivate to modeler and photographer pages */
 .buttons a {
-  font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
+  font-family: "Special Elite", system-ui;
   /* font-family: "Bitcount Prop Single", system-ui; /* 使用 Bitcount Prop Single 字体 */
   display: inline-block;
   margin: 60px 30px; /* 1rem = 16px 上下外边距 */
