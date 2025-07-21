@@ -34,7 +34,7 @@
             <h3>Sep 2022 - Nov 2023</h3>
             <h4>
                 Alternative Jet Fuel in California - Modeling LCFS Policy Scenarios and Air Quality Impact Considerations in the 2030 timeframe.
-                <a href="project-details-ucdSAF.html" class="details-button">Highlights</a>
+                <a href="javascript:void(0);" class="details-button" data-img="projects/SAF2030.jpg">Highlights</a>
             </h4>
             <p>Developed 2030 emissions inventories under three energy scenarios</p>
             <p>Conducted air quality modeling for PM2.5, O3 and SOx over California</p>
@@ -149,7 +149,14 @@
     <footer>
         &copy; <span id="year"></span> Yiting Li. All rights reserved.
     </footer>
-
+    
+    <!-- Global Modal for Project Details Images -->
+    <div id="imageModal" class="modal" onclick="closeModal(event)">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage" src="" alt="Project Image">
+    </div>
+    
+    <!-- java -->
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
         window.onscroll = function() { scrollFunction(); };
@@ -164,6 +171,29 @@
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        /* click button, display figure */
+        document.addEventListener('DOMContentLoaded', function () {
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const detailsButtons = document.querySelectorAll('.details-button');
+        
+        detailsButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const imgSrc = button.getAttribute('data-img');
+                modalImg.src = imgSrc;
+                modal.style.display = 'block';
+            });
+        });
+        
+        // Close when clicking outside the image or the close button
+        window.closeModal = function(event) {
+            const modalContent = modal.querySelector('.modal-content');
+            if (!modalContent.contains(event.target) || event.target.classList.contains('close')) {
+                modal.style.display = 'none';
+            }
+        };
+        });
     </script>
 </body>
 </html>
