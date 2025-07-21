@@ -330,8 +330,14 @@ footer {
     .header-block {
         flex-direction: column;
         margin-bottom: 5px;
-        padding: 15px;
+        padding: 5px;
         text-align: center;
+        background-color: rgba(0, 0, 0, 0.0);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .header-block h1 {
+        font-size: 24;
+        margin-bottom: 2px;
     }
     .contact-buttons .btn-text {
         display: none; /* 隐藏文字 */
