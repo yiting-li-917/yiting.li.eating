@@ -49,6 +49,7 @@ a[href^="tel"] {
     color: var(--main-cold1);
     margin: 10px 0 10px 0;
     font-size: 48px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5), 0 0 5px #ff6600; /* 多彩阴影 */
 }
 /* ---new ---/
 /* 默认按钮样式 */
