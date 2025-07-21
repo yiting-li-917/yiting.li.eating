@@ -333,13 +333,19 @@ footer {
         padding: 15px;
         text-align: center;
     }
-    .header-buttons {
+    .contact-buttons .btn-text {
+        display: none; /* 隐藏文字 */
+    }
+    .contact-buttons a i {
+        margin-right: 0;
+    }
+    .contact-buttons {
         display: flex;
         justify-content: center;
         gap: 8px; /* 调整间距更均衡 */
         flex-wrap: nowrap;
     }
-    .header-buttons a {
+    .contact-buttons a {
         font-size: 11px; /* 稍微大一些便于点击 */
         padding: 6px 10px;
         margin: 0 2px;
