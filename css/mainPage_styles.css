@@ -1,8 +1,8 @@
 :root {
-    --main-warm: #A56935;
-    --main-warm-dark: #5F331D;
-    --main-cold: #78ACAF;
-    --main-cold-dark: #17252E;
+    --main-warm: #DCC9A9; 
+    --main-warm-dark: #B83A2D;
+    --main-cold1: #3E6868;
+    --main-cold2: #4E6851;
 }
 
 body, html {
@@ -32,19 +32,20 @@ body, html {
 }
 /* Yiting Li */
 header h1 {
-  font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
-  font-size: 66px; /* 3rem = 48px */
-  font-weight: 750;
-  margin: 15px 0 12px 0; /* 上 12px，下 20px，左右 0px */
-  /*color: #ffeecc;*/ /* 让文字颜色更亮 */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* 增加立体感 */
+    font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
+    font-size: 66px; /* 3rem = 48px */
+    font-weight: 750;
+    margin: 15px 0 12px 0; /* 上 12px，下 20px，左右 0px */
+    color: var(--main-warm);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* 增加立体感 */
 }
 /* Atmopsheric scientist. modeler. photographer. cat lover */
 header p {
-  font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
-  font-size: 28px; /* 1.2rem = 19.2px */
-  font-weight: 320;
-  margin: 6px auto 40px auto; /* 上 6px，下 10px，左右 0px */
+    font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
+    color: var(--main-warm);
+    font-size: 28px; /* 1.2rem = 19.2px */
+    font-weight: 320;
+    margin: 6px auto 40px auto; /* 上 6px，下 10px，左右 0px */
 }
 /* hand writing introduction sentences */
 .intro p {
@@ -68,9 +69,9 @@ header p {
   font-size: 22px;
   font-weight: 550;
     /* 玻璃质感得button */
-  background: color-mix(in srgb, var(--main-warm-dark) 60%, transparent); 
+  background: color-mix(in srgb, var(--main-cold1) 60%, transparent); 
   color: var(--main-warm);
-  border: 1.5px solid var(--main-warm-dark);
+  border: 1.5px solid var(--main-cold1);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
     /*--*/
@@ -81,16 +82,16 @@ header p {
 
 .buttons a:hover,
 .buttons a:focus {
-  background: color-mix(in srgb, var(--main-warm) 70%, transparent);
-  color: var(--main-warm-dark);
-  border: 1.5px solid var(--main-warm);
+  background: color-mix(in srgb, var(--main-cold2) 70%, transparent);
+  color: var(--main-warm);
+  border: 1.5px solid var(--main-cold2);
   transform: scale(1.05);
 }
 
 .buttons a:active {
-  background-color: var(--main-warm);
-  border: 1.5px solid var(--main-warm);
-  color: var(--main-warm-dark);
+  background-color: var(--main-cold2);
+  border: 1.5px solid var(--main-cold2);
+  color: var(--main-warm);
   color: #fff;
   transform: scale(0.95); /* 点击时轻微缩小反馈 */
   -webkit-tap-highlight-color: transparent；
@@ -102,7 +103,7 @@ header p {
   font-size: 14px; /* 1rem = 16px */
   line-height: 1.2;
   margin-top: 50px 0 25px 0; /* 上 40px，下 24px，左右 0 */
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 8px 25px; /* 上下8px, 左右20px, 减少h2与边框距离 */
   padding: 16px; /* 1rem = 16px */
   border-radius: 12px;
