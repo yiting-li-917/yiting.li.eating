@@ -25,9 +25,10 @@ a[href^="tel"] {
 /* Header block : Yiting Li + three button */
 .header-block {
     text-align: center;
-    margin: 30px auto 20px auto;
+    margin: 50px auto 10px auto;
     padding: 5px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center; /* 水平居中内容 */
     gap: 20px; /* Yiting Li 和按钮的间距 */
@@ -47,7 +48,7 @@ a[href^="tel"] {
 .header-block h1 {
     color: var(--main-cold1);
     margin: 10px 0 10px 0;
-    font-size: 32px;
+    font-size: 48px;
 }
 /* ---new ---/
 /* 默认按钮样式 */
