@@ -36,7 +36,7 @@ a[href^="tel"] {
     border-radius: 30px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
-
+/* same width as header-block */
 .projects-publications {
     display: flex;
     gap: 20px;
@@ -46,7 +46,7 @@ a[href^="tel"] {
 }
 
 .header-block h1 {
-    color: #fff;
+    color: var(--main-warm1);
     margin: 10px 0 10px 0;
     font-size: 28px;
 }
@@ -68,7 +68,7 @@ a[href^="tel"] {
 /* Projects & Publications layout */
 .projects {
     flex: 1.5; /* 占比2 */
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.75);
     padding: 20px 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -76,7 +76,7 @@ a[href^="tel"] {
 
 .publications {
     flex: 1; /* 占比1 */
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.75);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -84,7 +84,7 @@ a[href^="tel"] {
 
 /* project period */
 h3 {
-    color: #496246;
+    color: var(--main-cold1);
     font-size: 18px;
     font-weight: 600;
     font-style: italic;
@@ -113,9 +113,9 @@ h4 .details-button {
     /* background-color: #496246; */
     /* border: none;*/
     background-color: transparent;  /* 无背景色 */
-    border: 1.4px solid #496246;      /* 添加边框 */
+    border: 1.4px solid var(--main-cold1);      /* 添加边框 */
     /* color: white; */
-    color: #496246;
+    color: var(--main-cold1);
     box-shadow: none;          /* 去掉阴影 */
     text-decoration: none;
     transition: all 0.3s ease;       /* 平滑过渡 */
@@ -123,9 +123,9 @@ h4 .details-button {
 }
 
 h4 .details-button:hover {
-    background-color: #496246;
-    color: #fff; /* 更明显 */
-    border: 1.4px solid #496246; /* 保留边框 */
+    background-color: var(--main-cold1);
+    color: var(--main-warm1); /* 更明显 */
+    border: 1.4px solid var(--main-cold1); /* 保留边框 */
 }
 
 /* project bullet point */
@@ -153,7 +153,7 @@ p::before {
     margin: 5px 10px;
     padding: 8px 18px;
     border-radius: 30px;
-    background: #496246;
+    background: var(--main-cold1);
     color: white;
     font-size: 12px;
     font-weight: 550;
@@ -165,8 +165,8 @@ p::before {
 
 .download-cv:hover,
 .link-button:hover {
-    background: #97a78c;
-    color: #2f3e2f;
+    background: var(--main-warm1);
+    color: var(--main-cold1);
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
@@ -183,7 +183,7 @@ p::before {
 
 /* Download PDF button */
 .download-button {
-    background-color: #496246;
+    background-color: var(--main-cold1);
     vertical-align: baseline;
     position: relative;
     top: -1px;
@@ -196,8 +196,8 @@ p::before {
 }
 
 .download-button:hover {
-    background-color: #97a78c;
-    color: #496246;
+    background-color: var(--main-warm1);
+    color: var(--main-cold1);
 }
 
 .publications .download-button {
@@ -222,16 +222,16 @@ p::before {
     padding: 10px 15px;
     border-radius: 22px;
     text-decoration: none;
-    background-color: #496246;
-    color: #dfeae9;
+    background-color: var(--main-cold1);
+    color:var(--main-warm1);
     font-weight: 550;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background 0.3s, transform 0.3s;
 }
 
 .back-button:hover {
-    background-color: #dfeae9;
-    color: #496246;
+    background-color: var(--main-warm1);
+    color: var(--main-cold1);
     transform: scale(1.05);
 }
 
@@ -243,8 +243,8 @@ p::before {
     right: 20px;
     border: none;
     outline: none;
-    background-color: #496246;
-    color: white;
+    background-color: var(--main-cold1);
+    color: var(--main-warm1);
     cursor: pointer;
     padding: 10px 15px;
     border-radius: 50%;
@@ -254,8 +254,8 @@ p::before {
 }
 
 #scrollTopBtn:hover {
-    background-color: #dfeae9;
-    color: #496246;
+    background-color: var(--main-warm1);
+    color: var(--main-cold1);
     transform: scale(1.1);
 }
 
