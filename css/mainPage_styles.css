@@ -96,7 +96,7 @@ header p {
   font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
   font-size: 14px; /* 1rem = 16px */
   line-height: 1.2;
-  margin-top: 60px 0 24px 0; /* 上 40px，下 24px，左右 0 */
+  margin-top: 50px 0 25px 0; /* 上 40px，下 24px，左右 0 */
   background-color: rgba(0, 0, 0, 0.25);
   padding: 8px 25px; /* 上下8px, 左右20px, 减少h2与边框距离 */
   padding: 16px; /* 1rem = 16px */
