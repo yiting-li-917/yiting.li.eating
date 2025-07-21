@@ -197,8 +197,8 @@ p::before {
     color: #0c0080;
 }
 
-/* Download PDF button */
-.download-button {
+/* open PDF from cloudflare R2 button */
+.pdf-button {
     background-color: var(--main-cold1);
     vertical-align: baseline;
     position: relative;
@@ -211,7 +211,7 @@ p::before {
     transition: all 0.3s ease;       /* 平滑过渡 */
 }
 
-.download-button:hover {
+.pdf-button:hover {
     background-color: var(--main-warm1);
     color: var(--main-cold1);
     border: 1.4px solid var(--main-cold1);      /* 添加边框 */
