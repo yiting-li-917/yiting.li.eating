@@ -64,15 +64,15 @@ header p {
   font-family: "Bitcount Prop Single", system-ui; /* 使用 Bitcount Prop Single 字体 */
   display: inline-block;
   margin: 60px 30px; /* 1rem = 16px 上下外边距 */
-  padding: 15px 20px 15px 20px; /* up left bottom right */
-  border-radius: 22px;
+  padding: 15px 20px 10px 20px; /* up left bottom right */
+  border-radius: 25px;
   text-decoration: none;
-  font-size: 22px;
-  font-weight: 550;
+  font-size: 24px;
+  font-weight: 500;
     /* 玻璃质感得button */
-  background-color: var(--main-cold1); 
+  background-color: var(--main-cold2); 
   color: var(--main-warm1);
-  border: 1.5px solid var(--main-cold1);
+  border: 1.5px solid var(--main-cold2);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 按钮阴影 */
   transition: all 0.3s ease;
   -webkit-tap-highlight-color: transparent; /* 去除手机端点击高亮 */
@@ -81,7 +81,7 @@ header p {
 .buttons a:hover,
 .buttons a:focus {
   background-color: var(--main-warm1);
-  color: var(--main-cold1);
+  color: var(--main-cold2);
   border: 1.5px solid var(--main-warm1);
   transform: scale(1.05);
 }
