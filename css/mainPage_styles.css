@@ -62,8 +62,8 @@ header p {
   text-decoration: none;
   font-size: 22px;
   font-weight: 550;
-  background-color: #496246;
-  color: #dfeae9;
+  background-color: var(--main-orange-dark);
+  color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 按钮阴影 */
   transition: background 0.3s;
   -webkit-tap-highlight-color: transparent; /* 去除手机端点击高亮 */
@@ -71,8 +71,8 @@ header p {
 
 .buttons a:hover,
 .buttons a:focus {
-  background-color: #dfeae9;
-  color: #496246;
+  background-color:var(--main-orange);
+  color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 按钮阴影 */
   transform: scale(1.1);
   outline: none; /* 移除默认点击边框 */
