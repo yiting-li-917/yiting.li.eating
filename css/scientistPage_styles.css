@@ -50,21 +50,37 @@ a[href^="tel"] {
     margin: 10px 0 10px 0;
     font-size: 28px;
 }
-.header-buttons a {
+/* ---new ---/
+/* 默认按钮样式 */
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
     margin: 0 5px;
+}
+
+.contact-buttons a {
+    text-decoration: none;
     padding: 6px 12px;
     border-radius: 15px;
     background-color: var(--main-cold1);
     color: var(--main-warm1);
-    font-size: 12px;
-    text-decoration: none;
-    transition: background 0.3s;
+    font-size: 14px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.header-buttons a:hover {
+.contact-buttons a i {
+    margin-right: 6px;
+}
+.contact-buttons a:hover {
     background-color: var(--main-warm1);
     color: var(--main-cold1);
+    transform: scale(1.05);
 }
-
+/*------*/
 /* Projects & Publications layout */
 .projects {
     flex: 1.5; /* 占比2 */
