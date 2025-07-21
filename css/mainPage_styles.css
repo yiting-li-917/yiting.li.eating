@@ -69,7 +69,7 @@ header p {
   font-weight: 550;
     /* 玻璃质感得button */
   background: color-mix(in srgb, var(--main-warm) 60%, transparent); 
-  color: #fff;
+  color: var(--main-cold-dark);
   border: 1.5px solid var(--main-warm);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -82,13 +82,15 @@ header p {
 .buttons a:hover,
 .buttons a:focus {
   background: color-mix(in srgb, var(--main-cold-dark) 70%, transparent);
-    border: 1.5px solid var(--main-cold-dark);
+  color: var(--main-warm);
+  border: 1.5px solid var(--main-cold-dark);
   transform: scale(1.05);
 }
 
 .buttons a:active {
   background-color: var(--main-cold-dark);
   border: 1.5px solid var(--main-cold-dark);
+  color: var(--main-warm);
   color: #fff;
   transform: scale(0.95); /* 点击时轻微缩小反馈 */
   -webkit-tap-highlight-color: transparent；
