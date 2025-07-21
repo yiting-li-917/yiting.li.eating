@@ -41,7 +41,7 @@ a[href^="tel"] {
     display: flex;
     gap: 20px;
     padding: 5px;
-    margin: 20px auto 35px auto;
+    margin: 10px auto 35px auto;
     max-width: 1200px;
 }
 
