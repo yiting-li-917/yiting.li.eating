@@ -27,7 +27,7 @@ a[href^="tel"] {
     max-width: 1100px;
     text-align: center;
     margin: 35px auto 10px auto;
-    padding: 5px auto 5px 20px;
+    padding: 5px 20px 5px 20px;
     display: flex;
     flex-direction: row;
     align-items: flex-end; /* 底边对齐 */
