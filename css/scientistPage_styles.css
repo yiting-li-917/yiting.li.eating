@@ -63,11 +63,12 @@ a[href^="tel"] {
 
 .contact-buttons a {
     text-decoration: none;
-    padding: 6px 12px;
+    padding: 8px 12px;
     border-radius: 15px;
     background-color: var(--main-cold1);
     color: var(--main-warm1);
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 400;
     transition: background 0.3s ease, transform 0.3s ease;
     display: flex;
     align-items: center;
