@@ -203,10 +203,10 @@ p::before {
     vertical-align: baseline;
     position: relative;
     top: -1px;
-    color: white;
+    color: var(--main-warm1);
     border: none;
-    padding: 6px 12px;
-    border-radius: 12px;
+    padding: 6px 8px;
+    border-radius: 5px;
     text-decoration: none;
     transition: all 0.3s ease;       /* 平滑过渡 */
 }
@@ -218,8 +218,8 @@ p::before {
 }
 
 .publications .pdf-button {
-    padding: 3px 8px;
-    font-size: 0.55rem;
+    padding: 3px 6px;
+    font-size: 0.60rem;
 }
 .pdf-button a i {
     margin-right: 1px;
@@ -406,7 +406,7 @@ footer {
     }
     .pdf-button {
         padding: 4px 8px;
-        font-size: 0.7rem; /* 更小按钮尺寸 */
+        font-size: 0.75rem; /* 更小按钮尺寸 */
         margin: 4px; /* 增加间距防止拥挤 */
     }
     .pdf-button .btn-text {
