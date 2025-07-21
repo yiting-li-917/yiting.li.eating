@@ -123,9 +123,9 @@ h4 .details-button {
 }
 
 h4 .details-button:hover {
-    background-color: --main-warm-dark;
+    background-color: var(--main-warm-dark);
     color: var(--main-warm1); /* 更明显 */
-    border: 1.4px solid --main-warm-dark; /* 保留边框 */
+    border: 1.4px solid var(--main-warm-dark); /* 保留边框 */
 }
 
 /* project bullet point */
