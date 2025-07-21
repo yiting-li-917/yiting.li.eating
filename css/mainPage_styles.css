@@ -1,6 +1,7 @@
 :root {
     --main-warm: #DCC9A9; 
-    --main-warm-dark: #B83A2D;
+    --main-warm2: #C1AB85; 
+    --main-warm-dark: #C94E44;
     --main-cold1: #3E6868;
     --main-cold2: #4E6851;
 }
@@ -36,13 +37,13 @@ header h1 {
     font-size: 66px; /* 3rem = 48px */
     font-weight: 750;
     margin: 15px 0 12px 0; /* 上 12px，下 20px，左右 0px */
-    color: var(--main-warm);
+    color: var(--main-warm2);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* 增加立体感 */
 }
 /* Atmopsheric scientist. modeler. photographer. cat lover */
 header p {
     font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
-    color: var(--main-warm);
+    color: var(--main-warm2);
     font-size: 28px; /* 1.2rem = 19.2px */
     font-weight: 320;
     margin: 6px auto 40px auto; /* 上 6px，下 10px，左右 0px */
@@ -69,9 +70,9 @@ header p {
   font-size: 22px;
   font-weight: 550;
     /* 玻璃质感得button */
-  background-color: var(--main-cold1); 
+  background-color: var(--main-cold2); 
   color: var(--main-warm);
-  border: 1.5px solid var(--main-cold1);
+  border: 1.5px solid var(--main-cold2);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 按钮阴影 */
   transition: all 0.3s ease;
   -webkit-tap-highlight-color: transparent; /* 去除手机端点击高亮 */
@@ -79,15 +80,15 @@ header p {
 
 .buttons a:hover,
 .buttons a:focus {
-  background-color: var(--main-cold2);
+  background-color: var(--main-cold1);
   color: var(--main-warm);
-  border: 1.5px solid var(--main-cold2);
+  border: 1.5px solid var(--main-cold1);
   transform: scale(1.05);
 }
 
 .buttons a:active {
-  background-color: var(--main-cold2);
-  border: 1.5px solid var(--main-cold2);
+  background-color: var(--main-cold1);
+  border: 1.5px solid var(--main-cold1);
   color: var(--main-warm);
   transform: scale(0.95); /* 点击时轻微缩小反馈 */
   -webkit-tap-highlight-color: transparent；
