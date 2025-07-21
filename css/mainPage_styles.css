@@ -60,7 +60,7 @@ header p {
   font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
   /* font-family: "Bitcount Prop Single", system-ui; /* 使用 Bitcount Prop Single 字体 */
   display: inline-block;
-  margin: 40px 30px; /* 1rem = 16px 上下外边距 */
+  margin: 60px 30px; /* 1rem = 16px 上下外边距 */
   padding: 15px 20px 15px 20px; /* up left bottom right */
   border-radius: 20px;
   text-decoration: none;
@@ -95,7 +95,7 @@ header p {
 .updates {
   font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
   font-size: 14px; /* 1rem = 16px */
-  line-height: 1.1;
+  line-height: 1.2;
   margin-top: 60px 0 24px 0; /* 上 40px，下 24px，左右 0 */
   background-color: rgba(0, 0, 0, 0.25);
   padding: 8px 25px; /* 上下8px, 左右20px, 减少h2与边框距离 */
