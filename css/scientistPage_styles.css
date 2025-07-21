@@ -68,7 +68,7 @@ a[href^="tel"] {
 /* Projects & Publications layout */
 .projects {
     flex: 1.5; /* 占比2 */
-    background: rgba(255,255,255,0.75);
+    background: rgba(255,255,255,0.8);
     padding: 20px 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -76,7 +76,7 @@ a[href^="tel"] {
 
 .publications {
     flex: 1; /* 占比1 */
-    background: rgba(255,255,255,0.75);
+    background: rgba(255,255,255,0.8);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -123,9 +123,9 @@ h4 .details-button {
 }
 
 h4 .details-button:hover {
-    background-color: var(--main-cold1);
+    background-color: --main-warm-dark;
     color: var(--main-warm1); /* 更明显 */
-    border: 1.4px solid var(--main-cold1); /* 保留边框 */
+    border: 1.4px solid --main-warm-dark; /* 保留边框 */
 }
 
 /* project bullet point */
