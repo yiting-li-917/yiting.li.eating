@@ -198,6 +198,7 @@ p::before {
 .download-button:hover {
     background-color: var(--main-warm1);
     color: var(--main-cold1);
+    border: 1.4px solid var(--main-cold1);      /* 添加边框 */
 }
 
 .publications .download-button {
