@@ -62,14 +62,14 @@ header p {
   display: inline-block;
   margin: 40px 30px; /* 1rem = 16px 上下外边距 */
   padding: 15px 20px 15px 20px; /* up left bottom right */
-  border-radius: 15px;
+  border-radius: 20px;
   text-decoration: none;
   font-size: 22px;
   font-weight: 550;
     /* 玻璃质感得button */
-  background: color-mix(in srgb, var(--main-orange-dark) 30%, transparent); 
+  background: color-mix(in srgb, var(--main-orange-dark) 50%, transparent); 
   color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1.5px solid var(--main-orange-dark);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
     /*--*/
@@ -80,7 +80,7 @@ header p {
 
 .buttons a:hover,
 .buttons a:focus {
-  background: color-mix(in srgb, var(--main-orange-dark) 50%, transparent);
+  background: color-mix(in srgb, var(--main-orange-dark) 70%, transparent);
   transform: scale(1.05);
 }
 
