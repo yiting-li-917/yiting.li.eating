@@ -33,7 +33,7 @@ a[href^="tel"] {
     justify-content: center; /* 水平居中内容 */
     gap: 20px; /* Yiting Li 和按钮的间距 */
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 30px;
+    border-radius: 22px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 /* same width as header-block */
@@ -329,15 +329,15 @@ footer {
 @media (max-width: 768px) {
     .header-block {
         flex-direction: column;
-        margin-bottom: 5px;
+        margin: 5px;
         padding: 5px;
         text-align: center;
-        background-color: rgba(0, 0, 0, 0.0);
+        background-color: rgba(0, 0, 0, 0.1);
         box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
     .header-block h1 {
         font-size: 24;
-        margin-bottom: 2px;
+        margin: 2px;
     }
     .contact-buttons .btn-text {
         display: none; /* 隐藏文字 */
