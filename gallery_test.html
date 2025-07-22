@@ -79,7 +79,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 60px 20px 60px;
+      padding: 80px 20px 60px;
       position: relative;
     }
     .gallery-grid {
@@ -87,6 +87,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 30px;
+      margin-top: 20px; /* 改动5: 增加gallery顶部与tag的距离 */
     }
     .album-wrapper {
       display: flex;
@@ -191,16 +192,19 @@
       display: flex;
       gap: 10px;
     }
+    .lightbox-controls button i {
+      font-size: 1.2rem; /* 改动3: 使用icon按钮 */
+    }
     /* 改动3: desc方框设置 */
     .photo-desc {
       position: absolute;
-      right: 10%; /* 距右边界10% */
-      bottom: 10%; /* 距底边界10% */
-      width: 200px;
-      height: 60px;
+      bottom: 10%; /* 改动2: 放置在照片底部平行位置 */
+      right: 10%;
+      width: 220px; /* 固定宽度 */
       background: rgba(0,0,0,0.05);
       padding: 10px;
       border-radius: 5px;
+      border: 2px dashed #333; /* 改动2: 手绘风格边框 */
       font-size: 0.9rem;
       line-height: 1.2rem;
       text-align: left;
@@ -210,7 +214,7 @@
       position: absolute;
       top: 10%;
       right: 10%;
-      color: #C94E44; /* 改动4: 更显眼的颜色 */
+      color: #FF5722; /* 改动4: 更显眼的颜色 */
       font-size: 2rem;
       cursor: pointer;
       z-index: 210;
@@ -258,8 +262,9 @@
     <span class="close-btn" onclick="closeLightbox()">&times;</span>
     <img id="lightbox-img" src="" alt="Large View">
     <div class="lightbox-controls">
-      <button onclick="prevPhoto()">&lt;</button>
-      <button onclick="nextPhoto()">&gt;</button>
+      <!-- 改动3: 使用font-awesome icon按钮 -->
+      <button onclick="prevPhoto()"><i class="fa-solid fa-backward"></i></button>
+      <button onclick="nextPhoto()"><i class="fa-solid fa-forward"></i></button>
     </div>
     <div class="photo-desc" id="photo-desc"></div>
   </div>
@@ -271,6 +276,7 @@
     let currentPhotos = [];
     let currentPhotoIndex = 0;
     let currentDesc = '';
+    let currentCamera = ''; // 改动1: 新增camera字段
     let activeTag = null;
 
     async function loadGallery() {
@@ -301,7 +307,7 @@
         const img = document.createElement('img');
         img.src = album.cover;
         img.alt = album.title;
-        img.addEventListener('click', () => openLightbox(album.photos, 0, album.desc));
+        img.addEventListener('click', () => openLightbox(album.photos, 0, album.desc, album.camera)); // 改动1: 传入camera
         imgContainer.appendChild(img);
         const titleDiv = document.createElement('div');
         titleDiv.className = 'album-title';
@@ -335,10 +341,11 @@
       });
     }
 
-    function openLightbox(photos, startIndex, desc) {
+    function openLightbox(photos, startIndex, desc, camera) {
       currentPhotos = photos;
       currentPhotoIndex = startIndex;
       currentDesc = desc;
+      currentCamera = camera || 'Unknown Camera'; // 改动1: 设置camera
       updateLightbox();
       document.getElementById('lightbox').classList.add('show');
     }
@@ -346,8 +353,8 @@
     function updateLightbox() {
       const img = document.getElementById('lightbox-img');
       const descBox = document.getElementById('photo-desc');
-      descBox.innerHTML = `相机: Nikon D850<br>${currentDesc || ''}`; // 改动3: 两行内容
-      descBox.style.display = currentDesc ? 'block' : 'none';
+      descBox.innerHTML = `相机: ${currentCamera}<br>${currentDesc || ''}`; // 改动1: 使用camera字段
+      descBox.style.display = 'block';
       img.src = currentPhotos[currentPhotoIndex];
     }
 
