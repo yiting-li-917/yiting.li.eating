@@ -116,53 +116,49 @@ body, html {
   background-color: #555;
   transform: translateY(-2px); /* 【新增】hover轻微上移 */
 }
-/* --------------side bar */
-.sidebar-container {
+/* --------------下拉 bar */
+/* 下拉按钮和菜单 */
+.dropdown {
   position: absolute;
   top: 10px;
   right: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
   z-index: 100;
 }
-.sidebar-toggle {
-  background: rgba(0,0,0,0.6);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s; /* 【新增】toggle hover过渡 */
-}
-.sidebar-toggle:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-.sidebar {
-  margin-top: 5px;
-  background: rgba(255, 255, 255, 0.7); /* 【新增】半透明白色 */
+.dropbtn {
+  background: rgba(255,255,255,0.6);
   color: #333;
+  padding: 8px 12px;
+  border: none;
   border-radius: 5px;
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease; /* 【新增】动画 */
-  transform: translateY(-10px); /* 【新增】初始上移 */
-}
-.sidebar.active {
-  max-height: 500px;
-  opacity: 1;
-  transform: translateY(0); /* 【新增】展开回到原位 */
-}
-.sidebar .tag {
-  padding: 5px 10px;
-  border-radius: 4px;
   cursor: pointer;
-  transition: background 0.3s, color 0.3s; /* 【新增】tag hover过渡 */
+  font-size: 16px;
 }
-.sidebar .tag:hover {
-  background: rgba(0, 0, 0, 0.1);
-  color: #000;
+.dropbtn:hover {
+  background: rgba(255,255,255,0.9);
 }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: rgba(255,255,255,0.8);
+  border-radius: 5px;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+.dropdown-content div {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.dropdown-content div:hover {
+  background: rgba(0,0,0,0.1);
+}
+.dropdown.show .dropdown-content {
+  display: block;
+}
+
+
 @media (max-width: 768px) {
   body, html {
     flex-direction: column;
@@ -182,23 +178,7 @@ body, html {
     grid-template-columns: 1fr;
     gap: 18px;
   }
-  .sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: left;
-    max-height: 0;
-    opacity: 20;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
-  }
-  .sidebar-toggle {
-    display: block;
-  }
-  .sidebar .tag {
-    margin: 5px;
-  }
-}
+
 /* for light box on pc */
 .lightbox {
   display: none;
