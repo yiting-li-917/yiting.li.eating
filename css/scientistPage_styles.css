@@ -205,10 +205,10 @@ p::before {
     top: -1px;
     color: var(--main-warm1);
     border: none;
-    padding: 6px 8px;
+    padding: 3px 5px;
     border-radius: 5px;
     background-color: transparent;  /* 无背景色 */
-    border: 1.3px solid var(--main-cold1);      /* 添加边框 */
+    border: 1.4px solid var(--main-cold1);      /* 添加边框 */
     /* color: white; */
     color: var(--main-cold1);
     box-shadow: none;          /* 去掉阴影 */
@@ -224,11 +224,10 @@ p::before {
 }
 
 .publications .pdf-button {
-    padding: 3px 6px;
     font-size: 0.55rem;
 }
 .pdf-button a i {
-    margin-right: 1px;
+    margin-right: 0.5px;
 }
 /* publication, looks like citation */
 /* auto count pulication number */
@@ -411,11 +410,18 @@ footer {
         font-size: 14px;
     }
     .pdf-button {
-        padding: 2px 5px; /* 手机端更小 */
-        font-size: 0.7rem; /* 更小按钮尺寸 */
+        padding: 2px 3px; /* 手机端更小 */
+        font-size: 0.65rem; /* 更小按钮尺寸 */
+        border-radius: 10px;
+        background-color: var(--main-cold1);
+        color:var(--main-warm1);
         margin: 4px; /* 增加间距防止拥挤 */
     }
-    .pdf-button .btn-text {
+    .pdf-button:hover {
+        background-color: var(--main-warm1);
+        color: var(--main-cold1);
+    }
+        .pdf-button .btn-text {
         display: none; /* 隐藏文字 */
     }
     .back-container {
