@@ -105,14 +105,16 @@ html, body {
   display: block;
 }
 .more-btn {
-  margin: 20px 0;
+  margin: 20px 0 0; /* 修改：去掉上下对称margin，只在上方留margin */
   padding: 10px 20px;
   background-color: #333;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  position: relative;
+  position: sticky; /* 修改：使用sticky使按钮跟随在底部 */
+  bottom: 10px; /* 修改：距离底部10px */
+  align-self: center; /* 修改：居中 */
   z-index: 10;
   transition: background 0.3s, transform 0.2s;
 }
