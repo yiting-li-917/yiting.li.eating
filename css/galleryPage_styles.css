@@ -67,7 +67,7 @@ html, body {
 .dropdown {
   position: absolute;
   top: 20px;
-  right: 20px; /* 修改：与右边框保持20px间距 */
+  right: 30px; /* 修改：与右边框保持20px间距 */
   left: auto; /* 修改：确保位置靠右 */
   z-index: 100;
 }
