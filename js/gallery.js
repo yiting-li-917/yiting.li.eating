@@ -11,7 +11,7 @@ let activeTag = null;
 
 async function loadGallery() {
   try {
-    const response = await fetch('./gallery.json');
+    const response = await fetch('https://www.yitingli.xyz/gallery.json');
     allAlbums = await response.json();
     filteredAlbums = [...allAlbums];
     displayedCount = 0;
