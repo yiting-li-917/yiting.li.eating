@@ -94,16 +94,19 @@
     }
 
     function bindTagEvents() {
-      // 新增函数：给所有tag绑定点击事件
       document.querySelectorAll('#tagList .tag').forEach(tag => {
         tag.addEventListener('click', () => {
           const tagValue = tag.getAttribute('data-tag');
+          // 重置所有tag高亮
+          document.querySelectorAll('#tagList .tag').forEach(t => t.classList.remove('active'));
           if (activeTag === tagValue) {
-            activeTag = null;
-            filteredAlbums = [...allAlbums];
+            // 新增：再次点击相同tag取消选择
+            activeTag = null; // 注释：取消当前activeTag
+            filteredAlbums = [...allAlbums]; // 注释：恢复全部相册
           } else {
             activeTag = tagValue;
             filteredAlbums = allAlbums.filter(album => album.tags && album.tags.includes(tagValue));
+            tag.classList.add('active');
           }
           displayedCount = 0;
           renderAlbums(true);
