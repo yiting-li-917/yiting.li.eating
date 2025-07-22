@@ -92,9 +92,9 @@ header p {
   transform: scale(0.95); /* 点击时轻微缩小反馈 */
   -webkit-tap-highlight-color: transparent；
 }
-
-button:hover i {
-    color: var(--main-cold1); /* 你想要的颜色 */
+/* setup button lock */
+button i {
+    color: inherit; /* 继承父元素的颜色 */
 }
 
 /* button lock style */
