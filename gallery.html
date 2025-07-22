@@ -73,6 +73,12 @@
     .album img:hover {
       transform: scale(1.05);
     }
+    .album-title {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      text-align: center;
+      color: #333;
+    }
     .dropdown {
       position: absolute;
       top: 20px;
@@ -243,11 +249,12 @@
         const album = filteredAlbums[i];
         const albumDiv = document.createElement('div');
         albumDiv.className = 'album';
-        const img = document.createElement('img');
-        img.src = album.cover;
-        img.alt = album.title;
-        img.addEventListener('click', () => openLightbox(album.photos, 0, album.desc));
-        albumDiv.appendChild(img);
+        albumDiv.innerHTML = `
+          <div class="album-image-container">
+            <img src="${album.cover}" alt="${album.title}" onclick="openLightbox(${i})">
+          </div>
+          <div class="album-title">${album.title}</div>
+        `;
         gallery.appendChild(albumDiv);
       }
       displayedCount = end;
@@ -275,13 +282,14 @@
 
     function loadMoreAlbums() { renderAlbums(); }
 
-    function openLightbox(photos, startIndex, desc) {
-      currentPhotos = photos;
-      currentPhotoIndex = startIndex;
-      currentDesc = desc;
+    function openLightbox(index) {
+      const album = filteredAlbums[index];
+      currentPhotos = album.photos || [];
+      currentPhotoIndex = 0;
+      currentDesc = album.desc || '';
       updateLightbox();
       const lightbox = document.getElementById('lightbox');
-      lightbox.classList.add('show');
+      if (lightbox) lightbox.classList.add('show');
     }
 
     function updateLightbox() {
