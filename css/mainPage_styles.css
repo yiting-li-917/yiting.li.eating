@@ -63,7 +63,7 @@ header p {
   /* font-family: "Special Elite", system-ui; */
   font-family: "Bitcount Prop Single", system-ui; /* 使用 Bitcount Prop Single 字体 */
   display: inline-block;
-  margin: 60px 60px; /* 1rem = 16px 上下外边距 */
+  margin: 60px 55px; /* 1rem = 16px 上下外边距 */
   padding: 10px 20px 8px 20px; /* up left bottom right */
   border-radius: 25px;
   text-decoration: none;
