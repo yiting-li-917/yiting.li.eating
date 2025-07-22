@@ -66,14 +66,15 @@
       });
 
     // ---------------- add a lock to scientist button -----------------
-    // 全局按钮文字
+    // -------------- 全局按钮文字
     const SCIENTIST_BTN_LABEL = "Weekday"; // 你可以在这里更改按钮文字
     const PHOTO_BTN_LABEL = "Weekend"; // 你可以在这里更改按钮文字
     
     // 阻止点击时的提示
     function preventClick(event) {
         event.preventDefault();
-        alert('This page is locked for now!');
+      // ------- change pop-up window content here!!!!
+        alert('不妙，锁住了！');
     }
     
     // 上锁
