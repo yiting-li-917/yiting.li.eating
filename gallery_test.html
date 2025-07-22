@@ -60,7 +60,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 80px 20px 60px;
+      padding: 60px 20px 60px; /* 调整padding，让内容更靠近left panel */
       position: relative;
     }
     .gallery-grid {
@@ -107,7 +107,8 @@
     .tag-bar {
       position: absolute;
       top: 20px;
-      left: 20px;
+      left: 50%; /* 居中显示tag-bar */
+      transform: translateX(-50%);
       display: flex;
       gap: 10px;
     }
@@ -167,12 +168,30 @@
     }
     .close-btn {
       position: absolute;
-      top: 10%; /* 调整为距顶部 10% */
-      right: 10%; /* 调整为距右侧 10% */
+      top: 10%;
+      right: 10%;
       color: #fff;
       font-size: 2rem;
       cursor: pointer;
       z-index: 210;
+    }
+    /* 新增：返回顶部按钮 */
+    #scrollTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 300;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 10px 15px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    #scrollTopBtn:hover {
+      background-color: #555;
     }
   </style>
 </head>
@@ -193,7 +212,7 @@
     <div class="gallery-grid" id="gallery"></div>
     <button class="more-btn" id="moreButton" onclick="loadMoreAlbums()">Load More</button>
   </div>
-
+  <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
   <!-- Lightbox -->
   <div id="lightbox">
     <span class="close-btn" onclick="closeLightbox()">&times;</span>
@@ -204,7 +223,6 @@
     </div>
     <div class="photo-desc" id="photo-desc"></div>
   </div>
-
   <script>
     let allAlbums = [];
     let filteredAlbums = [];
@@ -238,7 +256,6 @@
         const album = filteredAlbums[i];
         const wrapper = document.createElement('div');
         wrapper.className = 'album-wrapper';
-
         const imgContainer = document.createElement('div');
         imgContainer.className = 'album-image-container';
         const img = document.createElement('img');
@@ -246,11 +263,9 @@
         img.alt = album.title;
         img.addEventListener('click', () => openLightbox(album.photos, 0, album.desc));
         imgContainer.appendChild(img);
-
         const titleDiv = document.createElement('div');
         titleDiv.className = 'album-title';
         titleDiv.innerText = album.title ? album.title : '未命名相册';
-
         wrapper.appendChild(imgContainer);
         wrapper.appendChild(titleDiv);
         gallery.appendChild(wrapper);
@@ -259,9 +274,7 @@
       moreBtn.style.display = (displayedCount < filteredAlbums.length) ? 'block' : 'none';
     }
 
-    function loadMoreAlbums() {
-      renderAlbums();
-    }
+    function loadMoreAlbums() { renderAlbums(); }
 
     function bindTagEvents() {
       document.querySelectorAll('#tagBar .tag').forEach(tag => {
@@ -314,6 +327,20 @@
         currentPhotoIndex--;
         updateLightbox();
       }
+    }
+
+    // 新增：返回顶部功能
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    const rightPanel = document.getElementById('right-panel');
+    rightPanel.addEventListener('scroll', () => {
+      if (rightPanel.scrollTop > 100) {
+        scrollTopBtn.style.display = 'block';
+      } else {
+        scrollTopBtn.style.display = 'none';
+      }
+    });
+    function scrollToTop() {
+      rightPanel.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     window.onload = loadGallery;
