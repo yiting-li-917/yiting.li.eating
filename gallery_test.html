@@ -68,6 +68,7 @@
         filteredAlbums = [...allAlbums];
         displayedCount = 0;
         renderAlbums(true);
+        bindTagEvents(); // 新增：绑定tag点击事件
       } catch (error) {
         console.error('Loading gallery.json error:', error);
       }
@@ -90,6 +91,24 @@
       }
       displayedCount = end;
       document.getElementById('moreButton').style.display = (displayedCount < filteredAlbums.length) ? 'block' : 'none';
+    }
+
+    function bindTagEvents() {
+      // 新增函数：给所有tag绑定点击事件
+      document.querySelectorAll('#tagList .tag').forEach(tag => {
+        tag.addEventListener('click', () => {
+          const tagValue = tag.getAttribute('data-tag');
+          if (activeTag === tagValue) {
+            activeTag = null;
+            filteredAlbums = [...allAlbums];
+          } else {
+            activeTag = tagValue;
+            filteredAlbums = allAlbums.filter(album => album.tags && album.tags.includes(tagValue));
+          }
+          displayedCount = 0;
+          renderAlbums(true);
+        });
+      });
     }
 
     function loadMoreAlbums() {
@@ -133,3 +152,4 @@
   </script>
 </body>
 </html>
+
