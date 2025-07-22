@@ -157,18 +157,10 @@
     <div class="load-more"><button id="moreBtn">More</button></div>
   </div>
   <div class="sidebar" id="sidebar">
-    <div class="tag" data-tag="人像">人像
-      <div class="dropdown">点击筛选</div>
-    </div>
-    <div class="tag" data-tag="风景">风景
-      <div class="dropdown">点击筛选</div>
-    </div>
-    <div class="tag" data-tag="快乐">快乐
-      <div class="dropdown">点击筛选</div>
-    </div>
-    <div class="tag" data-tag="悲伤">悲伤
-      <div class="dropdown">点击筛选</div>
-    </div>
+    <div class="tag" data-tag="人像">人像<div class="dropdown">点击筛选</div></div>
+    <div class="tag" data-tag="风景">风景<div class="dropdown">点击筛选</div></div>
+    <div class="tag" data-tag="快乐">快乐<div class="dropdown">点击筛选</div></div>
+    <div class="tag" data-tag="悲伤">悲伤<div class="dropdown">点击筛选</div></div>
   </div>
   <div id="lightbox" class="lightbox">
     <span class="close-btn" onclick="closeLightbox()">&times;</span>
@@ -184,31 +176,38 @@
     let filteredAlbums = [];
     let currentAlbumIndex = 0;
     let currentPhotoIndex = 0;
+    let displayedCount = 0;
+    const BATCH_SIZE = 10;
 
     async function loadAlbums() {
       try {
         const response = await fetch('gallery.json');
         allAlbums = await response.json();
         filteredAlbums = [...allAlbums];
-        renderAlbums();
+        displayedCount = 0;
+        renderAlbums(true);
       } catch (error) {
         console.error("加载相册失败:", error);
       }
     }
 
-    function renderAlbums() {
+    function renderAlbums(reset = false) {
       const gallery = document.getElementById('gallery');
-      gallery.innerHTML = '';
-      filteredAlbums.forEach((album, index) => {
+      if (reset) gallery.innerHTML = '';
+      const end = Math.min(displayedCount + BATCH_SIZE, filteredAlbums.length);
+      for (let i = displayedCount; i < end; i++) {
+        const album = filteredAlbums[i];
         const albumDiv = document.createElement('div');
         albumDiv.className = 'album';
         const img = document.createElement('img');
         img.src = album.cover;
         img.alt = album.title;
-        img.onclick = () => openLightbox(index, 0);
+        img.onclick = () => openLightbox(i, 0);
         albumDiv.appendChild(img);
         gallery.appendChild(albumDiv);
-      });
+      }
+      displayedCount = end;
+      document.getElementById('moreBtn').style.display = displayedCount < filteredAlbums.length ? 'block' : 'none';
     }
 
     function openLightbox(albumIndex, photoIndex) {
@@ -253,8 +252,10 @@
       updateLightbox();
     }
 
-    // 标签筛选功能
     document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('moreBtn').addEventListener('click', () => {
+        renderAlbums();
+      });
       document.querySelectorAll('.sidebar .tag').forEach(tag => {
         tag.addEventListener('click', () => {
           const tagValue = tag.getAttribute('data-tag');
@@ -262,7 +263,8 @@
           if (filteredAlbums.length === 0) {
             filteredAlbums = [...allAlbums];
           }
-          renderAlbums();
+          displayedCount = 0;
+          renderAlbums(true);
         });
       });
     });
