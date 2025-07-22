@@ -1,10 +1,24 @@
 [
   {
-    "title": "Week 1",
-    "cover": "https://gallery.yitingli.xyz/galleryBG.jpg"
+    "title": "test 1",
+    "cover": "https://gallery.yitingli.xyz/DSC_6245.jpg",
+    "desc": "A warm and expressive portrait series.",
+    "tags": ["人像", "快乐"],
+    "photos": [
+      "https://gallery.yitingli.xyz/DSC_6245.jpg",
+      "https://gallery.yitingli.xyz/DSC_2608.jpg",
+      "https://gallery.yitingli.xyz/DSC_5458.jpg"
+    ]
   },
   {
-    "title": "Week 2",
-    "cover": "https://gallery.yitingli.xyz/DSC_6245.jpg"
-  }
+    "title": "test 2",
+    "cover": "https://gallery.yitingli.xyz/DSC_6907-1.jpg",
+    "desc": "A stunning view of the mountain range during sunset.",
+    "tags": ["风景"],
+    "photos": [
+      "https://gallery.yitingli.xyz/DSC_6907-1.jpg",
+      "https://gallery.yitingli.xyz/DSC_7633.jpg"
+    ]
+  },
 ]
+
