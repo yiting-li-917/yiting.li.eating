@@ -93,6 +93,17 @@ header p {
   -webkit-tap-highlight-color: transparent；
 }
 
+/* button lock style */
+.main-button.locked {
+    opacity: 0.6;        /* 上锁时按钮变灰 */
+    cursor: not-allowed; /* 上锁时不能点击 */
+}
+
+.main-button.locked i.fa-lock {
+    margin-left: 6px;    /* 图标与文字间距 */
+    color: var(--main-warm1);      /* 锁的颜色 */
+}
+
 /* updates sections : related to updates.json */
 .updates {
   font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
