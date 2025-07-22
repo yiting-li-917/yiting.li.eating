@@ -260,7 +260,7 @@
 
         const titleDiv = document.createElement('div');
         titleDiv.className = 'album-title';
-        titleDiv.textContent = album.title || '未命名相册';
+        titleDiv.innerText = album.title ? album.title : '未命名相册';
 
         albumDiv.appendChild(imgContainer);
         albumDiv.appendChild(titleDiv);
