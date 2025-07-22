@@ -53,8 +53,20 @@ body， html {
   gap: 10px;
   padding: 10px;
 }
-.album img {
+.album {
+  position: relative;
   width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  overflow: hidden;
+  border-radius: 5px;
+}
+.album img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 自动裁切，保持正方形 */
   border-radius: 5px;
   cursor: pointer;
   transition: transform 0.3s;
