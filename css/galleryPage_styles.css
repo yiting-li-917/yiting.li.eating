@@ -1,9 +1,9 @@
 :root {
-    --main-warm1: #DCC9A9; /*more colorful: choose*/
-    --main-warm2: #C1AB85; 
+    --main-warm1: #DCC9A9; 
+    --main-warm2: #C1AB85; /*more colorful: choose*/
     --main-warm-dark: #C94E44;
-    --main-cold1: #4E6851; /*more colorful: choose*/
-    --main-cold2: #3E6868;
+    --main-cold1: #4E6851; 
+    --main-cold2: #3E6868;/*more colorful: choose*/
 }
 
 body, html {
@@ -27,21 +27,9 @@ body, html {
   padding: 2rem;
   box-sizing: border-box;
 }
-.left-panel .more-btn {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-.left-panel .more-btn:hover {
-  background-color: rgba(0,0,0,0.8);
-}
+
 .left-panel.collapsed {
-  height: 60px;
+  height: 50px;
   justify-content: center;
   padding: 0 1rem;
 }
@@ -122,14 +110,15 @@ body, html {
 .more-btn:hover {
   background-color: #555;
 }
+/* --------------side bar */
 .sidebar {
   position: fixed;
   right: 0;
   top: 0;
-  width: 80px;
+  width: 40px;
   height: 100%;
-  background: rgba(51, 51, 51, 0.95);
-  color: white;
+  background: var(--main-cold2);
+  color: var(--main-warm2);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -145,8 +134,8 @@ body, html {
 }
 .sidebar-toggle {
   display: none;
-  background: #333;
-  color: white;
+  background: var(--main-cold2);
+  color: var(--main-warm2);
   padding: 10px;
   text-align: center;
   cursor: pointer;
@@ -214,7 +203,7 @@ body, html {
 }
 .lightbox img {
   max-width: 95%;
-  max-height: 85%;
+  max-height: 80%;
   border-radius: 5px;
 }
 .lightbox-controls {
@@ -229,8 +218,8 @@ body, html {
 }
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 50px;
+  right: 80px;
   font-size: 2rem;
   cursor: pointer;
   color: #000;
