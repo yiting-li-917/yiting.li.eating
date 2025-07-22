@@ -269,6 +269,26 @@
     });
 
     window.onload = loadAlbums;
+// test gallery.json
+    async function testGalleryJSON() {
+    try {
+      const response = await fetch('gallery.json');
+      if (!response.ok) {
+        console.error('无法加载 gallery.json，状态码:', response.status);
+        alert('无法加载 gallery.json，状态码: ' + response.status);
+        return;
+      }
+      const data = await response.json();
+      console.log('gallery.json 加载成功:', data);
+      alert('gallery.json 加载成功，检查控制台查看内容。');
+    } catch (error) {
+      console.error('加载 gallery.json 出错:', error);
+      alert('加载 gallery.json 出错: ' + error);
+    }
+  }
+  // 页面加载完成后测试
+  window.onload = testGalleryJSON;
+    
   </script>
 </body>
 </html>
