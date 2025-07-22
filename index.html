@@ -23,13 +23,9 @@
   <!-- two buttons link to modeler and photographer-->
       <div class="buttons">
         <!-- set a locker to each button, decide whether it can be entered in java below -->
-        <a href="scientist.html" class="main-button" id="scientistBtn">
-          <i class="fas fa-flask"></i> Weekday
-        </a>
-        
-        <a href="gallery.html" class="main-button" id="galleryBtn">
-          <i class="fas fa-flask"></i> Weekend
-        </a>
+        <!-- button set below, in java section -->
+        <a href="scientist.html" id="scientistBtn" class="main-button"></a>
+        <a href="gallery.html" id="photoBtn" class="main-button"> Weekend</a>    
         
       </div>
     </div>
@@ -67,33 +63,47 @@
         console.error('Error loading updates:', error);
       });
 
-    //
-    // 设置上锁状态
-      function lockScientistButton() {
-          const btn = document.getElementById('scientistBtn');
-          btn.classList.add('locked');
-          btn.innerHTML = '<i class="fas fa-flask"></i> Scientist <i class="fas fa-lock"></i>';
-          btn.addEventListener('click', preventClick);
-      }
-      
-      // 移除上锁状态
-      function unlockScientistButton() {
-          const btn = document.getElementById('scientistBtn');
-          btn.classList.remove('locked');
-          btn.innerHTML = '<i class="fas fa-flask"></i> Scientist';
-          btn.removeEventListener('click', preventClick);
-      }
-      
-      // 阻止点击
-      function preventClick(event) {
-          event.preventDefault();
-          alert('This page is locked for now!');
-      }
-      
-      // 例如：页面加载时上锁
-      document.addEventListener('DOMContentLoaded', () => {
-          lockScientistButton();
-      });
+    // ---------------- add a lock to scientist button -----------------
+    // 全局按钮文字
+    const SCIENTIST_BTN_LABEL = "Weekday"; // 你可以在这里更改按钮文字
+    const PHOTO_BTN_LABEL = "Weekend"; // 你可以在这里更改按钮文字
+    
+    // 阻止点击时的提示
+    function preventClick(event) {
+        event.preventDefault();
+        alert('This page is locked for now!');
+    }
+    
+    // 上锁
+    function lockScientistButton() {
+        const btn = document.getElementById('scientistBtn');
+        btn.classList.add('locked');
+        btn.addEventListener('click', preventClick);
+    
+        // 设置文字和锁图标
+        btn.innerHTML = `${SCIENTIST_BTN_LABEL} <i class="fas fa-lock"></i>`;
+    }
+    
+    // 解锁
+    function unlockScientistButton() {
+        const btn = document.getElementById('scientistBtn');
+        btn.classList.remove('locked');
+        btn.removeEventListener('click', preventClick);
+    
+        // 恢复按钮文字
+        btn.textContent = SCIENTIST_BTN_LABEL;
+    }
+    
+    // 页面加载时设置按钮
+    document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('scientistBtn');
+        btn.textContent = SCIENTIST_BTN_LABEL;  // 初始化文字
+    
+        // 如果默认是上锁状态
+        lockScientistButton();
+        // unlock, please uncomment below, comment above
+        unlockScientistButton();
+    });
   </script>
 </body>
 </html>
