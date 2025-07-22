@@ -1,142 +1,142 @@
-    :root {
-      --main-warm1: #DCC9A9;
-      --main-warm2: #C1AB85;
-      --main-warm-dark: #C94E44;
-      --main-cold1: #4E6851;
-      --main-cold2: #3E6868;
-    }
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Montserrat', sans-serif;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      overflow: hidden;
-    }
-    .left-panel {
-      flex: 0 0 60%;
-      background: url('https://gallery.yitingli.xyz/galleryBG.jpg') center/cover no-repeat;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-      box-sizing: border-box;
-    }
-    .right-panel {
-      flex: 0 0 40%;
-      background-color: #f0f0f0;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 80px 20px 20px;
-      position: relative;
-    }
-    .gallery-grid {
-      width: 80%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-    }
-    .album {
-      position: relative;
-      width: 100%;
-      padding-top: 100%;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .album img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-    .album img:hover {
-      transform: scale(1.05);
-    }
-    .dropdown {
-      position: absolute;
-      top: 10px;
-      right: 20px; /* 修改：与右边框保持20px间距 */
-      left: auto; /* 修改：确保位置靠右 */
-      z-index: 100;
-    }
-    .dropbtn {
-      background: rgba(255,255,255,0.6);
-      color: #333;
-      padding: 8px 12px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    .dropbtn:hover {
-      background: rgba(255,255,255,0.9);
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 40px;
-      right: 0;
-      background: rgba(255,255,255,0.8);
-      border-radius: 5px;
-      min-width: 100px;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    }
-    .dropdown-content .tag {
-      padding: 8px 12px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .dropdown-content .tag:hover {
-      background: rgba(0,0,0,0.1);
-    }
-    .dropdown.show .dropdown-content {
-      display: block;
-    }
-    .more-btn {
-      margin: 20px 0;
-      padding: 10px 20px;
-      background-color: #333;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      position: relative;
-      z-index: 10;
-      transition: background 0.3s, transform 0.2s;
-    }
-    .more-btn:hover {
-      background-color: #555;
-      transform: translateY(-2px);
-    }
-    @media (max-width: 768px) {
-      body, html {
-        flex-direction: column;
-        height: auto;
-      }
-      .left-panel, .right-panel {
-        flex: 0 0 auto;
-        width: 100%;
-        height: auto;
-        padding: 1rem;
-      }
-      .gallery-grid {
-        width: 90%;
-        grid-template-columns: 1fr;
-        gap: 18px;
-      }
-      .dropdown {
-        right: 20px; /* 确保移动端也有20px边距 */
-      }
-    }
+:root {
+  --main-warm1: #DCC9A9;
+  --main-warm2: #C1AB85;
+  --main-warm-dark: #C94E44;
+  --main-cold1: #4E6851;
+  --main-cold2: #3E6868;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+.left-panel {
+  flex: 0 0 60%;
+  background: url('https://gallery.yitingli.xyz/galleryBG.jpg') center/cover no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.right-panel {
+  flex: 0 0 40%;
+  background-color: #f0f0f0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px 20px;
+  position: relative;
+}
+.gallery-grid {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+.album {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.album img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.album img:hover {
+  transform: scale(1.05);
+}
+.dropdown {
+  position: absolute;
+  top: 10px;
+  right: 20px; /* 修改：与右边框保持20px间距 */
+  left: auto; /* 修改：确保位置靠右 */
+  z-index: 100;
+}
+.dropbtn {
+  background: rgba(255,255,255,0.6);
+  color: #333;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.dropbtn:hover {
+  background: rgba(255,255,255,0.9);
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: rgba(255,255,255,0.8);
+  border-radius: 5px;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+.dropdown-content .tag {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.dropdown-content .tag:hover {
+  background: rgba(0,0,0,0.1);
+}
+.dropdown.show .dropdown-content {
+  display: block;
+}
+.more-btn {
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  transition: background 0.3s, transform 0.2s;
+}
+.more-btn:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  body, html {
+    flex-direction: column;
+    height: auto;
+  }
+  .left-panel, .right-panel {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+  .gallery-grid {
+    width: 90%;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .dropdown {
+    right: 20px; /* 确保移动端也有20px边距 */
+  }
+}
