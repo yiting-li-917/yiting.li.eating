@@ -43,42 +43,49 @@
 
   <script>
     let allAlbums = [];
-    let currentIndex = 0;
+    let currentAlbumIndex = 0;
+    let currentPhotoIndex = 0;
 
     async function loadAlbums() {
       try {
         const response = await fetch('gallery.json');
         allAlbums = await response.json();
-        renderAlbums(0, 20); // 显示前20个
+        renderAlbums();
       } catch (error) {
         console.error("加载相册失败:", error);
       }
     }
 
-    function renderAlbums(start, count) {
+    function renderAlbums() {
       const gallery = document.getElementById('gallery');
-      for (let i = start; i < Math.min(start + count, allAlbums.length); i++) {
-        const album = allAlbums[i];
+      gallery.innerHTML = '';
+      allAlbums.forEach((album, index) => {
         const albumDiv = document.createElement('div');
         albumDiv.className = 'album';
         const img = document.createElement('img');
         img.src = album.cover;
         img.alt = album.title;
-        img.onclick = () => openLightbox(i);
+        img.onclick = () => openLightbox(index, 0);
         albumDiv.appendChild(img);
         gallery.appendChild(albumDiv);
-      }
+      });
     }
 
-    function openLightbox(index) {
-      currentIndex = index;
-      const lightbox = document.getElementById('lightbox');
+    function openLightbox(albumIndex, photoIndex) {
+      currentAlbumIndex = albumIndex;
+      currentPhotoIndex = photoIndex;
+      updateLightbox();
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+
+    function updateLightbox() {
+      const album = allAlbums[currentAlbumIndex];
+      const photo = album.photos[currentPhotoIndex];
       const lightboxImg = document.getElementById('lightbox-img');
       const descBox = document.getElementById('photo-desc');
-      lightboxImg.src = allAlbums[index].cover;
-      descBox.textContent = allAlbums[index].desc || '';
-      descBox.style.display = allAlbums[index].desc ? 'block' : 'none';
-      lightbox.style.display = 'flex';
+      lightboxImg.src = photo;
+      descBox.textContent = album.desc || '';
+      descBox.style.display = album.desc ? 'block' : 'none';
     }
 
     function closeLightbox() {
@@ -86,21 +93,25 @@
     }
 
     function nextPhoto() {
-      if (currentIndex < allAlbums.length - 1) {
-        openLightbox(currentIndex + 1);
+      const album = allAlbums[currentAlbumIndex];
+      if (currentPhotoIndex < album.photos.length - 1) {
+        currentPhotoIndex++;
+      } else if (currentAlbumIndex < allAlbums.length - 1) {
+        currentAlbumIndex++;
+        currentPhotoIndex = 0;
       }
+      updateLightbox();
     }
 
     function prevPhoto() {
-      if (currentIndex > 0) {
-        openLightbox(currentIndex - 1);
+      if (currentPhotoIndex > 0) {
+        currentPhotoIndex--;
+      } else if (currentAlbumIndex > 0) {
+        currentAlbumIndex--;
+        currentPhotoIndex = allAlbums[currentAlbumIndex].photos.length - 1;
       }
+      updateLightbox();
     }
-
-    document.getElementById('moreBtn').addEventListener('click', function() {
-      const currentCount = document.querySelectorAll('#gallery .album').length;
-      renderAlbums(currentCount, 20);
-    });
 
     window.onload = loadAlbums;
   </script>
