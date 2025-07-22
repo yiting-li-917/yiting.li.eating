@@ -14,7 +14,6 @@
 <body>
   
   <div class="left-panel" id="left-panel">
-    <div class="left-toggle" onclick="toggleLeftPanel()">☰ About Me</div>
     <h1>Yiting Li Eating</h1>
     <p>Caputure Life through the Lens.</p>
     <div class="buttons">
@@ -22,24 +21,17 @@
       <a href="https://instagram.com/memelulu_eating" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a>
     </div>
   </div>
-
-  
   <div class="right-panel" id="right-panel">
-    <!-- 新的下拉按钮替代sidebar -->
     <div class="dropdown" id="tagDropdown">
       <button class="dropbtn" onclick="toggleDropdown()">☰ Tags</button>
       <div class="dropdown-content">
         <div class="tag" data-tag="2025">2025</div>
         <div class="tag" data-tag="2024">2024</div>
-        <!--<div class="tag" data-tag="2023">2023</div>-->
-        <!--<div class="tag" data-tag="2022">2022</div>-->
       </div>
     </div>
     <div class="gallery-grid" id="gallery"></div>
-    <div class="loading" id="loading">加载中...</div>
     <button class="more-btn" id="moreButton" onclick="loadMoreAlbums()">Load More</button>
   </div>
-
   <div id="lightbox" class="lightbox">
     <span class="close-btn" onclick="closeLightbox()">&times;</span>
     <img id="lightbox-img" src="" alt="Large View">
@@ -49,7 +41,6 @@
     </div>
     <div class="photo-desc" id="photo-desc"></div>
   </div>
-
   <script>
     let allAlbums = [];
     let filteredAlbums = [];
@@ -59,21 +50,15 @@
     let currentDesc = '';
     const BATCH_SIZE = 10;
     let activeTag = null;
-    let startX = 0;
 
-    // tag button
     function toggleDropdown() {
       document.getElementById('tagDropdown').classList.toggle('show');
     }
-    window.onclick = function(event) {
+    window.addEventListener('click', function(event) {
       if (!event.target.matches('.dropbtn')) {
         document.getElementById('tagDropdown').classList.remove('show');
       }
-    //
-
-    function toggleLeftPanel() {
-      document.getElementById('left-panel').classList.toggle('collapsed');
-    }
+    });
 
     async function loadGallery() {
       try {
@@ -104,7 +89,6 @@
         gallery.appendChild(albumDiv);
       }
       displayedCount = end;
-      document.getElementById('loading').style.display = 'none';
       document.getElementById('moreButton').style.display = (displayedCount < filteredAlbums.length) ? 'block' : 'none';
     }
 
@@ -144,39 +128,6 @@
         updateLightbox();
       }
     }
-
-    const lightbox = document.getElementById('lightbox');
-    lightbox.addEventListener('touchstart', (e) => {
-      startX = e.touches[0].clientX;
-    });
-    lightbox.addEventListener('touchend', (e) => {
-      const endX = e.changedTouches[0].clientX;
-      const diffX = startX - endX;
-      if (Math.abs(diffX) > 50) {
-        if (diffX > 0) {
-          nextPhoto();
-        } else {
-          prevPhoto();
-        }
-      }
-    });
-
-    document.querySelectorAll('.sidebar .tag').forEach(tag => {
-      tag.addEventListener('click', () => {
-        const tagValue = tag.getAttribute('data-tag');
-        document.querySelectorAll('.sidebar .tag').forEach(t => t.classList.remove('active'));
-        if (activeTag === tagValue) {
-          activeTag = null;
-          filteredAlbums = [...allAlbums];
-        } else {
-          activeTag = tagValue;
-          filteredAlbums = allAlbums.filter(album => album.tags && album.tags.includes(tagValue));
-          tag.classList.add('active');
-        }
-        displayedCount = 0;
-        renderAlbums(true);
-      });
-    });
 
     window.onload = loadGallery;
   </script>
