@@ -14,20 +14,19 @@
 <body>
   <div class="left-panel" id="left-panel">
     <div class="left-toggle" onclick="toggleLeftPanel()">☰ About Me</div>
-    <h1>My Portfolio</h1>
-    <p>Welcome to my gallery website. Here is a brief introduction about my works and photography style.</p>
+    <h1>Yiting Li Eating</h1>
+    <p>Caputure Life through the Lens.</p>
     <div class="buttons">
-      <a href="mailto:summeryiting@gmail.com">Email</a>
-      <a href="https://instagram.com/memelulu_eating" target="_blank">Instagram</a>
+      <a href="mailto:summeryiting@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a>
+      <a href="https://instagram.com/memelulu_eating" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a>
     </div>
-    <button class="more-btn" onclick="alert('More about portfolio...')">More About Me</button>
   </div>
-  <div class="sidebar-toggle" onclick="toggleSidebar()">☰ Tags</div>
+  <div class="sidebar-toggle" onclick="toggleSidebar()">☰ Year</div>
   <div class="sidebar" id="sidebar">
-    <div class="tag" data-tag="人像">人像</div>
-    <div class="tag" data-tag="风景">风景</div>
-    <div class="tag" data-tag="快乐">快乐</div>
-    <div class="tag" data-tag="悲伤">悲伤</div>
+    <div class="tag" data-tag="2025">2025</div>
+    <div class="tag" data-tag="2024">2024</div>
+    <!--<div class="tag" data-tag="2023">2023</div>-->
+    <!--<div class="tag" data-tag="2022">2022</div>-->
   </div>
   <div class="right-panel" id="right-panel">
     <div class="gallery-grid" id="gallery"></div>
@@ -67,13 +66,13 @@
     async function loadGallery() {
       try {
         const response = await fetch('./gallery.json');
-        if (!response.ok) return console.error('无法加载 gallery.json');
+        if (!response.ok) return console.error('Cannot load gallery.json');
         allAlbums = await response.json();
         filteredAlbums = [...allAlbums];
         displayedCount = 0;
         renderAlbums(true);
       } catch (error) {
-        console.error('加载 gallery.json 出错:', error);
+        console.error('Loading gallery.json error:', error);
       }
     }
 
