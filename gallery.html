@@ -249,12 +249,21 @@
         const album = filteredAlbums[i];
         const albumDiv = document.createElement('div');
         albumDiv.className = 'album';
-        albumDiv.innerHTML = `
-          <div class="album-image-container">
-            <img src="${album.cover}" alt="${album.title}" onclick="openLightbox(${i})">
-          </div>
-          <div class="album-title">${album.title}</div>
-        `;
+
+        const imgContainer = document.createElement('div');
+        imgContainer.className = 'album-image-container';
+        const img = document.createElement('img');
+        img.src = album.cover;
+        img.alt = album.title;
+        img.addEventListener('click', () => openLightbox(album.photos, 0, album.desc));
+        imgContainer.appendChild(img);
+
+        const titleDiv = document.createElement('div');
+        titleDiv.className = 'album-title';
+        titleDiv.textContent = album.title || '未命名相册';
+
+        albumDiv.appendChild(imgContainer);
+        albumDiv.appendChild(titleDiv);
         gallery.appendChild(albumDiv);
       }
       displayedCount = end;
