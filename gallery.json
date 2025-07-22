@@ -3,6 +3,7 @@
     "title": "test 1",
     "cover": "https://gallery.yitingli.xyz/DSC_6245.jpg",
     "desc": "A warm and expressive portrait series.",
+    "camera": "Nikon ZF",
     "tags": ["2025"],
     "photos": [
       "https://gallery.yitingli.xyz/DSC_6245.jpg",
@@ -14,6 +15,7 @@
     "title": "test 2",
     "cover": "https://gallery.yitingli.xyz/DSC_6907-1.jpg",
     "desc": "A stunning view of the mountain range during sunset.",
+    "camera": "Olympus EP7",
     "tags": ["2024"],
     "photos": [
       "https://gallery.yitingli.xyz/DSC_6907-1.jpg",
