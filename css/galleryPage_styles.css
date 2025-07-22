@@ -62,7 +62,8 @@ body, html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 0;
+  padding: 80px 20px 20px; /* 给顶部留出位置 */
+  position: relative;
 }
 .gallery-grid {
   width: 80%;
@@ -75,7 +76,8 @@ body, html {
   width: 100%;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 添加阴影 */
 }
 .album img {
   position: absolute;
@@ -86,7 +88,7 @@ body, html {
   object-fit: cover;
   border-radius: 5px;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease; /* 【新增】图片缩放过渡 */
 }
 .album img:hover {
   transform: scale(1.05);
@@ -99,63 +101,72 @@ body, html {
   display: none;
 }
 .more-btn {
-  margin: 15px 0;
+  margin: 20px 0;
   padding: 10px 20px;
   background-color: #333;
-  color: #fff;
+  color: white;
   border: none;
-  cursor: pointer;
   border-radius: 5px;
-  transition: background 0.3s;
+  cursor: pointer;
+  position: relative; /* 保证在背景顶层 */
+  z-index: 10;
+  transition: background 0.3s, transform 0.2s; /* 【新增】按钮动画 */
 }
 .more-btn:hover {
   background-color: #555;
+  transform: translateY(-2px); /* 【新增】hover轻微上移 */
 }
 /* --------------side bar */
 .sidebar {
-  position: fixed;
-  right: 50px;
-  top: 50px;
-  width: 40px;
-  height: 100%;
-  background: var(--main-warm-dark);
-  color: var(--main-warm1);
+  position: absolute; /* 放在right panel顶部 */
+  right: 20px;
+  top: 10px;
+  width: auto;
+  background: rgba(255, 255, 255, 0.7); /* 半透明白色 */
+  color: #333;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 5px 5px;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
-  overflow: hidden;
+  align-items: flex-start;
+  padding: 10px;
+  border-radius: 0px;
+  transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease; /* 【新增】动画 */
+  z-index: 100;
 }
 .sidebar.collapsed {
-  height: auto;
   max-height: 0;
-  padding: 0;
   opacity: 0;
+  overflow: hidden;
+  transform: translateY(-10px); /* 【新增】收起动画 */
 }
 .sidebar-toggle {
-  display: none;
-  background: var(--main-cold2);
-  color: var(--main-warm2);
-  padding: 10px;
-  text-align: center;
-  cursor: pointer;
-}
-.sidebar .tag {
-  margin: 10px 5px;
-  cursor: pointer;
-  background: transparent;
-  font-weight: 400
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.6);
+  color: white;
   padding: 5px 10px;
   border-radius: 5px;
-  transition: background 0.3s;
+  cursor: pointer;
+  z-index: 101;
+  transition: background 0.3s; /* 【新增】按钮hover动画 */
+}
+.sidebar-toggle:hover {
+  background: rgba(0, 0, 0, 0.8); /* 【新增】hover更深色 */
+}
+.sidebar .tag {
+  margin: 5px 0;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s; /* 【新增】hover动画 */
 }
 .sidebar .tag.active {
   background: rgba(255, 255, 255, 0.4);
   font-weight: bold;
 }
 .sidebar .tag:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.1); /* 【新增】hover背景 */
+  color: #000; /* 【新增】hover字体颜色 */
 }
 @media (max-width: 768px) {
   body, html {
