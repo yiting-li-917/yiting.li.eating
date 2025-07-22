@@ -205,7 +205,7 @@ p::before {
     top: -1px;
     color: var(--main-warm1);
     border: none;
-    padding: 3px 5px;
+    padding: 2px 4px;
     border-radius: 5px;
     background-color: transparent;  /* 无背景色 */
     border: 1.4px solid var(--main-cold1);      /* 添加边框 */
@@ -224,7 +224,7 @@ p::before {
 }
 
 .publications .pdf-button {
-    font-size: 0.55rem;
+    font-size: 0.50rem;
 }
 .pdf-button a i {
     margin-right: 0.5px;
@@ -412,7 +412,7 @@ footer {
     .pdf-button {
         padding: 2px 3px; /* 手机端更小 */
         font-size: 0.65rem; /* 更小按钮尺寸 */
-        border-radius: 10px;
+        border-radius: 5px;
         background-color: var(--main-cold1);
         color:var(--main-warm1);
         margin: 4px; /* 增加间距防止拥挤 */
@@ -421,7 +421,7 @@ footer {
         background-color: var(--main-warm1);
         color: var(--main-cold1);
     }
-        .pdf-button .btn-text {
+    .pdf-button .btn-text {
         display: none; /* 隐藏文字 */
     }
     .back-container {
