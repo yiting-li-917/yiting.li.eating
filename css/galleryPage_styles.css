@@ -61,7 +61,7 @@ body, html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0;
+  padding: 100px 0;
 }
 .gallery-grid {
   width: 70%;
