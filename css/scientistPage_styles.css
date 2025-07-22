@@ -116,7 +116,8 @@ h4 {
 }
 
 /* project details button */
-h4 .details-button {
+h4 .details-button,
+h4 .cata-button {
     display: inline-block;
     margin-left: 4px;
     vertical-align: baseline;
@@ -138,7 +139,8 @@ h4 .details-button {
     -webkit-tap-highlight-color: transparent;
 }
 
-h4 .details-button:hover {
+h4 .details-button,
+h4 .cata-button:hover {
     background-color: var(--main-cold1);
     color: var(--main-warm1); /* 更明显 */
     border: 1.4px solid var(--main-cold1); /* 保留边框 */
@@ -400,7 +402,8 @@ footer {
         font-size: 14px;
         margin: 2px auto 5px auto; 
     }
-    h4 .details-button {
+    h4 .details-button,
+    h4 .cata-button {
         padding: 2px 5px; /* 手机端更小 */
         font-size: 0.6rem; /* 缩小字体 */
         margin: 4px; /* 增加间距防止拥挤 */
