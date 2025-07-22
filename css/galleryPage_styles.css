@@ -1,18 +1,55 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f0f0f0;
+:root {
+    --main-warm1: #DCC9A9; /*more colorful: choose*/
+    --main-warm2: #C1AB85; 
+    --main-warm-dark: #C94E44;
+    --main-cold1: #4E6851; /*more colorful: choose*/
+    --main-cold2: #3E6868;
 }
-header {
-  text-align: center;
-  padding: 1rem;
-  background: #222;
+
+body， html {
+  margin: 0;
+  display: flex;
+  font-family: Arial, sans-serif;
+}
+.left-panel {
+  width: 50%;
+  height: 100vh;
+  background: url('https://gallery.yitingli.xyz/galleryBG.jpg') center/cover no-repeat;
   color: white;
-  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.left-panel h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.left-panel p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.left-panel .buttons a {
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.right-panel {
+  width: 50%;
+  background-color: #f0f0f0;
+  overflow-y: auto;
+  position: relative;
 }
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   gap: 10px;
   padding: 10px;
 }
@@ -25,10 +62,9 @@ header {
 .album img:hover {
   transform: scale(1.05);
 }
-.album p {
+.load-more {
   text-align: center;
-  margin: 5px 0;
-  font-size: 1rem;
+  padding: 1rem;
 }
 .lightbox {
   display: none;
@@ -39,10 +75,11 @@ header {
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  flex-direction: column;
 }
 .lightbox img {
   max-width: 90%;
-  max-height: 90%;
+  max-height: 80%;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0,0,0,0.8);
 }
@@ -52,7 +89,44 @@ header {
   right: 40px;
   color: white;
   font-size: 2rem;
-  text-decoration: none;
-  font-weight: bold;
   cursor: pointer;
+}
+.lightbox-controls {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  color: white;
+}
+.photo-desc {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.6);
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  display: none;
+}
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 80px;
+  height: 100vh;
+  background: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+.sidebar .tag {
+  margin: 10px 0;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 5px;
+  background: #444;
+  border-radius: 5px;
+  text-align: center;
 }
