@@ -68,7 +68,7 @@
         filteredAlbums = [...allAlbums];
         displayedCount = 0;
         renderAlbums(true);
-        bindTagEvents(); // 新增：绑定tag点击事件
+        bindTagEvents(); // 确保绑定tag事件
       } catch (error) {
         console.error('Loading gallery.json error:', error);
       }
@@ -97,12 +97,10 @@
       document.querySelectorAll('#tagList .tag').forEach(tag => {
         tag.addEventListener('click', () => {
           const tagValue = tag.getAttribute('data-tag');
-          // 重置所有tag高亮
           document.querySelectorAll('#tagList .tag').forEach(t => t.classList.remove('active'));
           if (activeTag === tagValue) {
-            // 新增：再次点击相同tag取消选择
-            activeTag = null; // 注释：取消当前activeTag
-            filteredAlbums = [...allAlbums]; // 注释：恢复全部相册
+            activeTag = null; // 取消选择
+            filteredAlbums = [...allAlbums];
           } else {
             activeTag = tagValue;
             filteredAlbums = allAlbums.filter(album => album.tags && album.tags.includes(tagValue));
