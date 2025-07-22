@@ -18,7 +18,7 @@ async function loadGallery() {
     renderAlbums(true);
     bindTagEvents();
   } catch (e) {
-    console.error('加载相册失败:', e);
+    console.error('Loading album error:', e);
   }
 }
 
@@ -41,7 +41,7 @@ function renderAlbums(reset = false) {
     imgContainer.appendChild(img);
     const titleDiv = document.createElement('div');
     titleDiv.className = 'album-title';
-    titleDiv.innerText = album.title ? album.title : '未命名相册';
+    titleDiv.innerText = album.title ? album.title : 'Something Random';
     wrapper.appendChild(imgContainer);
     wrapper.appendChild(titleDiv);
     gallery.appendChild(wrapper);
@@ -83,7 +83,7 @@ function openLightbox(photos, startIndex, desc, camera) {
 function updateLightbox() {
   const img = document.getElementById('lightbox-img');
   const descBox = document.getElementById('photo-desc');
-  descBox.innerHTML = `相机: ${currentCamera}<br>${currentDesc || ''}`;
+  descBox.innerHTML = `Camera: ${currentCamera}<br>${currentDesc || ''}`;
   descBox.style.display = 'block';
   img.src = currentPhotos[currentPhotoIndex];
 }
