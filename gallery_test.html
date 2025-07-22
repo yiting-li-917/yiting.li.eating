@@ -272,11 +272,11 @@
 // test gallery.json
   async function testGalleryJSON() {
     try {
-      // 如果 gallery.json 也存储在 Cloudflare R2 上，请改成完整的 URL
-      const response = await fetch('https://gallery.yitingli.xyz/gallery.json');
+      // 如果 gallery.json 在 GitHub Pages 上，请用相对路径或 GitHub Pages 完整 URL
+      const response = await fetch('./gallery.json');
       if (!response.ok) {
         console.error('无法加载 gallery.json，状态码:', response.status);
-        alert('无法加载 gallery.json，状态码: ' + response.status + ' (请检查路径或权限)');
+        alert('无法加载 gallery.json，状态码: ' + response.status + ' (请检查路径或 GitHub Pages 设置)');
         return;
       }
       const data = await response.json();
@@ -299,7 +299,7 @@
       alert('gallery.json 加载成功，已检查图片，请查看控制台日志。');
     } catch (error) {
       console.error('加载 gallery.json 出错:', error);
-      alert('加载 gallery.json 出错: ' + error + ' (请确认 Cloudflare R2 是否开启公共访问)');
+      alert('加载 gallery.json 出错: ' + error + ' (请检查 GitHub Pages 是否已更新)');
     }
   }
   window.onload = testGalleryJSON;
