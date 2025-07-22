@@ -25,6 +25,41 @@ html, body {
   align-items: center;
   padding: 2rem;
   box-sizing: border-box;
+  position: relative;
+}
+.left-panel h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.left-panel p {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.left-panel .buttons {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  display: flex;
+  gap: 15px;
+}
+.left-panel .buttons a {
+  display: inline-block;
+  padding: 0.5rem;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+}
+.left-panel .buttons a i {
+  font-size: 1.5rem;
+}
+.left-panel .buttons a:hover {
+  transform: scale(1.05);
+}
+.left-panel .buttons a:active {
+  transform: scale(0.95);
 }
 .right-panel {
   flex: 0 0 40%;
@@ -33,24 +68,55 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 20px 20px;
+  padding: 80px 20px 60px;
   position: relative;
+}
+.tag-bar {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+.tag-bar .tag {
+  background: rgba(255,255,255,0.6);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.tag-bar .tag:hover {
+  transform: scale(1.05);
+}
+.tag-bar .tag:active {
+  transform: scale(0.95);
+}
+.tag-bar .tag.active {
+  background: rgba(0,0,0,0.2);
+  font-weight: bold;
 }
 .gallery-grid {
   width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  gap: 30px;
+  margin-top: 40px;
 }
-.album {
+.album-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.album-image-container {
   position: relative;
   width: 100%;
   padding-top: 100%;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-.album img {
+.album-image-container img {
   position: absolute;
   top: 0;
   left: 0;
@@ -61,60 +127,26 @@ html, body {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-.album img:hover {
+.album-image-container img:hover {
   transform: scale(1.05);
 }
-.dropdown {
-  position: absolute;
-  top: 20px;
-  left: 30px; /* 修改：与右边框保持20px间距 */
-  right: auto; /* 修改：确保位置靠左 */
-  z-index: 100;
-}
-.dropbtn {
-  background: rgba(255,255,255,0.6);
+.album-title {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  text-align: left;
   color: #333;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-.dropbtn:hover {
-  background: rgba(255,255,255,0.9);
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 40px;
-  left: 0;
-  background: rgba(255,255,255,0.8);
-  border-radius: 5px;
-  min-width: 100px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-}
-.dropdown-content .tag {
-  padding: 8px 12px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.dropdown-content .tag:hover {
-  background: rgba(0,0,0,0.1);
-}
-.dropdown.show .dropdown-content {
-  display: block;
+  font-weight: 500;
+  width: 100%;
 }
 .more-btn {
-  margin: 20px 0 0; /* 修改：去掉上下对称margin，只在上方留margin */
+  margin: 20px 0;
   padding: 10px 20px;
   background-color: #333;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  position: sticky; /* 修改：使用sticky使按钮跟随在底部 */
-  bottom: 10px; /* 修改：距离底部10px */
-  align-self: center; /* 修改：居中 */
+  position: relative;
   z-index: 10;
   transition: background 0.3s, transform 0.2s;
 }
@@ -122,23 +154,72 @@ html, body {
   background-color: #555;
   transform: translateY(-2px);
 }
-@media (max-width: 768px) {
-  body, html {
-    flex-direction: column;
-    height: auto;
-  }
-  .left-panel, .right-panel {
-    flex: 0 0 auto;
-    width: 100%;
-    height: auto;
-    padding: 1rem;
-  }
-  .gallery-grid {
-    width: 90%;
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-  .dropdown {
-    right: 20px; /* 确保移动端也有20px边距 */
-  }
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 200;
+}
+#lightbox.show {
+  display: flex;
+}
+#lightbox img {
+  max-width: 90%;
+  max-height: 70%;
+  border-radius: 5px;
+}
+.lightbox-controls {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+.lightbox-controls button i {
+  font-size: 1.2rem;
+}
+.photo-desc {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  width: 220px;
+  background: rgba(0,0,0,0.05);
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px dashed #333;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  text-align: left;
+  color: #333;
+}
+.close-btn {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  color: #FF5722;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 210;
+}
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 300;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+#scrollTopBtn:hover {
+  background-color: #555;
 }
