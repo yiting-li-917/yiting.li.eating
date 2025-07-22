@@ -1,9 +1,9 @@
 :root {
-    --main-warm1: #DCC9A9; 
-    --main-warm2: #C1AB85; /*more colorful: choose*/
-    --main-warm-dark: #C94E44;
-    --main-cold1: #4E6851; 
-    --main-cold2: #3E6868;/*more colorful: choose*/
+    --main-warm1: #DCC9A9; /*more colorful: choose*/
+    --main-warm2: #C1AB85; 
+    --main-warm-dark: #C94E44; /*more colorful: choose*/
+    --main-cold1: #4E6851; /*more colorful: choose*/
+    --main-cold2: #3E6868;
 }
 
 body, html {
@@ -118,8 +118,8 @@ body, html {
   top: 0;
   width: 40px;
   height: 100%;
-  background: var(--main-cold2);
-  color: var(--main-warm2);
+  background: var(--main-warm-dark);
+  color: var(--main-warm1);
   display: flex;
   flex-direction: column;
   align-items: center;
