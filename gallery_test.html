@@ -53,7 +53,8 @@
     function toggleDropdown() {
       document.getElementById('tagDropdown').classList.toggle('show');
     }
-    window.addEventListener('click', function(event) {
+
+    window.addEventListener('click', (event) => {
       if (!event.target.matches('.dropbtn')) {
         document.getElementById('tagDropdown').classList.remove('show');
       }
@@ -62,15 +63,12 @@
     async function loadGallery() {
       try {
         const response = await fetch('./gallery.json');
-        if (!response.ok) return console.error('Cannot load gallery.json');
         allAlbums = await response.json();
         filteredAlbums = [...allAlbums];
         displayedCount = 0;
         renderAlbums(true);
-        bindTagEvents(); // 确保绑定tag事件
-      } catch (error) {
-        console.error('Loading gallery.json error:', error);
-      }
+        bindTagEvents(); // 确保tag点击绑定
+      } catch (e) { console.error('加载相册失败:', e); }
     }
 
     function renderAlbums(reset = false) {
@@ -84,7 +82,7 @@
         const img = document.createElement('img');
         img.src = album.cover;
         img.alt = album.title;
-        img.onclick = () => openLightbox(album.photos, 0, album.desc);
+        img.addEventListener('click', () => openLightbox(album.photos, 0, album.desc)); // 确保绑定lightbox
         albumDiv.appendChild(img);
         gallery.appendChild(albumDiv);
       }
@@ -95,14 +93,13 @@
     function bindTagEvents() {
       document.querySelectorAll('#tagList .tag').forEach(tag => {
         tag.addEventListener('click', () => {
-          const tagValue = tag.getAttribute('data-tag');
+          const tagValue = tag.dataset.tag;
           document.querySelectorAll('#tagList .tag').forEach(t => t.classList.remove('active'));
           if (activeTag === tagValue) {
-            activeTag = null; // 取消选择
-            filteredAlbums = [...allAlbums];
+            activeTag = null; filteredAlbums = [...allAlbums];
           } else {
             activeTag = tagValue;
-            filteredAlbums = allAlbums.filter(album => album.tags && album.tags.includes(tagValue));
+            filteredAlbums = allAlbums.filter(a => a.tags && a.tags.includes(tagValue));
             tag.classList.add('active');
           }
           displayedCount = 0;
@@ -111,9 +108,7 @@
       });
     }
 
-    function loadMoreAlbums() {
-      renderAlbums();
-    }
+    function loadMoreAlbums() { renderAlbums(); }
 
     function openLightbox(photos, startIndex, desc) {
       currentPhotos = photos;
@@ -130,26 +125,13 @@
       descBox.style.display = currentDesc ? 'block' : 'none';
     }
 
-    function closeLightbox() {
-      document.getElementById('lightbox').style.display = 'none';
-    }
-
-    function nextPhoto() {
-      if (currentPhotoIndex < currentPhotos.length - 1) {
-        currentPhotoIndex++;
-        updateLightbox();
-      }
-    }
-
-    function prevPhoto() {
-      if (currentPhotoIndex > 0) {
-        currentPhotoIndex--;
-        updateLightbox();
-      }
-    }
+    function closeLightbox() { document.getElementById('lightbox').style.display = 'none'; }
+    function nextPhoto() { if (currentPhotoIndex < currentPhotos.length-1) { currentPhotoIndex++; updateLightbox(); } }
+    function prevPhoto() { if (currentPhotoIndex > 0) { currentPhotoIndex--; updateLightbox(); } }
 
     window.onload = loadGallery;
   </script>
 </body>
 </html>
+
 
