@@ -21,14 +21,24 @@
       <a href="https://instagram.com/memelulu_eating" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a>
     </div>
   </div>
-  <div class="sidebar-toggle" onclick="toggleSidebar()"><i class="fa-solid fa-down-long"></i>Year</div>
-  <div class="sidebar" id="sidebar">
+
+
     <div class="tag" data-tag="2025">2025</div>
     <div class="tag" data-tag="2024">2024</div>
     <!--<div class="tag" data-tag="2023">2023</div>-->
     <!--<div class="tag" data-tag="2022">2022</div>-->
-  </div>
+
   <div class="right-panel" id="right-panel">
+    <!-- 新的下拉按钮替代sidebar -->
+    <div class="dropdown" id="tagDropdown">
+      <button class="dropbtn" onclick="toggleDropdown()">☰ Tags</button>
+      <div class="dropdown-content">
+        <div class="tag" data-tag="2025">2025</div>
+        <div class="tag" data-tag="2024">2024</div>
+        <!--<div class="tag" data-tag="2023">2023</div>-->
+        <!--<div class="tag" data-tag="2022">2022</div>-->
+      </div>
+    </div>
     <div class="gallery-grid" id="gallery"></div>
     <div class="loading" id="loading">加载中...</div>
     <button class="more-btn" id="moreButton" onclick="loadMoreAlbums()">Load More</button>
@@ -55,10 +65,15 @@
     let activeTag = null;
     let startX = 0;
 
-    function toggleSidebar() {
-      const sidebar = document.getElementById('sidebar');
-      sidebar.classList.toggle('active');
+    // tag button
+    function toggleDropdown() {
+      document.getElementById('tagDropdown').classList.toggle('show');
     }
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        document.getElementById('tagDropdown').classList.remove('show');
+      }
+    //
 
     function toggleLeftPanel() {
       document.getElementById('left-panel').classList.toggle('collapsed');
