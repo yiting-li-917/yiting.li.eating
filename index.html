@@ -22,8 +22,15 @@
   -->
   <!-- two buttons link to modeler and photographer-->
       <div class="buttons">
-        <a href="scientist.html">Weekday</a>
-        <a href="gallery.html">Weekend</a>
+        <!-- set a locker to each button, decide whether it can be entered in java below -->
+        <a href="scientist.html" class="main-button" id="scientistBtn">
+          <i class="fas fa-flask"></i> Weekday
+        </a>
+        
+        <a href="gallery.html" class="main-button" id="galleryBtn">
+          <i class="fas fa-flask"></i> Weekend
+        </a>
+        
       </div>
     </div>
 <!-- updates section -->
@@ -58,6 +65,34 @@
       .catch(error => {
         document.getElementById('update-container').innerHTML = '<p>Could not load updates.</p>';
         console.error('Error loading updates:', error);
+      });
+
+    //
+    // 设置上锁状态
+      function lockScientistButton() {
+          const btn = document.getElementById('scientistBtn');
+          btn.classList.add('locked');
+          btn.innerHTML = '<i class="fas fa-flask"></i> Scientist <i class="fas fa-lock"></i>';
+          btn.addEventListener('click', preventClick);
+      }
+      
+      // 移除上锁状态
+      function unlockScientistButton() {
+          const btn = document.getElementById('scientistBtn');
+          btn.classList.remove('locked');
+          btn.innerHTML = '<i class="fas fa-flask"></i> Scientist';
+          btn.removeEventListener('click', preventClick);
+      }
+      
+      // 阻止点击
+      function preventClick(event) {
+          event.preventDefault();
+          alert('This page is locked for now!');
+      }
+      
+      // 例如：页面加载时上锁
+      document.addEventListener('DOMContentLoaded', () => {
+          lockScientistButton();
       });
   </script>
 </body>
