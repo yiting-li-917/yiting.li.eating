@@ -12,47 +12,72 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>My Photo Gallery</header>
-  <div class="gallery-grid" id="gallery"></div>
-
-  <!-- Lightbox 弹出层 -->
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <a class="close-btn" onclick="closeLightbox()">&times;</a>
+  <div class="left-panel">
+    <h1>My Portfolio</h1>
+    <p>Welcome to my gallery website. Here is a brief introduction about my works and photography style.</p>
+    <div class="buttons">
+      <a href="mailto:summeryiting@gmail.com">Email</a>
+      <a href="https://instagram.com/memelulu_eating" target="_blank">Instagram</a>
+    </div>
+  </div>
+  <div class="right-panel">
+    <div class="gallery-grid" id="gallery"></div>
+    <div class="load-more"><button id="moreBtn">More</button></div>
+  </div>
+  <div class="sidebar" id="sidebar">
+    <div class="tag">人像</div>
+    <div class="tag">风景</div>
+    <div class="tag">快乐</div>
+    <div class="tag">悲伤</div>
+  </div>
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
     <img id="lightbox-img" src="" alt="Large View">
+    <div class="lightbox-controls">
+      <button onclick="prevPhoto()">&lt; Prev</button>
+      <button onclick="nextPhoto()">Next &gt;</button>
+    </div>
+    <div class="photo-desc" id="photo-desc"></div>
   </div>
 
   <script>
-    // 从 albums.json 动态加载相册
+    let allAlbums = [];
+    let currentIndex = 0;
+
     async function loadAlbums() {
       try {
         const response = await fetch('gallery.json');
-        const albums = await response.json();
-        const gallery = document.getElementById('gallery');
-        albums.forEach(album => {
-          const albumDiv = document.createElement('div');
-          albumDiv.className = 'album';
-
-          const img = document.createElement('img');
-          img.src = album.cover;
-          img.alt = album.title;
-          img.onclick = () => openLightbox(img);
-
-          const title = document.createElement('p');
-          title.textContent = album.title;
-
-          albumDiv.appendChild(img);
-          albumDiv.appendChild(title);
-          gallery.appendChild(albumDiv);
-        });
+        allAlbums = await response.json();
+        renderAlbums(0, 20); // 显示前20个
       } catch (error) {
-        console.error("Loading Error:", error);
+        console.error("加载相册失败:", error);
       }
     }
 
-    function openLightbox(img) {
+    function renderAlbums(start, count) {
+      const gallery = document.getElementById('gallery');
+      for (let i = start; i < Math.min(start + count, allAlbums.length); i++) {
+        const album = allAlbums[i];
+        const albumDiv = document.createElement('div');
+        albumDiv.className = 'album';
+        const img = document.createElement('img');
+        img.src = album.cover;
+        img.alt = album.title;
+        img.onclick = () => openLightbox(i);
+        albumDiv.appendChild(img);
+        gallery.appendChild(albumDiv);
+      }
+    }
+
+    function openLightbox(index) {
+      currentIndex = index;
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = document.getElementById('lightbox-img');
-      lightboxImg.src = img.src;
+      const descBox = document.getElementById('photo-desc');
+      lightboxImg.src = allAlbums[index].cover;
+      descBox.textContent = allAlbums[index].desc || '';
+      descBox.style.display = allAlbums[index].desc ? 'block' : 'none';
       lightbox.style.display = 'flex';
     }
 
@@ -60,8 +85,26 @@
       document.getElementById('lightbox').style.display = 'none';
     }
 
+    function nextPhoto() {
+      if (currentIndex < allAlbums.length - 1) {
+        openLightbox(currentIndex + 1);
+      }
+    }
+
+    function prevPhoto() {
+      if (currentIndex > 0) {
+        openLightbox(currentIndex - 1);
+      }
+    }
+
+    document.getElementById('moreBtn').addEventListener('click', function() {
+      const currentCount = document.querySelectorAll('#gallery .album').length;
+      renderAlbums(currentCount, 20);
+    });
+
     window.onload = loadAlbums;
   </script>
 </body>
 </html>
+
 
