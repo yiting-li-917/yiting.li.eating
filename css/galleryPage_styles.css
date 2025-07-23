@@ -331,13 +331,6 @@ html.vertical-layout, body.vertical-layout {
   margin: 0 auto; /* 居中 */
 }
 
-/* 针对手机设备，改为1列 */
-@media (max-width: 768px) {
-  .vertical-layout .gallery-grid {
-    grid-template-columns: 1fr; /* 手机保持1列 */
-  }
-}
-
 /* TAG 居中 */
 .vertical-layout .tag-bar {
   position: static;
@@ -383,4 +376,29 @@ html.vertical-layout, body.vertical-layout {
 #scrollTopBtn:hover {
   color: var(--light-green);
   background-color: var(--light-mint);
+}
+
+/* specific for phone */
+@media (max-width: 768px) {
+  .vertical-layout .gallery-grid {
+    grid-template-columns: 1fr; /* 手机保持1列 */
+  }
+  .vertical-layout .left-panel .portfolio {
+  align-items: center;   /* 水平居中 */
+  text-align: center;
+  margin-top: 20%;       /* 向下偏移让布局更协调 */
+}
+
+.vertical-layout .left-panel .portfolio h1 {
+  font-size: 2rem;       /* 手机端字体更小 */
+}
+
+.vertical-layout .left-panel .portfolio p {
+  font-size: 1rem;       /* 手机端字体更小 */
+}
+
+.vertical-layout .left-panel {
+  padding: 1rem;         /* 减少边距 */
+  align-items: center;   /* 居中内容 */
+}
 }
