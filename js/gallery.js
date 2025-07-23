@@ -120,42 +120,5 @@ function scrollToTop() {
 }
 // load more
 window.onload = loadGallery;
-// ================== Contact Form ==================
-// 实现 Contact Me 弹窗
-function openContactModal() {
-  document.getElementById('contactModal').style.display = 'flex';
-}
-function closeContactModal() {
-  document.getElementById('contactModal').style.display = 'none';
-}
-// Cloudflare Email Forwarding Integration (Example)
-async function submitContactForm() {
-  const name = document.getElementById('contactName').value.trim();
-  const email = document.getElementById('contactEmail').value.trim();
-  const message = document.getElementById('contactMessage').value.trim();
 
-  if (!name || !email || !message) {
-    alert('Please fill out all fields.');
-    return;
-  }
-
-  try {
-    const response = await fetch('https://contact-form-worker.summeryiting.workers.dev', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, message })
-    });
-
-    const result = await response.json();
-    if (result.success) {
-      alert('Message sent successfully!');
-      closeContactModal();
-    } else {
-      alert('Failed to send message.');
-    }
-  } catch (err) {
-    console.error(err);
-    alert('An error occurred.');
-  }
-}
 
