@@ -17,7 +17,7 @@ function handleScroll() {
   const container = document.body.classList.contains('vertical-layout') ? window : rightPanel;
   const scrollTop = container === window ? window.scrollY : rightPanel.scrollTop;
   scrollBtn.style.display = scrollTop > 150 ? 'block' : 'none';
-  console.log("ScrollTop:", scrollTop, "Button Display:", scrollBtn.style.display);
+  //console.log("ScrollTop:", scrollTop, "Button Display:", scrollBtn.style.display);
 }
 
 function bindScrollListener() {
@@ -25,7 +25,7 @@ function bindScrollListener() {
   rightPanel.removeEventListener('scroll', handleScroll);
   const container = document.body.classList.contains('vertical-layout') ? window : rightPanel;
   container.addEventListener('scroll', handleScroll);
-  console.log("Scroll listener bound to:", container === window ? "window" : "#right-panel");
+  //console.log("Scroll listener bound to:", container === window ? "window" : "#right-panel");
 }
 
 function scrollToTop() {
