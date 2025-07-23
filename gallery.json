@@ -25,7 +25,7 @@
     ]
   }
   {
-    "title": "Twin Peak @ SF",
+    "title": "Old Day @ Twin Peak SF",
     "cover": "https://gallery.yitingli.xyz/2017-oldday-1.jpg",
     "desc": "Nightview from Twin Peak always my favorite. Even though so many years fly away, always there.",
     "camera": "Sony A7",
@@ -33,6 +33,19 @@
     "photos": [
       "https://gallery.yitingli.xyz/2017-oldday-1.jpg",
       "https://gallery.yitingli.xyz/2017-oldday-2.jpg",
+    ]
+  }
+  {
+    "title": "Still @ Twin Peak SF",
+    "cover": "https://gallery.yitingli.xyz/2024-twinpeak-1.jpg",
+    "desc": "Nightview from Twin Peak always my favorite. Even though so many years fly away, always there.",
+    "camera": "Olympus EP-7",
+    "tags": ["2024"],
+    "photos": [
+      "https://gallery.yitingli.xyz/2024-twinpeak-1.jpg",
+      "https://gallery.yitingli.xyz/2024-twinpeak-3.jpg",
+      "https://gallery.yitingli.xyz/2024-twinpeak-2.jpg",
+      "https://gallery.yitingli.xyz/2024-twinpeak-4.jpg"
     ]
   }
 ]
