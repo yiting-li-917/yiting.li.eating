@@ -54,7 +54,7 @@ html, body {
   bottom: 5%;
   left: 5%;
   display: flex;
-  gap: 15px;
+  gap: 10px;
 }
 .left-panel .buttons a {
   display: inline-block;
