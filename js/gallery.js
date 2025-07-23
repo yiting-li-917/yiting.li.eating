@@ -121,3 +121,18 @@ function scrollToTop() {
 
 window.onload = loadGallery;
 
+// 实现 Contact Me 弹窗
+function openContactModal() {
+  document.getElementById('contactModal').style.display = 'flex';
+}
+function closeContactModal() {
+  document.getElementById('contactModal').style.display = 'none';
+}
+function submitContactForm() {
+  const name = document.getElementById('contactName').value;
+  const email = document.getElementById('contactEmail').value;
+  const message = document.getElementById('contactMessage').value;
+  console.log('Contact Me:', { name, email, message });
+  alert('Message sent! (This can be integrated with Cloudflare email forwarding)');
+  closeContactModal();
+}
