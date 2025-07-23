@@ -190,9 +190,9 @@ html, body {
   background-color: var(--light-green);
   color: var(--light-mint);
   border: none;
-  border-radius: 10px;
+  border-radius: 25px;
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 14px;
   cursor: pointer;
   z-index: 500;
   transition: transform 0.2s, background 0.3s;
@@ -361,12 +361,7 @@ html.vertical-layout, body.vertical-layout {
   color: var(--gray-black);
   transform: none; /* 禁用缩放 */
 }
-/* back button stick on the screen bottom */
-@media (orientation: portrait) {
-  #backHomeBtn {
-    bottom: 10px; 
-    top: auto; 
-  }
+
 }
 /* Scroll to top button */
 #scrollTopBtn {
