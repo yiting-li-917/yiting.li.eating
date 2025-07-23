@@ -364,8 +364,8 @@ html.vertical-layout, body.vertical-layout {
 /* back button stick on the screen bottom */
 @media (orientation: portrait) {
   #backHomeBtn {
-    top: 10px;          /* 顶端距离 10px */
-    bottom: auto;       /* 禁用底部位置 */
+    bottom: 10px; 
+    top: auto; 
   }
 }
 /* Scroll to top button */
