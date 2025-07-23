@@ -119,7 +119,7 @@ html, body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
-  margin-top: 45px;
+  margin-top: 40px;
 }
 .album-wrapper {
   display: flex;
@@ -143,7 +143,7 @@ html, body {
   object-fit: cover;
   border-radius: 15px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 /* --------- adjust to container hover later!!!! ----------- */
 /*.album-image-container img:hover {
@@ -151,17 +151,17 @@ html, body {
 }*/
 .album-image-container:hover {
   transform: scale(1.05);
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 /* ----------------------*/
 .album-title {
   font-family: 'Montserrat', sans-serif; /* change to handwriting later */
   margin-top: 10px;
   margin-left: 10px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   text-align: left;
   color: var(--gray-black);
-  font-weight: 600;
+  font-weight: 400;
   width: 90%;
 }
 .more-btn {
