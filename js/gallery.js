@@ -127,18 +127,29 @@ function prevPhoto() {
   }
 }
 // ================== Scroll to Top ==================
-const scrollTopBtn = document.getElementById('scrollTopBtn');
-const rightPanel = document.getElementById('right-panel');
-rightPanel.addEventListener('scroll', () => {
-  if (rightPanel.scrollTop > 100) {
-    scrollTopBtn.style.display = 'block';
-  } else {
-    scrollTopBtn.style.display = 'none';
-  }
-});
-function scrollToTop() {
-  rightPanel.scrollTo({ top: 0, behavior: 'smooth' });
+const scrollBtn = document.getElementById('scrollTopBtn');
+// CHECK which panel is scroll down, so the scroll up button can display
+function bindScrollListener() {
+  const container = document.body.classList.contains('vertical-layout') ? window : document.getElementById('right-panel');
+  container.addEventListener('scroll', () => {
+    const scrollTop = container === window ? window.scrollY : container.scrollTop;
+    scrollBtn.style.display = scrollTop > 300 ? 'block' : 'none';
+  });
 }
+
+// 初始化时绑定
+bindScrollListener();
+
+function scrollToTop() {
+  const container = document.body.classList.contains('vertical-layout') ? window : document.getElementById('right-panel');
+  if (container === window) {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    container.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+
 // load more
 window.onload = loadGallery;
 
