@@ -203,6 +203,7 @@ html, body {
   border-radius: 5px;
 }
 .lightbox-controls {
+  background-color: transparent;
   margin-top: 30px;
   display: flex;
   gap: 30px;
