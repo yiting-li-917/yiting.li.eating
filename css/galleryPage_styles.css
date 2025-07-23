@@ -249,5 +249,5 @@ html, body {
 }
 #scrollTopBtn:hover {
   color: var(--light-green);
-  background-color: var(--light-mint);
+  background-color: var(--gray-black);
 }
