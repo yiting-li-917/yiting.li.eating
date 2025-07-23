@@ -182,27 +182,30 @@ html, body {
   transform: translateY(-2px);
 }
 /* Back button */
-.back-container {
-    width: 100%;
-    text-align: center;
-    margin: 20px 0 40px 0;
-}
-.back-button {
-    display: inline-block;
-    padding: 10px 15px;
-    border-radius: 22px;
-    text-decoration: none;
-    background-color: var(--light-green);
-    color:var(--light-mint);
-    font-weight: 550;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s, transform 0.3s;
+#backHomeBtn {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--light-green);
+  color: var(--light-mint);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 500;
+  transition: transform 0.2s, background 0.3s;
 }
 
-.back-button:hover {
-    background-color: var(--light-mint);
-    color: var(--gray-black);
-    transform: scale(1.05);
+#backHomeBtn:hover {
+  background-color: var(--gray-black);
+  color: var(--light-mint);
+  transform: translateX(-50%) scale(1.05);
+}
+
+#backHomeBtn:active {
+  transform: translateX(-50%) scale(0.95);
 }
 
 #lightbox {
