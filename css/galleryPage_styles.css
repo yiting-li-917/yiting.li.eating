@@ -37,12 +37,12 @@ html, body {
   display: flex;
   gap: 15px;
 }
-.portfolio h1 {
-  font-size: 80;
+.left-panel .portfolio h1 {
+  font-size: 72;
   text-align: left;
   margin-bottom: 10px;
 }
-.portfolio p {
+.left-panel .portfolio p {
   font-size: 28;
   text-align: left;
   margin-top: 10px;
