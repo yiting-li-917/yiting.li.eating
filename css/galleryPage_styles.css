@@ -90,7 +90,7 @@ html, body {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin: 10px auto;    
+  margin: 10px auto 2px auto;    
 
 }
 .tag-bar .tag {
