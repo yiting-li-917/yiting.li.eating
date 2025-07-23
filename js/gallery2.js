@@ -8,26 +8,17 @@ let currentPhotoIndex = 0;
 let currentDesc = '';
 let currentCamera = '';
 let activeTag = null;
-const backHomeBtn = document.getElementById('backHomeBtn'); // COMMENT: Added reference to back to home button
+const backHomeBtn = document.getElementById('backHomeBtn'); // COMMENT: Back to Home button reference
+const scrollBtn = document.getElementById('scrollTopBtn'); // COMMENT: Scroll up button reference
+const rightPanel = document.getElementById('right-panel'); // COMMENT: Right panel reference
 
-// COMMENT: Check vertical/horizontal layout
-function checkVerticalLayout() {
-  const isVertical = window.innerWidth < 900 || window.innerHeight > window.innerWidth;
-  if (isVertical) {
-    document.documentElement.classList.add("vertical-layout");
-    document.body.classList.add("vertical-layout");
-  } else {
-    document.documentElement.classList.remove("vertical-layout");
-    document.body.classList.remove("vertical-layout");
-  }
-  bindScrollListener(); // COMMENT: Re-bind scroll listener when layout changes
+// ========== Scroll Handler =============
+function handleScroll() {
+  const container = document.body.classList.contains('vertical-layout') ? window : rightPanel;
+  const scrollTop = container === window ? window.scrollY : rightPanel.scrollTop;
+  scrollBtn.style.display = scrollTop > 150 ? 'block' : 'none';
+  console.log("ScrollTop:", scrollTop, "Button Display:", scrollBtn.style.display);
 }
-
-window.addEventListener('resize', checkVerticalLayout);
-
-// ========== Scroll to Top =============
-const scrollBtn = document.getElementById('scrollTopBtn');
-const rightPanel = document.getElementById('right-panel');
 
 function bindScrollListener() {
   window.removeEventListener('scroll', handleScroll);
@@ -35,13 +26,6 @@ function bindScrollListener() {
   const container = document.body.classList.contains('vertical-layout') ? window : rightPanel;
   container.addEventListener('scroll', handleScroll);
   console.log("Scroll listener bound to:", container === window ? "window" : "#right-panel");
-}
-
-function handleScroll() {
-  const container = document.body.classList.contains('vertical-layout') ? window : rightPanel;
-  const scrollTop = container === window ? window.scrollY : rightPanel.scrollTop;
-  scrollBtn.style.display = scrollTop > 300 ? 'block' : 'none';
-  console.log("ScrollTop:", scrollTop, "Button Display:", scrollBtn.style.display);
 }
 
 function scrollToTop() {
@@ -52,6 +36,20 @@ function scrollToTop() {
     rightPanel.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
+
+// ========== Layout Detection =============
+function checkVerticalLayout() {
+  const isVertical = window.innerWidth < 900 || window.innerHeight > window.innerWidth;
+  if (isVertical) {
+    document.documentElement.classList.add("vertical-layout");
+    document.body.classList.add("vertical-layout");
+  } else {
+    document.documentElement.classList.remove("vertical-layout");
+    document.body.classList.remove("vertical-layout");
+  }
+  bindScrollListener(); // COMMENT: Always rebind after layout change
+}
+window.addEventListener('resize', checkVerticalLayout);
 
 // ========== Gallery Loading =============
 async function loadGallery() {
@@ -125,7 +123,7 @@ function openLightbox(photos, startIndex, desc, camera) {
   currentCamera = camera || 'Unknown Camera';
   updateLightbox();
   document.getElementById('lightbox').classList.add('show');
-  if (backHomeBtn) backHomeBtn.style.display = 'none'; // COMMENT: Hide Back to Home button when lightbox is open
+  if (backHomeBtn) backHomeBtn.style.display = 'none'; // COMMENT: Hide Back to Home when lightbox is open
 }
 
 function updateLightbox() {
@@ -138,7 +136,7 @@ function updateLightbox() {
 
 function closeLightbox() {
   document.getElementById('lightbox').classList.remove('show');
-  if (backHomeBtn) backHomeBtn.style.display = 'inline-block'; // COMMENT: Show Back to Home button when lightbox is closed
+  if (backHomeBtn) backHomeBtn.style.display = 'inline-block'; // COMMENT: Show Back to Home when lightbox is closed
 }
 
 function nextPhoto() {
@@ -160,6 +158,7 @@ window.onload = function() {
   loadGallery();
   checkVerticalLayout();
   bindScrollListener();
+  handleScroll(); // COMMENT: Trigger initial scroll check
 };
 
 function goHome() {
