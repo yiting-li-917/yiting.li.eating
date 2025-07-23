@@ -135,38 +135,25 @@ function prevPhoto() {
   }
 }
 // ================== Scroll to Top ==================
-const scrollBtn = document.getElementById('scrollTopBtn');
-
 function bindScrollListener() {
-  const container = document.body.classList.contains('vertical-layout') ? window : document.getElementById('right-panel');
+  // COMMENT: Remove old scroll event listeners to avoid duplicates
+  window.removeEventListener('scroll', handleScroll);
+  rightPanel.removeEventListener('scroll', handleScroll);
 
-  // 【UPDATED】先移除旧的监听器，防止重复绑定
-  if (bindScrollListener._lastContainer) {
-    bindScrollListener._lastContainer.removeEventListener('scroll', bindScrollListener._handler);
-  }
-
-  // 【UPDATED】定义新的滚动处理函数
-  bindScrollListener._handler = () => {
-    const scrollTop = container === window ? window.scrollY : container.scrollTop;
-    scrollBtn.style.display = scrollTop > 300 ? 'block' : 'none';
-  };
-
-  // 【UPDATED】绑定新的监听器
-  container.addEventListener('scroll', bindScrollListener._handler);
-  bindScrollListener._lastContainer = container;
+  const container = document.body.classList.contains('vertical-layout') ? window : rightPanel;
+  container.addEventListener('scroll', handleScroll);
+  console.log("Scroll listener bound to:", container === window ? "window" : "#right-panel");
 }
 
-// 【UPDATED】当布局切换时重新绑定滚动监听
-window.addEventListener('resize', () => {
-  checkVerticalLayout(); // 保持原有布局检查
-  bindScrollListener();  // 【新增】重新绑定监听
-});
-
-// 初始化时绑定
-bindScrollListener();
+function handleScroll() {
+  const container = document.body.classList.contains('vertical-layout') ? window : rightPanel;
+  const scrollTop = container === window ? window.scrollY : container.scrollTop;
+  scrollBtn.style.display = scrollTop > 300 ? 'block' : 'none';
+  console.log("ScrollTop:", scrollTop, "Button Display:", scrollBtn.style.display);
+}
 
 function scrollToTop() {
-  const container = document.body.classList.contains('vertical-layout') ? window : document.getElementById('right-panel');
+  const container = document.body.classList.contains('vertical-layout') ? window : rightPanel;
   if (container === window) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   } else {
