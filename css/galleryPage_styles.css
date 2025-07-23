@@ -370,7 +370,6 @@ html.vertical-layout, body.vertical-layout {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 300;
   background-color: var(--light-green);
   color: var(--light-mint);
   border: none;
