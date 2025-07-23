@@ -1,4 +1,6 @@
 :root {
+  --main-warm1: #DCC9A9; /*more colorful: choose*/
+  --main-cold1: #4E6851; /*more colorful: choose*/
   --gray-black: #4e4e4e;
   --light-green: #8e8f6d;
   --light-mint: #e8e5da;
@@ -187,12 +189,13 @@ html, body {
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--light-green);
-  color: var(--light-mint);
+  background-color: var(--main-cold1);
+  color: var(--main-warm1);
   border: none;
   border-radius: 25px;
-  padding: 10px 20px;
+  padding: 5px 8px;
   font-size: 14px;
+  font-weight: 400;
   cursor: pointer;
   z-index: 500;
   transition: transform 0.2s, background 0.3s;
