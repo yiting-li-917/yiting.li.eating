@@ -10,9 +10,10 @@ let currentCamera = '';
 let activeTag = null;
 
 // decide whether resize the layout
-function applyLayoutMode() {
-  const isVerticalScreen = window.innerHeight > window.innerWidth;
-  if (window.innerWidth <= 1200 || isVerticalScreen) {
+function checkVerticalLayout() {
+  const isVertical = window.innerWidth < 900 || window.innerHeight > window.innerWidth; 
+
+  if (isVertical) {
     document.documentElement.classList.add("vertical-layout");
     document.body.classList.add("vertical-layout");
   } else {
@@ -21,8 +22,11 @@ function applyLayoutMode() {
   }
 }
 
-window.addEventListener('load', applyLayoutMode);
-window.addEventListener('resize', applyLayoutMode);
+// initial check
+checkVerticalLayout();
+
+// when window change, check again
+window.addEventListener('resize', checkVerticalLayout);
 // resize end here
 
 // load gallery
