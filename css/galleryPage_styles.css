@@ -248,6 +248,6 @@ html, body {
   cursor: pointer;
 }
 #scrollTopBtn:hover {
-  color: var(--light-green);
+  color: var(--light-mint);
   background-color: var(--gray-black);
 }
