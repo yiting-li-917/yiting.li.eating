@@ -254,30 +254,34 @@ html, body {
 
 /* ---------------- vertical screen change layout ---------------- */
 html.vertical-layout, body.vertical-layout {
-  flex-direction: column; /* UPDATED: change to column */
+  flex-direction: column; /* UPDATED: 改为上下布局 */
   overflow-y: auto;
 }
 
+/* Left & Right Panel 调整 */
 .vertical-layout .left-panel,
 .vertical-layout .right-panel {
   width: 100%;
   flex: none;
 }
 
+/* 保证 Left Panel 内容正常显示 */
 .vertical-layout .left-panel {
   padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; /* 保证 portfolio 和 buttons 可见 */
+  position: relative; /* 修复内容被其他元素覆盖 */
+  z-index: 10; /* 确保在前面 */
 }
 
-vertical-layout .left-panel .portfolio h1 {
-  font-size: 2rem; /* UPDATED: fontsize */
+.vertical-layout .left-panel .portfolio h1 {
+  font-size: 2rem; /* UPDATED: 字体大小 */
 }
 
-vertical-layout .left-panel .portfolio p {
-  font-size: 1rem; /* UPDATED: fontsize shrink */
+.vertical-layout .left-panel .portfolio p {
+  font-size: 1rem; /* UPDATED: 字体大小 */
 }
 
 .vertical-layout .left-panel .buttons {
@@ -286,37 +290,37 @@ vertical-layout .left-panel .portfolio p {
   justify-content: center;
 }
 
-vertical-layout .gallery-grid {
-  grid-template-columns: 1fr; /* UPDATED: 1 col */
+/* Gallery Grid：电脑竖屏 2列，手机 1列 */
+.vertical-layout .gallery-grid {
+  grid-template-columns: 1fr 1fr; /* 默认2列 */
   gap: 20px;
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto; /* 居中 */
 }
 
-vertical-layout .tag-bar {
-  position: static; /* UPDATED: tag stick to the top */
-  margin-bottom: 20px;
-  justify-content: center;
+/* 针对手机设备，改为1列 */
+@media (max-width: 768px) {
+  .vertical-layout .gallery-grid {
+    grid-template-columns: 1fr; /* 手机保持1列 */
+  }
 }
 
 /* TAG 居中 */
-.tag-bar {
+.vertical-layout .tag-bar {
+  position: static;
+  margin-bottom: 20px;
   display: flex;
-  justify-content: center; /* 水平居中 */
-  align-items: center;
+  justify-content: center;
   gap: 10px;
-  margin-bottom: 15px; /* 和 gallery 之间的间距 */
-  position: relative; /* 移除 absolute */
-  transform: none;
-  top: 0;
-  left: 0;
 }
 
-/* Album 居中 */
-.gallery-grid {
-  width: 80%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  margin: 40px auto 0 auto; /* 居中 */
+/* Right Panel 背景始终填充 */
+.vertical-layout .right-panel {
+  background-color: var(--light-mint);
+  min-height: 100vh; /* 始终填满屏幕高度 */
+  box-sizing: border-box;
+  padding-bottom: 40px;
 }
 
 /* TAG 状态修复 */
