@@ -16,11 +16,9 @@ function checkVerticalLayout() {
   if (isVertical) {
     document.documentElement.classList.add("vertical-layout");
     document.body.classList.add("vertical-layout");
-    console.log("Layout: Vertical"); // DEBUG: 检查当前是竖屏
   } else {
     document.documentElement.classList.remove("vertical-layout");
     document.body.classList.remove("vertical-layout");
-    console.log("Layout: Horizontal"); // DEBUG: 检查当前是横屏
   }
 }
 
@@ -137,6 +135,9 @@ function prevPhoto() {
   }
 }
 // ================== Scroll to Top ==================
+const scrollBtn = document.getElementById('scrollTopBtn');
+const rightPanel = document.getElementById('right-panel');
+// COMMENT: This function decides which container to monitor (window for vertical, rightPanel for horizontal)
 function bindScrollListener() {
   // COMMENT: Remove old scroll event listeners to avoid duplicates
   window.removeEventListener('scroll', handleScroll);
@@ -162,6 +163,9 @@ function scrollToTop() {
     container.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
+
+// COMMENT: Initialize scroll listener
+bindScrollListener();
 
 // load more
 window.onload = loadGallery;
