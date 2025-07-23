@@ -8,6 +8,7 @@ let currentPhotoIndex = 0;
 let currentDesc = '';
 let currentCamera = '';
 let activeTag = null;
+const backHomeBtn = document.getElementById('backHomeBtn'); // COMMENT: Added reference to back to home button
 
 // COMMENT: Check vertical/horizontal layout
 function checkVerticalLayout() {
@@ -124,6 +125,7 @@ function openLightbox(photos, startIndex, desc, camera) {
   currentCamera = camera || 'Unknown Camera';
   updateLightbox();
   document.getElementById('lightbox').classList.add('show');
+  if (backHomeBtn) backHomeBtn.style.display = 'none'; // COMMENT: Hide Back to Home button when lightbox is open
 }
 
 function updateLightbox() {
@@ -136,6 +138,7 @@ function updateLightbox() {
 
 function closeLightbox() {
   document.getElementById('lightbox').classList.remove('show');
+  if (backHomeBtn) backHomeBtn.style.display = 'inline-block'; // COMMENT: Show Back to Home button when lightbox is closed
 }
 
 function nextPhoto() {
