@@ -20,15 +20,15 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;   /* 从上方开始布局 */
-  align-items: flex-start;       /* 左对齐 */
-  padding: 2rem 0 2rem 10%;      /* 左边距 20% */
+  align-items: flex-start; 
+  padding: 20px 0 20px 5%;      /* left 20% */
   box-sizing: border-box;
   position: relative;
 }
 
 .left-panel .portfolio {
   color: var(--gray-black);
-  margin-top: 15%;               /* 模拟 top:30% */
+  margin-top: 10%;           
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -41,9 +41,9 @@ html, body {
 }
 
 .left-panel .portfolio p {
-  font-size: 48px;
+  font-size: 28px;
   text-align: left;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 .left-panel .buttons {
   position: absolute;
