@@ -19,7 +19,7 @@
       <p>Capture Life through the Lens.</p>
     </div>
     <div class="buttons">
-      <a href="mailto:summeryiting@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      <button onclick="openContactModal()"><i class="fa-solid fa-envelope"></i></button>
       <a href="https://instagram.com/memelulu_eating" target="_blank"><i class="fa-brands fa-instagram"></i></a>
       <!--
       <a href="https://www.xiaohongshu.com/user/yourprofile" target="_blank"><i class="fa-solid fa-book"></i></a>
@@ -44,6 +44,17 @@
       <button onclick="nextPhoto()"><i class="fa-solid fa-forward"></i></button>
     </div>
     <div class="photo-desc" id="photo-desc"></div>
+  </div>
+  <!-- Contact Modal -->
+  <div class="contact-modal" id="contactModal">
+    <div class="contact-content">
+      <span class="close-modal" onclick="closeContactModal()">&times;</span>
+      <h2>Contact Me</h2>
+      <input type="text" id="contactName" placeholder="Your Name">
+      <input type="email" id="contactEmail" placeholder="Your Email">
+      <textarea id="contactMessage" placeholder="Message"></textarea>
+      <button onclick="submitContactForm()">Send</button>
+    </div>
   </div>
   <script src="js/gallery.js"></script> <!-- 分离的JS文件: Java functions-->
 </body>
