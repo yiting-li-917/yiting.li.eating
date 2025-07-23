@@ -128,11 +128,26 @@ function openContactModal() {
 function closeContactModal() {
   document.getElementById('contactModal').style.display = 'none';
 }
-function submitContactForm() {
-  const name = document.getElementById('contactName').value;
-  const email = document.getElementById('contactEmail').value;
-  const message = document.getElementById('contactMessage').value;
-  console.log('Contact Me:', { name, email, message });
-  alert('Message sent! (This can be integrated with Cloudflare email forwarding)');
-  closeContactModal();
+// Cloudflare Email Forwarding Integration (Example)
+async function submitContactForm() {
+  const name = document.getElementById('contactName').value.trim();
+  const email = document.getElementById('contactEmail').value.trim();
+  const message = document.getElementById('contactMessage').value.trim();
+  if (!name || !email || !message) {
+    alert('Please fill out all fields.');
+    return;
+  }
+  try {
+    // 将信息发送到 Cloudflare Worker 或 API 端点
+    await fetch('https://your-worker.example.workers.dev/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, message })
+    });
+    alert('Message sent successfully!');
+    closeContactModal();
+  } catch (error) {
+    alert('Failed to send message.');
+    console.error(error);
+  }
 }
