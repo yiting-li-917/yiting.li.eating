@@ -84,12 +84,15 @@ html, body {
   position: relative;
 }
 .tag-bar {
-  position: absolute;
-  top: 25px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;    /* 替换掉 absolute */
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
+  margin: 20px auto;     /* 让其水平居中 */
+  top: 0;
+  left: 0;
+  transform: none;       /* 移除 translateX */
 }
 .tag-bar .tag {
   background-color: var(--gray-black);
