@@ -186,7 +186,7 @@ html, body {
 /* Back button */
 #backHomeBtn {
   display: inline-block;             
-  padding: 20px 20px;                
+  padding: 10px 15px;                
   border-radius: 22px;              
   text-decoration: none;             
   background-color: var(--main-cold1); 
@@ -198,7 +198,7 @@ html, body {
   transition: background 0.3s, transform 0.3s; 
 
   position: fixed;                   
-  bottom: 10px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 500;
