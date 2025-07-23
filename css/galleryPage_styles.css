@@ -185,31 +185,34 @@ html, body {
 }
 /* Back button */
 #backHomeBtn {
-  position: fixed;
+  display: inline-block;             
+  padding: 10px 15px;                
+  border-radius: 22px;              
+  text-decoration: none;             
+  background-color: var(--main-cold1); 
+  color: var(--main-warm1);          
+  font-weight: 550;                 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: background 0.3s, transform 0.3s; 
+
+  position: fixed;                   
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--main-cold1);
-  color: var(--main-warm1);
-  border: none;
-  border-radius: 25px;
-  padding: 5px 8px;
-  font-size: 14px;
-  font-weight: 400;
-  cursor: pointer;
   z-index: 500;
-  transition: transform 0.2s, background 0.3s;
+  cursor: pointer;
 }
 
 #backHomeBtn:hover {
-  background-color: var(--gray-black);
-  color: var(--light-mint);
-  transform: translateX(-50%) scale(1.05);
+  background-color: var(--main-warm1); /* UPDATED */
+  color: var(--main-cold1);            /* UPDATED */
+  transform: translateX(-50%) scale(1.05); /* UPDATED */
 }
 
 #backHomeBtn:active {
   transform: translateX(-50%) scale(0.95);
 }
+
 
 #lightbox {
   display: none;
