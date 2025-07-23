@@ -8,7 +8,7 @@ let currentPhotoIndex = 0;
 let currentDesc = '';
 let currentCamera = '';
 let activeTag = null;
-
+// load gallery
 async function loadGallery() {
   try {
     const response = await fetch('https://www.yitingli.xyz/gallery.json');
@@ -21,7 +21,7 @@ async function loadGallery() {
     console.error('Loading album error:', e);
   }
 }
-
+//渲染相册
 function renderAlbums(reset = false) {
   const gallery = document.getElementById('gallery');
   const moreBtn = document.getElementById('moreButton');
@@ -49,9 +49,9 @@ function renderAlbums(reset = false) {
   displayedCount = end;
   moreBtn.style.display = (displayedCount < filteredAlbums.length) ? 'block' : 'none';
 }
-
+// load more 
 function loadMoreAlbums() { renderAlbums(); }
-
+//绑定tag event
 function bindTagEvents() {
   document.querySelectorAll('#tagBar .tag').forEach(tag => {
     tag.addEventListener('click', () => {
@@ -70,7 +70,7 @@ function bindTagEvents() {
     });
   });
 }
-
+// ======== light box ===========
 function openLightbox(photos, startIndex, desc, camera) {
   currentPhotos = photos;
   currentPhotoIndex = startIndex;
@@ -105,7 +105,7 @@ function prevPhoto() {
     updateLightbox();
   }
 }
-
+// ================== Scroll to Top ==================
 const scrollTopBtn = document.getElementById('scrollTopBtn');
 const rightPanel = document.getElementById('right-panel');
 rightPanel.addEventListener('scroll', () => {
@@ -118,9 +118,9 @@ rightPanel.addEventListener('scroll', () => {
 function scrollToTop() {
   rightPanel.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
+// load more
 window.onload = loadGallery;
-
+// ================== Contact Form ==================
 // 实现 Contact Me 弹窗
 function openContactModal() {
   document.getElementById('contactModal').style.display = 'flex';
@@ -133,21 +133,29 @@ async function submitContactForm() {
   const name = document.getElementById('contactName').value.trim();
   const email = document.getElementById('contactEmail').value.trim();
   const message = document.getElementById('contactMessage').value.trim();
+
   if (!name || !email || !message) {
     alert('Please fill out all fields.');
     return;
   }
+
   try {
-    // 将信息发送到 Cloudflare Worker 或 API 端点
-    await fetch('https://your-worker.example.workers.dev/contact', {
+    const response = await fetch('https://contact-form-worker.summeryiting.workers.dev', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, message })
     });
-    alert('Message sent successfully!');
-    closeContactModal();
-  } catch (error) {
-    alert('Failed to send message.');
-    console.error(error);
+
+    const result = await response.json();
+    if (result.success) {
+      alert('Message sent successfully!');
+      closeContactModal();
+    } else {
+      alert('Failed to send message.');
+    }
+  } catch (err) {
+    console.error(err);
+    alert('An error occurred.');
   }
 }
+
