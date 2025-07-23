@@ -1,25 +1,27 @@
 [
   {
-    "title": "test 1",
-    "cover": "https://gallery.yitingli.xyz/DSC_6245.jpg",
-    "desc": "A warm and expressive portrait series.",
-    "camera": "Nikon ZF",
+    "title": "A Girl with Red Ballon. 偶遇",
+    "cover": "https://gallery.yitingli.xyz/202502-redballon-5.jpg",
+    "desc": "We were photo shooting birds on that day, and suddenly we saw this girl with her photographer",
+    "camera": "Nikon ZF Nikkor 24-120mmF4",
     "tags": ["2025"],
     "photos": [
-      "https://gallery.yitingli.xyz/DSC_6245.jpg",
-      "https://gallery.yitingli.xyz/DSC_2608.jpg",
-      "https://gallery.yitingli.xyz/DSC_5458.jpg"
+      "https://gallery.yitingli.xyz/202502-redballon-1.jpg",
+      "https://gallery.yitingli.xyz/202502-redballon-2.jpg",
+      "https://gallery.yitingli.xyz/202502-redballon-3.jpg",
+      "https://gallery.yitingli.xyz/202502-redballon-4.jpg",
+      "https://gallery.yitingli.xyz/202502-redballon-5.jpg"
     ]
   },
   {
-    "title": "test 2",
-    "cover": "https://gallery.yitingli.xyz/DSC_6907-1.jpg",
-    "desc": "A stunning view of the mountain range during sunset.",
-    "camera": "Olympus EP7",
+    "title": "Comet C/2023 A3 (Tsuchinshan-ATLAS)",
+    "cover": "https://gallery.yitingli.xyz/202410-comet-1.jpg",
+    "desc": "八万年一遇的大彗星",
+    "camera": "Nikon ZF Voigtlander 40mmF1.2",
     "tags": ["2024"],
     "photos": [
-      "https://gallery.yitingli.xyz/DSC_6907-1.jpg",
-      "https://gallery.yitingli.xyz/DSC_7633.jpg"
+      "https://gallery.yitingli.xyz/202410-comet-1.jpg",
+      "https://gallery.yitingli.xyz/202410-comet-2.jpg",
     ]
   }
 ]
