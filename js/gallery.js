@@ -128,14 +128,31 @@ function prevPhoto() {
 }
 // ================== Scroll to Top ==================
 const scrollBtn = document.getElementById('scrollTopBtn');
-// CHECK which panel is scroll down, so the scroll up button can display
+
 function bindScrollListener() {
   const container = document.body.classList.contains('vertical-layout') ? window : document.getElementById('right-panel');
-  container.addEventListener('scroll', () => {
+
+  // 【UPDATED】先移除旧的监听器，防止重复绑定
+  if (bindScrollListener._lastContainer) {
+    bindScrollListener._lastContainer.removeEventListener('scroll', bindScrollListener._handler);
+  }
+
+  // 【UPDATED】定义新的滚动处理函数
+  bindScrollListener._handler = () => {
     const scrollTop = container === window ? window.scrollY : container.scrollTop;
     scrollBtn.style.display = scrollTop > 300 ? 'block' : 'none';
-  });
+  };
+
+  // 【UPDATED】绑定新的监听器
+  container.addEventListener('scroll', bindScrollListener._handler);
+  bindScrollListener._lastContainer = container;
 }
+
+// 【UPDATED】当布局切换时重新绑定滚动监听
+window.addEventListener('resize', () => {
+  checkVerticalLayout(); // 保持原有布局检查
+  bindScrollListener();  // 【新增】重新绑定监听
+});
 
 // 初始化时绑定
 bindScrollListener();
@@ -148,7 +165,6 @@ function scrollToTop() {
     container.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
-
 
 // load more
 window.onload = loadGallery;
