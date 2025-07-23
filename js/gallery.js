@@ -16,9 +16,11 @@ function checkVerticalLayout() {
   if (isVertical) {
     document.documentElement.classList.add("vertical-layout");
     document.body.classList.add("vertical-layout");
+    console.log("Layout: Vertical"); // DEBUG: 检查当前是竖屏
   } else {
     document.documentElement.classList.remove("vertical-layout");
     document.body.classList.remove("vertical-layout");
+    console.log("Layout: Horizontal"); // DEBUG: 检查当前是横屏
   }
 }
 
