@@ -274,7 +274,7 @@ html, body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 300;
+  z-index: 9999;
   background-color: var(--light-green);
   color: var(--light-mint);
   border: none;
