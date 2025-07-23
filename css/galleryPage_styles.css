@@ -27,13 +27,14 @@ html, body {
 }
 .left-panel .portfolio {
   color: var(--gray-black);
-  position: absolute;
-  top: 30%;
-  left: 10%;
+  position: relative; 
+  left: auto;
+  top: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* 左对齐 */
+  align-items: flex-start; 
   gap: 15px;
+  margin: 20px 50px; /* 新增：上下留白 */
 }
 .left-panel .portfolio h1 {
   font-size: 72px;
@@ -272,16 +273,20 @@ html.vertical-layout, body.vertical-layout {
   flex-direction: column;
   align-items: center;
   justify-content: center; /* 保证 portfolio 和 buttons 可见 */
-  position: relative; /* 修复内容被其他元素覆盖 */
-  z-index: 10; /* 确保在前面 */
+  position: relative; /* wont cover by other text */
+  z-index: 10; /* font  */
 }
-
+/* vertical layout set to center */
+.vertical-layout .left-panel .portfolio {
+  align-items: center;
+  text-align: center;
+}
 .vertical-layout .left-panel .portfolio h1 {
-  font-size: 2rem; /* UPDATED: 字体大小 */
+  font-size: 2rem; 
 }
 
 .vertical-layout .left-panel .portfolio p {
-  font-size: 1rem; /* UPDATED: 字体大小 */
+  font-size: 1rem; 
 }
 
 .vertical-layout .left-panel .buttons {
@@ -344,6 +349,7 @@ html.vertical-layout, body.vertical-layout {
   padding: 10px 15px;
   font-size: 1.2rem;
   cursor: pointer;
+  z-index: 9999;
 }
 
 #scrollTopBtn:hover {
