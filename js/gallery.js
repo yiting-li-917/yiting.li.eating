@@ -8,6 +8,23 @@ let currentPhotoIndex = 0;
 let currentDesc = '';
 let currentCamera = '';
 let activeTag = null;
+
+// decide whether resize the layout
+function applyLayoutMode() {
+  if (window.innerWidth <= 1024) {
+    document.documentElement.classList.add("vertical-layout");
+    document.body.classList.add("vertical-layout");
+  } else {
+    document.documentElement.classList.remove("vertical-layout");
+    document.body.classList.remove("vertical-layout");
+  }
+}
+
+// 初次加载和窗口变化时调用
+window.addEventListener('load', applyLayoutMode);
+window.addEventListener('resize', applyLayoutMode);
+// resize end here
+
 // load gallery
 async function loadGallery() {
   try {
