@@ -153,4 +153,7 @@ function scrollToTop() {
 // load more
 window.onload = loadGallery;
 
-
+// back to home
+function goHome() {
+  window.location.href = "index.html"; // main page html
+}
