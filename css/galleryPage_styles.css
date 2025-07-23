@@ -3,9 +3,9 @@
   --main-warm2: #C1AB85;
   --main-cold1: #4E6851;
   --main-cold2: #3E6868;
-  --gray-black: #616E39;
-  --light-green: #FEA935;
-  --light-mint: #F2CFA9;
+  --gray-black: #493F36;
+  --light-green: #93965F;
+  --light-mint: #F5E6CF;
 }
 html, body {
   margin: 0;
@@ -30,6 +30,7 @@ html, body {
   position: relative;
 }
 .left-panel .portfolio {
+  color: var(--gray-black);
   position: absolute;
   top: 30%;
   left: 10%;
@@ -37,7 +38,7 @@ html, body {
   gap: 15px;
 }
 .portfolio h1 {
-  font-size: 56;
+  font-size: 80;
   text-align: left;
   margin-bottom: 10px;
 }
@@ -58,13 +59,13 @@ html, body {
   padding: 0.5rem;
   /*background: rgba(0,0,0,0.6);*/
   background: transparent;
-  color: #fff;
+  color: var(--light-mint);
   text-decoration: none;
   border-radius: 5px;
   transition: transform 0.2s ease;
 }
 .left-panel .buttons a i {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .left-panel .buttons a:hover {
   transform: scale(1.1);
@@ -74,7 +75,7 @@ html, body {
 }
 .right-panel {
   flex: 0 0 40%;
-  background-color: var(--gray-black);
+  background-color: var(--light-mint);
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -91,7 +92,7 @@ html, body {
   gap: 10px;
 }
 .tag-bar .tag {
-  background: var(--light-green);
+  background-color: var(--gray-black);
   color: var(--light-mint);
   padding: 5px 10px;
   border-radius: 8px;
@@ -99,18 +100,18 @@ html, body {
   transition: transform 0.2s ease;
 }
 .tag-bar .tag:hover {
-  color: var(--light-green);
-  background: var(--light-mint);  
+  color: var(--light-mint);
+  background-color: var(--light-green);  
   transform: scale(1.05);
 }
 .tag-bar .tag:active {
-  color: var(--light-green);
-  background: var(--gray-black); 
+  color: var(--gray-black);
+  background-color: var(--light-mint); 
   transform: scale(0.95);
 }
 .tag-bar .tag.active {
-  color: var(--light-green);
-  background: var(--gray-black);
+  color: var(--gray-black);
+  background-color: var(--light-mint);
   font-weight: bold;
 }
 .gallery-grid {
@@ -130,7 +131,7 @@ html, body {
   width: 100%;
   padding-top: 100%;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 15px; /*need to be the same as container img below */
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 .album-image-container img {
@@ -145,17 +146,22 @@ html, body {
   transition: transform 0.3s ease;
 }
 /* --------- adjust to container hover later!!!! ----------- */
-.album-image-container img:hover {
+/*.album-image-container img:hover {
+  transform: scale(1.05);
+}*/
+.album-image-container:hover {
   transform: scale(1.05);
 }
+/* ----------------------*/
 .album-title {
   font-family: 'Montserrat', sans-serif; /* change to handwriting later */
   margin-top: 10px;
+  margin-left: 10px;
   font-size: 0.95rem;
   text-align: left;
-  color: #333;
-  font-weight: 500;
-  width: 100%;
+  color: var(--gray-black);
+  font-weight: 600;
+  width: 90%;
 }
 .more-btn {
   margin: 20px 0;
