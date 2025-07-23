@@ -11,7 +11,8 @@ let activeTag = null;
 
 // decide whether resize the layout
 function applyLayoutMode() {
-  if (window.innerWidth <= 1024) {
+  const isVerticalScreen = window.innerHeight > window.innerWidth;
+  if (window.innerWidth <= 1200 || isVerticalScreen) {
     document.documentElement.classList.add("vertical-layout");
     document.body.classList.add("vertical-layout");
   } else {
@@ -20,7 +21,6 @@ function applyLayoutMode() {
   }
 }
 
-// 初次加载和窗口变化时调用
 window.addEventListener('load', applyLayoutMode);
 window.addEventListener('resize', applyLayoutMode);
 // resize end here
