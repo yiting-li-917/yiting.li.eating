@@ -40,12 +40,12 @@ html, body {
   gap: 15px;
 }
 .left-panel .portfolio h1 {
-  font-size: 72;
+  font-size: 120;
   text-align: left;
   margin-bottom: 10px;
 }
 .left-panel .portfolio p {
-  font-size: 28;
+  font-size: 60;
   text-align: left;
   margin-top: 10px;
 }
