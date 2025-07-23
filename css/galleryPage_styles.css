@@ -75,7 +75,7 @@ html, body {
 .left-panel .buttons a:active {
   transform: scale(0.90);
 }
-/* Contact Modal Styles */
+/* ----------- Contact Modal Styles */
 .contact-modal {
   display: none;
   position: fixed;
@@ -93,7 +93,7 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 300px;
+  width: 600px;
 }
 .close-modal {
   align-self: flex-end;
