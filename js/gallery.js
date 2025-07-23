@@ -137,21 +137,24 @@ function prevPhoto() {
 // ================== Scroll to Top ==================
 const scrollBtn = document.getElementById('scrollTopBtn');
 const rightPanel = document.getElementById('right-panel');
+
+// COMMENT: Add a resize listener to re-bind the scroll listener when layout changes
+window.addEventListener('resize', bindScrollListener); // DEBUG: To handle screen orientation/layout changes
 // COMMENT: This function decides which container to monitor (window for vertical, rightPanel for horizontal)
 function bindScrollListener() {
   // COMMENT: Remove old scroll event listeners to avoid duplicates
   window.removeEventListener('scroll', handleScroll);
   rightPanel.removeEventListener('scroll', handleScroll);
-
+// COMMENT: Decide which container to bind based on layout
   const container = document.body.classList.contains('vertical-layout') ? window : rightPanel;
   container.addEventListener('scroll', handleScroll);
   console.log("Scroll listener bound to:", container === window ? "window" : "#right-panel");
 }
-
+// COMMENT: Handle scroll logic
 function handleScroll() {
   const container = document.body.classList.contains('vertical-layout') ? window : rightPanel;
   const scrollTop = container === window ? window.scrollY : container.scrollTop;
-  scrollBtn.style.display = scrollTop > 300 ? 'block' : 'none';
+  scrollBtn.style.display = scrollTop > 200 ? 'block' : 'none';
   console.log("ScrollTop:", scrollTop, "Button Display:", scrollBtn.style.display);
 }
 
