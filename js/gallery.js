@@ -99,6 +99,10 @@ function openLightbox(photos, startIndex, desc, camera) {
   currentCamera = camera || 'Unknown Camera';
   updateLightbox();
   document.getElementById('lightbox').classList.add('show');
+
+  // COMMENT: Hide the Back to Home button when lightbox is open
+  const backBtn = document.getElementById('backHomeBtn');
+  if (backBtn) backBtn.style.display = 'none';
 }
 
 function updateLightbox() {
@@ -111,6 +115,10 @@ function updateLightbox() {
 
 function closeLightbox() {
   document.getElementById('lightbox').classList.remove('show');
+
+  // COMMENT: Show the Back to Home button again when lightbox is closed
+  const backBtn = document.getElementById('backHomeBtn');
+  if (backBtn) backBtn.style.display = 'inline-block';
 }
 
 function nextPhoto() {
