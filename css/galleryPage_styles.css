@@ -362,19 +362,12 @@ html.vertical-layout, body.vertical-layout {
   transform: none; /* 禁用缩放 */
 }
 /* back button stick on the screen bottom */
-.back-container {
-    margin: 20px 0;
-    text-align: center;
+@media (orientation: portrait) {
+  #backHomeBtn {
+    top: 10px;          /* 顶端距离 10px */
+    bottom: auto;       /* 禁用底部位置 */
+  }
 }
-.back-button {
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 15px;
-    padding: 8px 8px;
-    font-size: 14px;
-    z-index: 1000;
-} 
 /* Scroll to top button */
 #scrollTopBtn {
   display: none;
