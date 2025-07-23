@@ -186,7 +186,7 @@ html, body {
 /* Back button */
 #backHomeBtn {
   display: inline-block;             
-  padding: 10px 15px;                
+  padding: 20px 20px;                
   border-radius: 22px;              
   text-decoration: none;             
   background-color: var(--main-cold1); 
