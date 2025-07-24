@@ -205,7 +205,7 @@ html, body {
   gap: 20px;
   /*border: none;*/
   /*outline: none;*/
-  /*transition: background 0.3s, transform 0.3s; */
+  transition: border-color 0.3s ease, gap 0.3s ease; /* Smooth transition */
 
   position: fixed;                   
   bottom: 5%;
@@ -218,11 +218,12 @@ html, body {
   color: var(--main-warm1); 
   font-size: 16px;
   font-weight: 500;  
-  /*padding: 2px 10px 2px 10px;*/
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 #backHomeBtn:hover {
   /*background-color: var(--main-warm1); /* UPDATED */
   /*color: var(--main-cold1);            /* UPDATED */
+  gap: 25px; 
   transform: translateX(-50%) scale(1.1); /* UPDATED */
 }
 
