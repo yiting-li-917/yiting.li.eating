@@ -120,7 +120,7 @@ html, body {
   width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  gap: 40px;
   margin-top: 40px;
 }
 .album-wrapper {
