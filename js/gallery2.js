@@ -20,7 +20,7 @@ function handleScroll() {
     scrollBtn.style.display = 'block'; // COMMENT: Vertical layout - always visible
   } else {
     const scrollTop = rightPanel.scrollTop;
-    scrollBtn.style.display = scrollTop > 150 ? 'block' : 'none'; // COMMENT: Horizontal - show after 150px scroll
+    scrollBtn.style.display = scrollTop > 300 ? 'block' : 'none'; // COMMENT: Horizontal - show after 150px scroll
   }
 }
 
