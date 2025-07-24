@@ -275,7 +275,7 @@ html, body {
 /* Info Button */
 #info-button {
   position: absolute; /* COMMENT: Position it absolutely relative to #lightbox */
-  bottom: 7%;        /* COMMENT: 6% from bottom of lightbox */
+  bottom: 9%;        /* COMMENT: 6% from bottom of lightbox */
   right: 8%;         /* COMMENT: 10% from right side of lightbox */
   z-index: 230;       /* COMMENT: Ensure it appears above the image */
   background-color: transparent;
