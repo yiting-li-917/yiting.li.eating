@@ -14,8 +14,12 @@ const rightPanel = document.getElementById('right-panel'); // COMMENT: Right pan
 
 // ========== Scroll Handler =============
 function handleScroll() {
-  const container = document.body.classList.contains('vertical-layout') ? window : rightPanel;
-  const scrollTop = container === window ? window.scrollY : rightPanel.scrollTop;
+  // COMMENT: Use documentElement as container in vertical mode instead of window
+  const container = document.body.classList.contains('vertical-layout') 
+    ? document.documentElement 
+    : rightPanel;
+
+  const scrollTop = container.scrollTop;
   scrollBtn.style.display = scrollTop > 150 ? 'block' : 'none';
   console.log("ScrollTop:", scrollTop, "Button Display:", scrollBtn.style.display);
 }
@@ -29,12 +33,12 @@ function bindScrollListener() {
 }
 
 function scrollToTop() {
-  const container = document.body.classList.contains('vertical-layout') ? window : rightPanel;
-  if (container === window) {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  } else {
-    rightPanel.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+  // COMMENT: Use documentElement in vertical layout
+  const container = document.body.classList.contains('vertical-layout') 
+    ? document.documentElement 
+    : rightPanel;
+
+  container.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // ========== Layout Detection =============
