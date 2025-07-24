@@ -14,7 +14,7 @@ const scrollBtn = document.getElementById('scrollTopBtn');  // COMMENT: Scroll u
 const rightPanel = document.getElementById('right-panel');  // COMMENT: Right panel reference
 
 // ========== Scroll Handler =============
-// COMMENT: Always show scroll button in vertical layout
+// COMMENT: Always show scroll button in vertical layout, but ensure scroll-to-top works
 function handleScroll() {
   if (document.body.classList.contains('vertical-layout')) {
     scrollBtn.style.display = 'block'; // COMMENT: Vertical layout - always visible
@@ -33,8 +33,8 @@ function bindScrollListener() {
 }
 
 function scrollToTop() {
-  const container = document.body.classList.contains('vertical-layout') ? window : rightPanel;
-  if (container === window) {
+  // COMMENT: Scroll to top of window if vertical-layout, else scroll rightPanel
+  if (document.body.classList.contains('vertical-layout')) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   } else {
     rightPanel.scrollTo({ top: 0, behavior: 'smooth' });
