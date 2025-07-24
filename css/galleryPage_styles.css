@@ -168,8 +168,8 @@ html, body {
 }
 /* CSS for glowing NEW badge */
 .new-badge {
-  color: #D4AF37; /* Gold color */
-  font-weight: bold;
+  color: var(--light-green);
+  font-family: "Permanent Marker", cursive;
   padding-right: 4px;
   text-shadow: 0 0 5px rgba(212, 175, 55, 0.8), 0 0 10px rgba(255, 215, 0, 0.6);
 }
