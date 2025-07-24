@@ -249,7 +249,7 @@ html, body {
 
 .lightbox-controls {
   position: absolute; /* COMMENT: Fix position */
-  bottom: 5%; /* Fixed 5% from bottom */
+  bottom: 4%; /* Fixed 5% from bottom */
   width: 100%;
   justify-content: center;
   display: flex;
@@ -302,14 +302,14 @@ html, body {
 #photo-desc-content {
   display: none;
   position: absolute;
-  bottom: 7%;
+  bottom: 10%;
   right: 3%;
   width: 250px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
   color: #fff;
   padding: 10px;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-align: left;
   line-height: 1.2rem;
   z-index: 230;                  /* COMMENT: Ensure above image */
@@ -437,6 +437,14 @@ html.vertical-layout, body.vertical-layout {
 #scrollTopBtn:hover {
   color: var(--light-green);
   background-color: var(--light-mint);
+}
+
+.lightbox-controls {
+  bottom: 5%; /* Fixed 5% from bottom */
+}
+#info-button {
+  bottom: 5%;        /* COMMENT: 6% from bottom of lightbox */
+  right: 6%;         /* COMMENT: 10% from right side of lightbox */
 }
 
 /* specific for phone */
