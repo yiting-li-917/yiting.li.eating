@@ -15,13 +15,6 @@ const scrollBtn = document.getElementById('scrollTopBtn');  // COMMENT: Scroll u
 const rightPanel = document.getElementById('right-panel');  // COMMENT: Right panel reference
 
 // ========== Scroll Handler =============
-/* COMMENT: Disable scrolling when lightbox is open */
-.no-scroll {
-  overflow: hidden;
-  height: 100%;
-  touch-action: none;       /* Prevent scrolling on touch devices */
-  -webkit-overflow-scrolling: none; /* iOS Safari fix */
-}
 // COMMENT: Always show scroll button in vertical layout, but ensure scroll-to-top works
 function handleScroll() {
   const lightbox = document.getElementById('lightbox');
