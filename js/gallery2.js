@@ -35,7 +35,7 @@ function handleScroll() {
     ? (window.scrollY || document.documentElement.scrollTop)
     : rightPanel.scrollTop;
 
-  scrollBtn.style.display = scrollTop > 300 ? 'block' : 'none';
+  scrollBtn.style.display = scrollTop > 200 ? 'block' : 'none';
 }
 
 function bindScrollListener() {
