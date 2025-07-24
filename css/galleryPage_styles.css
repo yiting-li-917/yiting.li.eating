@@ -168,9 +168,10 @@ html, body {
 }
 /* CSS for glowing NEW badge */
 .new-badge {
-  color: red;
+  color: var(--light-green);
   font-weight: bold;
-  text-shadow: 0 0 5px yellow, 0 0 10px orange;
+  font-family: "Bitcount Prop Single", system-ui;
+  text-shadow: 0 0 5px var(--light-mint);
 }
 
 .more-btn {
