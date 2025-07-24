@@ -41,7 +41,7 @@ function bindScrollListener() {
   const container = document.body.classList.contains('vertical-layout') ? window : rightPanel;
   container.addEventListener('scroll', handleScroll);
 
-  console.log("Scroll listener bound to:", container === window ? "window" : "#right-panel");
+  //console.log("Scroll listener bound to:", container === window ? "window" : "#right-panel");
 }
 
 // COMMENT: Smoothly scrolls to the top of the page
