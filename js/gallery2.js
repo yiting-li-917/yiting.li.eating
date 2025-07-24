@@ -90,7 +90,18 @@ function renderAlbums(reset = false) {
     imgContainer.appendChild(img);
     const titleDiv = document.createElement('div');
     titleDiv.className = 'album-title';
-    titleDiv.innerText = album.title || 'Untitled';
+
+    // Add NEW! badge if album.new === 1
+    if (album.new === 1) {
+      const newSpan = document.createElement('span');
+      newSpan.innerText = 'NEW! ';
+      newSpan.className = 'new-badge'; // CSS class for glowing effect
+      titleDiv.appendChild(newSpan);
+    }
+
+    const titleText = document.createTextNode(album.title || 'Untitled');
+    titleDiv.appendChild(titleText);
+    
     wrapper.appendChild(imgContainer);
     wrapper.appendChild(titleDiv);
     gallery.appendChild(wrapper);
@@ -134,9 +145,9 @@ function openLightbox(photos, startIndex, desc, camera) {
 
 function updateLightbox() {
   const img = document.getElementById('lightbox-img');
-  const descBox = document.getElementById('photo-desc');
-  descBox.innerHTML = `Camera: ${currentCamera}<br>${currentDesc || ''}`;
-  descBox.style.display = 'block';
+  const descButton = document.getElementById('photo-desc-button'); // COMMENT: Button for toggling description box
+  const descContent = document.getElementById('photo-desc-content'); // COMMENT: Hidden content box
+  descContent.innerHTML = `Camera: ${currentCamera}<br>${currentDesc || ''}`;
   img.src = currentPhotos[currentPhotoIndex];
 }
 
@@ -157,6 +168,12 @@ function prevPhoto() {
     currentPhotoIndex--;
     updateLightbox();
   }
+}
+
+// ========== Toggle Description Box =============
+function toggleDescBox() {
+  const descBox = document.getElementById('photo-desc-content');
+  descBox.classList.toggle('show'); // COMMENT: Toggle visibility of the description content
 }
 
 // ========== Initialize =============
