@@ -2,7 +2,7 @@
   {
     "new": 1,
     "title": "A Girl with Red Ballon. 偶遇",
-    "cover": "https://gallery.yitingli.xyz/202502-redballon-5.jpg",
+    "cover": "https://gallery-thumb.yitingli.xyz/20250105-202502-redballon-5.jpg",
     "desc": "We were photo shooting birds on that day, and suddenly we saw this girl with her photographer",
     "camera": "Nikon ZF Nikkor 24-120mmF4",
     "tags": ["2025"],
@@ -17,7 +17,7 @@
   {
     "new": 0,
     "title": "Burrowing Owl, 穴小鸮",
-    "cover": "https://gallery.yitingli.xyz/202501-bird-2.jpg",
+    "cover": "https://gallery-thumb.yitingli.xyz/20250105-202501-bird-2.jpg",
     "desc": "San Mateo有三只穴小鸮",
     "camera": "Nikon ZF Nikkor 24-120mmF4",
     "tags": ["2025"],
@@ -30,7 +30,7 @@
   {
     "new": 0,
     "title": "Comet C/2023 A3 (Tsuchinshan-ATLAS)",
-    "cover": "https://gallery.yitingli.xyz/202410-comet-1.jpg",
+    "cover": "https://gallery-thumb.yitingli.xyz/20241013-202410-comet-2.jpg",
     "desc": "八万年一遇的大彗星",
     "camera": "Nikon ZF Voigtlander 40mmF1.2",
     "tags": ["2024"],
@@ -42,7 +42,7 @@
   {
     "new": 0,
     "title": "Antiques Faire",
-    "cover": "https://gallery.yitingli.xyz/202405-antiques-1.jpg",
+    "cover": "https://gallery-thumb.yitingli.xyz/20240505-202405-antiques-1.jpg",
     "desc": "Many bling-bling little things, but didn't buy anything.",
     "camera": "Nikon ZF Voigtlander 40mmF1.2",
     "tags": ["2024"],
@@ -55,7 +55,7 @@
   {
     "new": 0,
     "title": "Flower @ Davis, CA",
-    "cover": "https://gallery.yitingli.xyz/202403-flower-1.jpg",
+    "cover": "https://gallery-thumb.yitingli.xyz/20240330-202403-flower-1.jpg",
     "desc": "It is spring.",
     "camera": "Nikon ZF Nikkor 26mmF2.8",
     "tags": ["2024"],
@@ -67,7 +67,7 @@
   {
     "new": 0,
     "title": "Still @ Twin Peak SF",
-    "cover": "https://gallery.yitingli.xyz/2024-twinpeak-1.jpg",
+    "cover": "https://gallery-thumb.yitingli.xyz/20240331-2024-twinpeak-1.jpg",
     "desc": "Nightview from Twin Peak always my favorite. Even though so many years fly away, always there.",
     "camera": "Olympus EP-7",
     "tags": ["2024"],
@@ -80,11 +80,11 @@
   },
   {
     "new": 0,
-    "title": "Old Day @ Twin Peak SF",
+    "title": "https://gallery-thumb.yitingli.xyz/20151106-2017-oldday-1.jpg",
     "cover": "https://gallery.yitingli.xyz/2017-oldday-1.jpg",
     "desc": "Nightview from Twin Peak always my favorite. Even though so many years fly away, always there.",
     "camera": "Sony A7",
-    "tags": ["2017"],
+    "tags": ["2015"],
     "photos": [
       "https://gallery.yitingli.xyz/2017-oldday-1.jpg",
       "https://gallery.yitingli.xyz/2017-oldday-2.jpg"
