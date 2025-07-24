@@ -49,6 +49,7 @@ function checkVerticalLayout() {
   if (isVertical) {
     document.documentElement.classList.add("vertical-layout");
     document.body.classList.add("vertical-layout");
+    scrollBtn.style.display = 'block'; // COMMENT: Ensure scroll button is visible when switching to vertical
   } else {
     document.documentElement.classList.remove("vertical-layout");
     document.body.classList.remove("vertical-layout");
