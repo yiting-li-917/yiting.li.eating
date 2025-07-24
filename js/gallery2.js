@@ -15,21 +15,27 @@ const scrollBtn = document.getElementById('scrollTopBtn');  // COMMENT: Scroll u
 const rightPanel = document.getElementById('right-panel');  // COMMENT: Right panel reference
 
 // ========== Scroll Handler =============
+/* COMMENT: Disable scrolling when lightbox is open */
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+  touch-action: none;       /* Prevent scrolling on touch devices */
+  -webkit-overflow-scrolling: none; /* iOS Safari fix */
+}
 // COMMENT: Always show scroll button in vertical layout, but ensure scroll-to-top works
 function handleScroll() {
-  // COMMENT: If lightbox is open, always hide the scroll button
   const lightbox = document.getElementById('lightbox');
+  // COMMENT: Force scroll button hidden if lightbox is active
   if (lightbox && lightbox.classList.contains('show')) {
-    scrollBtn.style.display = 'none'; // COMMENT: Prevent scroll button when lightbox is active
-    return; // COMMENT: Exit function early
+    scrollBtn.style.display = 'none';
+    return;
   }
-  
-  if (document.body.classList.contains('vertical-layout')) {
-    scrollBtn.style.display = 'block'; // COMMENT: Vertical layout - always visible
-  } else {
-    const scrollTop = rightPanel.scrollTop;
-    scrollBtn.style.display = scrollTop > 300 ? 'block' : 'none'; // COMMENT: Horizontal - show after 150px scroll
-  }
+
+  const scrollTop = document.body.classList.contains('vertical-layout')
+    ? (window.scrollY || document.documentElement.scrollTop)
+    : rightPanel.scrollTop;
+
+  scrollBtn.style.display = scrollTop > 300 ? 'block' : 'none';
 }
 
 function bindScrollListener() {
@@ -148,7 +154,10 @@ function openLightbox(photos, startIndex, desc, camera) {
   currentDesc = desc;
   currentCamera = camera || 'Unknown Camera';
   updateLightbox();
+  
   document.getElementById('lightbox').classList.add('show');
+  document.body.classList.add('no-scroll'); // COMMENT: Disable body scroll when lightbox is open
+
   if (backHomeBtn) backHomeBtn.style.display = 'none'; // COMMENT: Hide Back to Home when lightbox is open
   if (scrollBtn) scrollBtn.style.display = 'none'; // Hide scroll up when lightbox is open
 }
@@ -182,8 +191,10 @@ function updateLightbox() {
 
 function closeLightbox() {
   document.getElementById('lightbox').classList.remove('show');
+  document.body.classList.remove('no-scroll'); // COMMENT: Re-enable body scroll when lightbox closes
+  
   if (backHomeBtn) backHomeBtn.style.display = 'inline-block'; // COMMENT: Show Back to Home when lightbox is closed
-  if (scrollBtn) scrollBtn.style.display = 'block'; // Show scroll up when lightbox is closed
+  handleScroll(); // COMMENT: Trigger scroll button state update
 }
 
 function nextPhoto() {
