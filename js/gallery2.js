@@ -24,11 +24,12 @@ function handleScroll() {
     return;
   }
 
-  const scrollTop = document.body.classList.contains('vertical-layout')
-    ? (window.scrollY || document.documentElement.scrollTop)
-    : rightPanel.scrollTop;
-
-  scrollBtn.style.display = scrollTop > 200 ? 'block' : 'none';
+  if (document.body.classList.contains('vertical-layout')) {
+    scrollBtn.style.display = 'block'; // COMMENT: Vertical layout - always visible
+  } else {
+    const scrollTop = rightPanel.scrollTop;
+    scrollBtn.style.display = scrollTop > 200 ? 'block' : 'none'; // COMMENT: Horizontal - show after 150px scroll
+  }
 }
 
 function bindScrollListener() {
