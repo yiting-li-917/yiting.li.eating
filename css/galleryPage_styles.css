@@ -275,8 +275,8 @@ html, body {
 /* Info Button */
 #info-button {
   position: absolute; /* COMMENT: Position it absolutely relative to #lightbox */
-  bottom: 10%;        /* COMMENT: 10% from bottom of lightbox */
-  right: 10%;         /* COMMENT: 10% from right side of lightbox */
+  bottom: 6%;        /* COMMENT: 6% from bottom of lightbox */
+  right: 8%;         /* COMMENT: 10% from right side of lightbox */
   z-index: 230;       /* COMMENT: Ensure it appears above the image */
   background-color: transparent;
   border: none;
@@ -302,8 +302,8 @@ html, body {
 #photo-desc-content {
   display: none;
   position: absolute;
-  bottom: 15%;
-  right: 5%;
+  bottom: 7%;
+  right: 3%;
   width: 250px;
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
