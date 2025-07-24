@@ -14,22 +14,28 @@ const scrollBtn = document.getElementById('scrollTopBtn');  // COMMENT: Scroll u
 const rightPanel = document.getElementById('right-panel');  // COMMENT: Right panel reference
 
 // ========== Scroll Handler =============
-// COMMENT: Always show scroll button in vertical layout, but ensure scroll-to-top works
+let lastScrollTop = 0; // COMMENT: Track the previous scroll position
+
 function handleScroll() {
-  // COMMENT: If lightbox is open, always hide the scroll button
-  const lightbox = document.getElementById('lightbox');
+  // COMMENT: If lightbox is open, always hide scroll button
   if (lightbox && lightbox.classList.contains('show')) {
-    scrollBtn.style.display = 'none'; // COMMENT: Prevent scroll button when lightbox is active
-    return; // COMMENT: Exit function early
+    scrollBtn.style.display = 'none';
+    return;
   }
-  
-  if (document.body.classList.contains('vertical-layout')) {
-    scrollBtn.style.display = scrollTop > 200 ? 'block' : 'none';
-    //scrollBtn.style.display = 'block'; // COMMENT: Vertical layout - always visible
+
+  const scrollTop = document.body.classList.contains('vertical-layout')
+    ? (window.scrollY || document.documentElement.scrollTop)
+    : rightPanel.scrollTop;
+
+  // COMMENT: Show button only if user scrolled more than 300px AND is scrolling up
+  if (scrollTop > 300 && scrollTop < lastScrollTop) {
+    scrollBtn.style.display = 'block';
   } else {
-    const scrollTop = rightPanel.scrollTop;
-    scrollBtn.style.display = scrollTop > 200 ? 'block' : 'none'; // COMMENT: Horizontal - show after 150px scroll
+    scrollBtn.style.display = 'none';
   }
+
+  // COMMENT: Save current position for next scroll event
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 }
 
 function bindScrollListener() {
