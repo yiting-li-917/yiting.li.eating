@@ -16,6 +16,13 @@ const rightPanel = document.getElementById('right-panel');  // COMMENT: Right pa
 // ========== Scroll Handler =============
 // COMMENT: Always show scroll button in vertical layout, but ensure scroll-to-top works
 function handleScroll() {
+  // COMMENT: If lightbox is open, always hide the scroll button
+  const lightbox = document.getElementById('lightbox');
+  if (lightbox && lightbox.classList.contains('show')) {
+    scrollBtn.style.display = 'none'; // COMMENT: Prevent scroll button when lightbox is active
+    return; // COMMENT: Exit function early
+  }
+  
   if (document.body.classList.contains('vertical-layout')) {
     scrollBtn.style.display = 'block'; // COMMENT: Vertical layout - always visible
   } else {
