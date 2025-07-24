@@ -109,6 +109,7 @@ function renderAlbums(reset = false) {
     const img = document.createElement('img');
     img.src = album.cover;
     img.alt = album.title;
+    img.loading = 'lazy'; // enable lazy loading
     img.addEventListener('click', () => openLightbox(album.photos, 0, album.desc, album.camera));
     imgContainer.appendChild(img);
 
