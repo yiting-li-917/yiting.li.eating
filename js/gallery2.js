@@ -145,9 +145,10 @@ function openLightbox(photos, startIndex, desc, camera) {
 
 function updateLightbox() {
   const img = document.getElementById('lightbox-img');
-  const descButton = document.getElementById('photo-desc-button'); // COMMENT: Button for toggling description box
-  const descContent = document.getElementById('photo-desc-content'); // COMMENT: Hidden content box
-  descContent.innerHTML = `Camera: ${currentCamera}<br>${currentDesc || ''}`;
+  const descContent = document.getElementById('photo-desc-content');
+  if (descContent) {
+    descContent.innerHTML = `Camera: ${currentCamera}<br>${currentDesc || ''}`;
+  }
   img.src = currentPhotos[currentPhotoIndex];
 }
 
@@ -172,8 +173,8 @@ function prevPhoto() {
 
 // ========== Toggle Description Box =============
 function toggleDescBox() {
-  const descBox = document.getElementById('photo-desc-content');
-  descBox.classList.toggle('show'); // COMMENT: Toggle visibility of the description content
+  const box = document.getElementById('photo-desc-content');
+  if (box) box.classList.toggle('show');
 }
 
 // ========== Initialize =============
