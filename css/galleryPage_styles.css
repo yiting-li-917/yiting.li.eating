@@ -276,31 +276,23 @@ html, body {
   right: 8%;
 }
 /* Info Button */
-#photo-desc-button {
-  position: absolute;
-  right: 5%;
-  bottom: 5%;
-  background: var(--gray-black);
-  border: none;
-  color: #fff;
-  font-size: 1.5rem;
-  border-radius: 50%;
-  padding: 10px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-#photo-desc-button:hover { transform: scale(1.1); }
-
 .info-btn {
   border-radius: 50%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: var(--gray-black);
   color: #fff;
+  font-size: 1.5rem;
+  border: none;
   padding: 8px; /* Adjust for a clear clickable area */
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  transition: transform 0.2s ease;
 }
+.info-btn:hover { transform: scale(1.1); }
 
 .info-btn i {
   pointer-events: none; /* Make entire circle clickable */
