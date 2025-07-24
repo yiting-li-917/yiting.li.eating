@@ -443,8 +443,11 @@ html.vertical-layout, body.vertical-layout {
 }
 
 #scrollTopBtn:hover {
-  color: var(--light-green);
-  background-color: var(--light-mint);
+  transform: scale(1.1);
+}
+
+#scrollTopBtn:active {
+  transform: scale(0.9);
 }
 
 .vertical-layout .lightbox-controls {
@@ -484,7 +487,12 @@ html.vertical-layout, body.vertical-layout {
   padding: 1rem;         /* 减少边距 */
   align-items: center;   /* 居中内容 */
 }
-#backHomeBtn {
+.vertical-layout #backHomeBtn {
   bottom: 10px;
+  opacity: 0.7; /* COMMENT: Make button semi-transparent */
+}
+
+.vertical-layout #scrollTopBtn{
+  opacity: 0.7; /* COMMENT: Make button semi-transparent */
 }
 }
