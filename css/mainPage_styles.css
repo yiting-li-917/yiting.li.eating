@@ -141,6 +141,7 @@ footer {
   bottom: 0;
   left: 0;
   background: transparent;
+  opacity: 0.75;
 }
 
 /* phone display */
