@@ -2,36 +2,24 @@
   {
     "new": 1,
     "title": "A Girl with Red Ballon. 偶遇",
-    "cover": "https://gallery-thumb.yitingli.xyz/20250105-202502-redballon-5.jpg",
-    "desc": "We were photo shooting birds on that day, and suddenly we saw this girl with her photographer",
+    "cover": "https://gallery.yitingli.xyz/202402-redballon-1.jpg",
+    "desc": "拍穴小鸮时偶遇的野模",
     "camera": "Nikon ZF Nikkor 24-120mmF4",
     "tags": ["2025"],
     "photos": [
-      "https://gallery.yitingli.xyz/202502-redballon-1.jpg",
-      "https://gallery.yitingli.xyz/202502-redballon-2.jpg",
-      "https://gallery.yitingli.xyz/202502-redballon-3.jpg",
-      "https://gallery.yitingli.xyz/202502-redballon-4.jpg",
-      "https://gallery.yitingli.xyz/202502-redballon-5.jpg"
+      "https://gallery.yitingli.xyz/202402-redballon-1.jpg",
+      "https://gallery.yitingli.xyz/202402-redballon-2.jpg",
+      "https://gallery.yitingli.xyz/202402-redballon-3.jpg",
+      "https://gallery.yitingli.xyz/202402-redballon-4.jpg",
+      "https://gallery.yitingli.xyz/202402-redballon-5.jpg",
+      "https://gallery.yitingli.xyz/202402-redballon-6.jpg"
     ]
   },
   {
     "new": 0,
-    "title": "Burrowing Owl, 穴小鸮",
-    "cover": "https://gallery-thumb.yitingli.xyz/20250105-202501-bird-2.jpg",
-    "desc": "San Mateo有三只穴小鸮",
-    "camera": "Nikon ZF Nikkor 24-120mmF4",
-    "tags": ["2025"],
-    "photos": [
-      "https://gallery.yitingli.xyz/202501-bird-1.jpg",
-      "https://gallery.yitingli.xyz/202501-bird-2.jpg",
-      "https://gallery.yitingli.xyz/202501-bird-3.jpg"
-    ]
-  },
-  {
-    "new": 0,
-    "title": "Comet C/2023 A3 (Tsuchinshan-ATLAS)",
-    "cover": "https://gallery-thumb.yitingli.xyz/20241013-202410-comet-2.jpg",
-    "desc": "八万年一遇的大彗星",
+    "title": "彗星Comet C/2023 A3 (Tsuchinshan-ATLAS)",
+    "cover": "https://gallery.yitingli.xyz/202410-comet-1.jpg",
+    "desc": "八万年一遇的大彗星：紫金山-阿特拉斯，拍摄于2024/10/13",
     "camera": "Nikon ZF Voigtlander 40mmF1.2",
     "tags": ["2024"],
     "photos": [
