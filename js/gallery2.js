@@ -1,3 +1,4 @@
+
 // ========== Gallery and Layout =============
 let allAlbums = [];
 let filteredAlbums = [];
@@ -14,28 +15,21 @@ const scrollBtn = document.getElementById('scrollTopBtn');  // COMMENT: Scroll u
 const rightPanel = document.getElementById('right-panel');  // COMMENT: Right panel reference
 
 // ========== Scroll Handler =============
-let lastScrollTop = 0; // COMMENT: Track the previous scroll position
-
+// COMMENT: Always show scroll button in vertical layout, but ensure scroll-to-top works
 function handleScroll() {
-  // COMMENT: If lightbox is open, always hide scroll button
+  // COMMENT: If lightbox is open, always hide the scroll button
+  const lightbox = document.getElementById('lightbox');
   if (lightbox && lightbox.classList.contains('show')) {
-    scrollBtn.style.display = 'none';
-    return;
+    scrollBtn.style.display = 'none'; // COMMENT: Prevent scroll button when lightbox is active
+    return; // COMMENT: Exit function early
   }
-
-  const scrollTop = document.body.classList.contains('vertical-layout')
-    ? (window.scrollY || document.documentElement.scrollTop)
-    : rightPanel.scrollTop;
-
-  // COMMENT: Show button only if user scrolled more than 300px AND is scrolling up
-  if (scrollTop > 300 && scrollTop < lastScrollTop) {
-    scrollBtn.style.display = 'block';
+  
+  if (document.body.classList.contains('vertical-layout')) {
+    scrollBtn.style.display = 'block'; // COMMENT: Vertical layout - always visible
   } else {
-    scrollBtn.style.display = 'none';
+    const scrollTop = rightPanel.scrollTop;
+    scrollBtn.style.display = scrollTop > 300 ? 'block' : 'none'; // COMMENT: Horizontal - show after 150px scroll
   }
-
-  // COMMENT: Save current position for next scroll event
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 }
 
 function bindScrollListener() {
@@ -172,7 +166,7 @@ function updateLightbox() {
     counter = document.createElement('span');
     counter.id = 'photo-counter';
     counter.style.position = 'absolute';
-    counter.style.bottom = '5%';
+    counter.style.bottom = '3.5%';
     counter.style.left = '50%';
     counter.style.transform = 'translateX(-50%)';
     counter.style.color = '#000';
