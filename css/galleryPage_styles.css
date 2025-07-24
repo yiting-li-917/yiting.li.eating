@@ -410,4 +410,7 @@ html.vertical-layout, body.vertical-layout {
   padding: 1rem;         /* 减少边距 */
   align-items: center;   /* 居中内容 */
 }
+#backHomeBtn {
+  bottom: 10px;
+}
 }
