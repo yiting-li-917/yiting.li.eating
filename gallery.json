@@ -29,9 +29,9 @@
   },
   {
     "new": 0,
-    "title": "Antiques Faire",
-    "cover": "https://gallery-thumb.yitingli.xyz/20240505-202405-antiques-1.jpg",
-    "desc": "Many bling-bling little things, but didn't buy anything.",
+    "title": "跳蚤市场 \u2022 Antiques Faire",
+    "cover": "https://gallery.yitingli.xyz/202405-antiques-1.jpg",
+    "desc": "很多bling-bling的小东西。拍摄于Alamenda County Oakland Port",
     "camera": "Nikon ZF Voigtlander 40mmF1.2",
     "tags": ["2024"],
     "photos": [
@@ -42,9 +42,9 @@
   },
   {
     "new": 0,
-    "title": "Flower @ Davis, CA",
-    "cover": "https://gallery-thumb.yitingli.xyz/20240330-202403-flower-1.jpg",
-    "desc": "It is spring.",
+    "title": "花 \u2022 Flower @ Davis, CA",
+    "cover": "https://gallery.yitingli.xyz/202403-flower-1.jpg",
+    "desc": "给相机加了个1/4黑柔滤镜，效果果然好。",
     "camera": "Nikon ZF Nikkor 26mmF2.8",
     "tags": ["2024"],
     "photos": [
@@ -54,9 +54,9 @@
   },
   {
     "new": 0,
-    "title": "Still @ Twin Peak SF",
+    "title": "旧金山双子峰 \u2022 Still @ Twin Peak SF",
     "cover": "https://gallery-thumb.yitingli.xyz/20240331-2024-twinpeak-1.jpg",
-    "desc": "Nightview from Twin Peak always my favorite. Even though so many years fly away, always there.",
+    "desc": "最喜欢的地方之一，过了十年了，依旧是这里。",
     "camera": "Olympus EP-7",
     "tags": ["2024"],
     "photos": [
@@ -68,14 +68,14 @@
   },
   {
     "new": 0,
-    "title": "Old Days @ Twin Peak SF",
-    "cover": "https://gallery-thumb.yitingli.xyz/20151106-2017-oldday-1.jpg",
-    "desc": "Nightview from Twin Peak always my favorite. Even though so many years fly away, always there.",
+    "title": "旧金山双子峰 \u2022 Old Days @ Twin Peak SF",
+    "cover": "https://gallery.yitingli.xyz/2015-oldday-1.jpg",
+    "desc": "应该是2015年第一次带着相机来这里，那时候人还不多。",
     "camera": "Sony A7",
     "tags": ["2015"],
     "photos": [
-      "https://gallery.yitingli.xyz/2017-oldday-1.jpg",
-      "https://gallery.yitingli.xyz/2017-oldday-2.jpg"
+      "https://gallery.yitingli.xyz/2015-oldday-1.jpg",
+      "https://gallery.yitingli.xyz/2015-oldday-2.jpg"
     ]
   }
 ]
