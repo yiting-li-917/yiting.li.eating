@@ -171,7 +171,7 @@ html, body {
   color: var(--light-green); /* Matching your green tone */
   font-family: 'Permanent Marker', cursive;
   padding-right: 4px;
-  text-shadow: 0 0 4px rgba(142, 143, 109, 0.6), 0 0 8px rgba(142, 143, 109, 0.4);
+  text-shadow: 0 0 5px rgba(212, 175, 55, 0.8), 0 0 10px rgba(255, 215, 0, 0.6);
   font-size: 0.8em; /* 80% of the album title */
 }
 
