@@ -36,6 +36,8 @@ function scrollToTop() {
   // COMMENT: Scroll to top of window if vertical-layout, else scroll rightPanel
   if (document.body.classList.contains('vertical-layout')) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+    document.body.scrollTo({ top: 0, behavior: 'smooth' });    
   } else {
     rightPanel.scrollTo({ top: 0, behavior: 'smooth' });
   }
