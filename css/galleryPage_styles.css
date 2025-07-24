@@ -249,7 +249,7 @@ html, body {
 
 .lightbox-controls {
   position: absolute; /* COMMENT: Fix position */
-  bottom: 4%; /* Fixed 5% from bottom */
+  bottom: 2%; /* Fixed 5% from bottom */
   width: 100%;
   justify-content: center;
   display: flex;
@@ -263,7 +263,7 @@ html, body {
 /* 2. Close button with circle background */
 .close-btn {
   color: var(--gray-black);
-  font-size: 2rem; /* Size of the icon */
+  font-size: 2.5rem; /* Size of the icon */
   cursor: pointer;
   display: flex;
   justify-content: center;
