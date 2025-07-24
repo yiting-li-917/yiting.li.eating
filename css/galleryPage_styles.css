@@ -249,7 +249,7 @@ html, body {
 
 .lightbox-controls {
   position: absolute; /* COMMENT: Fix position */
-  bottom: 2%; /* Fixed 5% from bottom */
+  bottom: 3%; /* Fixed 5% from bottom */
   width: 100%;
   justify-content: center;
   display: flex;
@@ -275,7 +275,7 @@ html, body {
 /* Info Button */
 #info-button {
   position: absolute; /* COMMENT: Position it absolutely relative to #lightbox */
-  bottom: 9%;        /* COMMENT: 6% from bottom of lightbox */
+  bottom: 8%;        /* COMMENT: 6% from bottom of lightbox */
   right: 10%;         /* COMMENT: 10% from right side of lightbox */
   z-index: 230;       /* COMMENT: Ensure it appears above the image */
   background-color: transparent;
@@ -439,14 +439,14 @@ html.vertical-layout, body.vertical-layout {
   background-color: var(--light-mint);
 }
 
-.lightbox-controls {
+.vertical-layout .lightbox-controls {
   bottom: 5%; /* Fixed 5% from bottom */
 }
-#info-button {
+.vertical-layout #info-button {
   bottom: 3.8%;        /* COMMENT: 6% from bottom of lightbox */
   right: 5%;         /* COMMENT: 10% from right side of lightbox */
 }
-.close-btn {
+.vertical-layout .close-btn {
   top: 3%;
   right: 6%;
 }
