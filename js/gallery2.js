@@ -189,6 +189,8 @@ window.onload = function() {
   checkVerticalLayout();
   bindScrollListener();
   handleScroll(); // COMMENT: Trigger initial scroll check
+  if (infoBtn) infoBtn.addEventListener('click', toggleDescBox);
+  adjustInfoButtonPosition(); // COMMENT: Adjust on initial load
 };
 
 function goHome() {
