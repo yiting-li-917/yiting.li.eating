@@ -201,6 +201,7 @@ html, body {
   background-color: transparent;
   border: 2px var(--main-warm1); 
   align-items: center;  
+  display: flex;                   /* Enables gap between icons */
   gap: 20px;
   /*border: none;*/
   /*outline: none;*/
