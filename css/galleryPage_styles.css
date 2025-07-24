@@ -16,7 +16,7 @@ html, body {
   overflow: hidden;
 }
 .left-panel {
-  flex: 0 0 60%;
+  flex: 0 0 55%;
   background: url('https://gallery.yitingli.xyz/smallgalleryBG.jpg') center/cover no-repeat;
   color: white;
   display: flex;
@@ -75,7 +75,7 @@ html, body {
 }
 /* right panel - gallery grid */
 .right-panel {
-  flex: 0 0 40%;
+  flex: 0 0 45%;
   background-color: var(--light-mint);
   overflow-y: auto;
   display: flex;
@@ -117,10 +117,10 @@ html, body {
   font-weight: bold;
 }
 .gallery-grid {
-  width: 80%;
+  width: 85%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 35px;
   margin-top: 40px;
 }
 .album-wrapper {
