@@ -151,9 +151,24 @@ function updateLightbox() {
   if (descContent) {
     descContent.innerHTML = `Camera: ${currentCamera}<br>${currentDesc || ''}`;
   }
-  // Update photo counter between next/prev
-  const counter = document.getElementById('photo-counter');
-  if (counter) counter.textContent = `${currentPhotoIndex + 1} / ${currentPhotos.length}`;
+ // Ensure photo counter exists and is updated
+  let counter = document.getElementById('photo-counter');
+  if (!counter) {
+    // COMMENT: Create photo-counter span if it doesn't exist
+    counter = document.createElement('span');
+    counter.id = 'photo-counter';
+    counter.style.position = 'absolute';
+    counter.style.bottom = '5%';
+    counter.style.left = '50%';
+    counter.style.transform = 'translateX(-50%)';
+    counter.style.color = '#fff';
+    counter.style.fontSize = '1rem';
+    counter.style.zIndex = '220';
+    const controls = document.querySelector('.lightbox-controls');
+    if (controls) controls.appendChild(counter);
+  }
+  counter.textContent = `${currentPhotoIndex + 1} / ${currentPhotos.length}`;
+
   img.src = currentPhotos[currentPhotoIndex];
 }
 
