@@ -39,11 +39,18 @@
   <div id="lightbox">
     <span class="close-btn" onclick="closeLightbox()">&times;</span>
     <img id="lightbox-img" src="" alt="Large View">
+
+    <!-- Info Button -->
+    <button id="photo-desc-button" onclick="toggleDescBox()">
+      <i class="fa-solid fa-circle-info"></i>
+    </button>
+    <!-- Expandable Description Box -->
+    <div id="photo-desc-content"></div>
+    
     <div class="lightbox-controls">
       <button onclick="prevPhoto()"><i class="fa-solid fa-backward"></i></button>
       <button onclick="nextPhoto()"><i class="fa-solid fa-forward"></i></button>
     </div>
-    <div class="photo-desc" id="photo-desc"></div>
   </div>
 
   <!-- Back to Home Button -->
