@@ -262,9 +262,6 @@ html, body {
 
 /* 2. Close button with circle background */
 .close-btn {
-  border-radius: 50%; /* Make it a perfect circle */
-  padding: 6px; /* Adjust padding */
-  background-color: rgba(0,0,0,0.5); /* Optional background */
   color: #fff; /* Icon color */
   font-size: 2rem; /* Size of the icon */
   cursor: pointer;
@@ -277,11 +274,11 @@ html, body {
 }
 /* Info Button */
 .info-btn {
-  border-radius: 50%;
-  background-color: var(--gray-black);
+  background-color: transparent;
   color: #fff;
   font-size: 1.5rem;
   border: none;
+  border-radius: 50%;            /* COMMENT: Perfect circle */
   padding: 8px; /* Adjust for a clear clickable area */
   display: flex;
   justify-content: center;
@@ -289,14 +286,15 @@ html, body {
   cursor: pointer;
   position: absolute;
   right: 5%;
-  bottom: 5%;
+  bottom: 10%;
   transition: transform 0.2s ease;
+  z-index: 220;                  /* COMMENT: Ensure above other elements */
 }
-.info-btn:hover { transform: scale(1.1); }
 
 .info-btn i {
   pointer-events: none; /* Make entire circle clickable */
 }
+.info-btn i:hover { transform: scale(1.1); }
 
 /* Description Box */
 #photo-desc-content {
@@ -312,6 +310,7 @@ html, body {
   font-size: 0.9rem;
   text-align: left;
   line-height: 1.2rem;
+  z-index: 230;                  /* COMMENT: Ensure above image */
 }
 /* Desc Box Spacing */
 .photo-desc {
