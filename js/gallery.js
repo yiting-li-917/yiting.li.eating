@@ -1,4 +1,4 @@
-// gallery.js: call by gallery.html
+// ========== Gallery and Layout =============
 let allAlbums = [];
 let filteredAlbums = [];
 let displayedCount = 0;
@@ -9,10 +9,43 @@ let currentDesc = '';
 let currentCamera = '';
 let activeTag = null;
 
-// decide whether resize the layout
-function checkVerticalLayout() {
-  const isVertical = window.innerWidth < 900 || window.innerHeight > window.innerWidth; 
+const backHomeBtn = document.getElementById('backHomeBtn'); // COMMENT: Back to Home button reference
+const scrollBtn = document.getElementById('scrollTopBtn');  // COMMENT: Scroll up button reference
+const rightPanel = document.getElementById('right-panel');  // COMMENT: Right panel reference
 
+// ========== Scroll Handler =============
+// COMMENT: Always show scroll button in vertical layout, but ensure scroll-to-top works
+function handleScroll() {
+  if (document.body.classList.contains('vertical-layout')) {
+    scrollBtn.style.display = 'block'; // COMMENT: Vertical layout - always visible
+  } else {
+    const scrollTop = rightPanel.scrollTop;
+    scrollBtn.style.display = scrollTop > 300 ? 'block' : 'none'; // COMMENT: Horizontal - show after 150px scroll
+  }
+}
+
+function bindScrollListener() {
+  window.removeEventListener('scroll', handleScroll);
+  rightPanel.removeEventListener('scroll', handleScroll);
+  const container = document.body.classList.contains('vertical-layout') ? window : rightPanel;
+  container.addEventListener('scroll', handleScroll);
+  console.log("Scroll listener bound to:", container === window ? "window" : "#right-panel");
+}
+
+function scrollToTop() {
+  // COMMENT: Scroll to top of window if vertical-layout, else scroll rightPanel
+  if (document.body.classList.contains('vertical-layout')) {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+    document.body.scrollTo({ top: 0, behavior: 'smooth' });    
+  } else {
+    rightPanel.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+// ========== Layout Detection =============
+function checkVerticalLayout() {
+  const isVertical = window.innerWidth < 900 || window.innerHeight > window.innerWidth;
   if (isVertical) {
     document.documentElement.classList.add("vertical-layout");
     document.body.classList.add("vertical-layout");
@@ -20,16 +53,11 @@ function checkVerticalLayout() {
     document.documentElement.classList.remove("vertical-layout");
     document.body.classList.remove("vertical-layout");
   }
+  bindScrollListener(); // COMMENT: Always rebind scroll listener when layout changes
 }
-
-// initial check
-checkVerticalLayout();
-
-// when window change, check again
 window.addEventListener('resize', checkVerticalLayout);
-// resize end here
 
-// load gallery
+// ========== Gallery Loading =============
 async function loadGallery() {
   try {
     const response = await fetch('https://www.yitingli.xyz/gallery.json');
@@ -42,7 +70,7 @@ async function loadGallery() {
     console.error('Loading album error:', e);
   }
 }
-//渲染相册
+
 function renderAlbums(reset = false) {
   const gallery = document.getElementById('gallery');
   const moreBtn = document.getElementById('moreButton');
@@ -62,7 +90,18 @@ function renderAlbums(reset = false) {
     imgContainer.appendChild(img);
     const titleDiv = document.createElement('div');
     titleDiv.className = 'album-title';
-    titleDiv.innerText = album.title ? album.title : 'Something Random';
+
+    // Add NEW! badge if album.new === 1
+    if (album.new === 1) {
+      const newSpan = document.createElement('span');
+      newSpan.innerText = 'NEW! ';
+      newSpan.className = 'new-badge'; // CSS class for glowing effect
+      titleDiv.appendChild(newSpan);
+    }
+
+    const titleText = document.createTextNode(album.title || 'Untitled');
+    titleDiv.appendChild(titleText);
+    
     wrapper.appendChild(imgContainer);
     wrapper.appendChild(titleDiv);
     gallery.appendChild(wrapper);
@@ -70,9 +109,10 @@ function renderAlbums(reset = false) {
   displayedCount = end;
   moreBtn.style.display = (displayedCount < filteredAlbums.length) ? 'block' : 'none';
 }
-// load more 
+
 function loadMoreAlbums() { renderAlbums(); }
-//绑定tag event
+
+// ========== Tag Events =============
 function bindTagEvents() {
   document.querySelectorAll('#tagBar .tag').forEach(tag => {
     tag.addEventListener('click', () => {
@@ -91,7 +131,8 @@ function bindTagEvents() {
     });
   });
 }
-// ======== light box ===========
+
+// ========== Lightbox =============
 function openLightbox(photos, startIndex, desc, camera) {
   currentPhotos = photos;
   currentPhotoIndex = startIndex;
@@ -99,10 +140,7 @@ function openLightbox(photos, startIndex, desc, camera) {
   currentCamera = camera || 'Unknown Camera';
   updateLightbox();
   document.getElementById('lightbox').classList.add('show');
-
-  // COMMENT: Hide the Back to Home button when lightbox is open
-  const backBtn = document.getElementById('backHomeBtn');
-  if (backBtn) backBtn.style.display = 'none';
+  if (backHomeBtn) backHomeBtn.style.display = 'none'; // COMMENT: Hide Back to Home when lightbox is open
 }
 
 function updateLightbox() {
@@ -115,10 +153,7 @@ function updateLightbox() {
 
 function closeLightbox() {
   document.getElementById('lightbox').classList.remove('show');
-
-  // COMMENT: Show the Back to Home button again when lightbox is closed
-  const backBtn = document.getElementById('backHomeBtn');
-  if (backBtn) backBtn.style.display = 'inline-block';
+  if (backHomeBtn) backHomeBtn.style.display = 'inline-block'; // COMMENT: Show Back to Home when lightbox is closed
 }
 
 function nextPhoto() {
@@ -134,46 +169,15 @@ function prevPhoto() {
     updateLightbox();
   }
 }
-// ================== Scroll to Top ==================
-const scrollBtn = document.getElementById('scrollTopBtn');
-const rightPanel = document.getElementById('right-panel');
 
-// COMMENT: Add a resize listener to re-bind the scroll listener when layout changes
-window.addEventListener('resize', bindScrollListener); // DEBUG: To handle screen orientation/layout changes
-// COMMENT: This function decides which container to monitor (window for vertical, rightPanel for horizontal)
-function bindScrollListener() {
-  // COMMENT: Remove old scroll event listeners to avoid duplicates
-  window.removeEventListener('scroll', handleScroll);
-  rightPanel.removeEventListener('scroll', handleScroll);
-// COMMENT: Decide which container to bind based on layout
-  const container = document.body.classList.contains('vertical-layout') ? window : rightPanel;
-  container.addEventListener('scroll', handleScroll);
-  console.log("Scroll listener bound to:", container === window ? "window" : "#right-panel");
-}
-// COMMENT: Handle scroll logic
-function handleScroll() {
-  const container = document.body.classList.contains('vertical-layout') ? window : rightPanel;
-  const scrollTop = container === window ? window.scrollY : container.scrollTop;
-  scrollBtn.style.display = scrollTop > 200 ? 'block' : 'none';
-  console.log("ScrollTop:", scrollTop, "Button Display:", scrollBtn.style.display);
-}
+// ========== Initialize =============
+window.onload = function() {
+  loadGallery();
+  checkVerticalLayout();
+  bindScrollListener();
+  handleScroll(); // COMMENT: Trigger initial scroll check
+};
 
-function scrollToTop() {
-  const container = document.body.classList.contains('vertical-layout') ? window : rightPanel;
-  if (container === window) {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  } else {
-    container.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-}
-
-// COMMENT: Initialize scroll listener
-bindScrollListener();
-
-// load more
-window.onload = loadGallery;
-
-// back to home
 function goHome() {
-  window.location.href = "index.html"; // main page html
+  window.location.href = "index.html";
 }
