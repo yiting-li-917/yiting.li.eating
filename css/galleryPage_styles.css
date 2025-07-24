@@ -160,11 +160,11 @@ html, body {
   font-family: 'Montserrat', sans-serif; /* change to handwriting later */
   margin-top: 10px;
   margin-left: 10px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-align: left;
   color: var(--gray-black);
   font-weight: 400;
-  width: 90%;
+  width: 95%;
 }
 /* CSS for glowing NEW badge */
 .new-badge {
