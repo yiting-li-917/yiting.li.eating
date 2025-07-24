@@ -166,6 +166,13 @@ html, body {
   font-weight: 400;
   width: 90%;
 }
+/* CSS for glowing NEW badge */
+.new-badge {
+  color: red;
+  font-weight: bold;
+  text-shadow: 0 0 5px yellow, 0 0 10px orange;
+}
+
 .more-btn {
   margin: 20px 0;
   padding: 10px 20px;
