@@ -298,6 +298,10 @@ html, body {
   transform: scale(1.1);
 }
 
+#info-button:active {
+  transform: scale(0.9);
+}
+
 /* Description Box */
 #photo-desc-content {
   display: none;
@@ -346,8 +350,11 @@ html, body {
   cursor: pointer;
 }
 #scrollTopBtn:hover {
-  color: var(--light-mint);
-  background-color: var(--gray-black);
+  transform: scale(1.1);
+}
+
+#scrollTopBtn:active {
+  transform: scale(0.9);
 }
 
 /* ---------------- vertical screen change layout ---------------- */
@@ -419,7 +426,7 @@ html.vertical-layout, body.vertical-layout {
 }
 
 /* TAG 状态修复 */
-.tag-bar .tag.active:hover {
+.vertical-layout .tag-bar .tag.active:hover {
   background-color: var(--light-mint);
   color: var(--gray-black);
   transform: none; /* 禁用缩放 */
@@ -427,7 +434,7 @@ html.vertical-layout, body.vertical-layout {
 
 }
 /* Scroll to top button */
-#scrollTopBtn {
+.vertical-layout #scrollTopBtn {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -442,12 +449,13 @@ html.vertical-layout, body.vertical-layout {
   z-index: 9999;
 }
 
-#scrollTopBtn:hover {
-  transform: scale(1.1);
+.vertical-layout #backHomeBtn {
+  bottom: 10px;
+  opacity: 0.7; /* COMMENT: Make button semi-transparent */
 }
 
-#scrollTopBtn:active {
-  transform: scale(0.9);
+.vertical-layout #scrollTopBtn{
+  opacity: 0.7; /* COMMENT: Make button semi-transparent */
 }
 
 .vertical-layout .lightbox-controls {
@@ -486,13 +494,5 @@ html.vertical-layout, body.vertical-layout {
 .vertical-layout .left-panel {
   padding: 1rem;         /* 减少边距 */
   align-items: center;   /* 居中内容 */
-}
-.vertical-layout #backHomeBtn {
-  bottom: 10px;
-  opacity: 0.7; /* COMMENT: Make button semi-transparent */
-}
-
-.vertical-layout #scrollTopBtn{
-  opacity: 0.7; /* COMMENT: Make button semi-transparent */
 }
 }
