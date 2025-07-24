@@ -158,7 +158,7 @@ function updateLightbox() {
     counter = document.createElement('span');
     counter.id = 'photo-counter';
     counter.style.position = 'absolute';
-    counter.style.bottom = '5%';
+    counter.style.bottom = '3.5%';
     counter.style.left = '50%';
     counter.style.transform = 'translateX(-50%)';
     counter.style.color = '#000';
