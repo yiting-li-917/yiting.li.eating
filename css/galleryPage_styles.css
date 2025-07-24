@@ -262,7 +262,7 @@ html, body {
 
 /* 2. Close button with circle background */
 .close-btn {
-  color: #fff; /* Icon color */
+  color: var(--gray-black);
   font-size: 2rem; /* Size of the icon */
   cursor: pointer;
   display: flex;
