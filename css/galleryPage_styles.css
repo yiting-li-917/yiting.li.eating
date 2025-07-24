@@ -496,3 +496,59 @@ html.vertical-layout, body.vertical-layout {
   align-items: center;   /* 居中内容 */
 }
 }
+
+/* --------------test lightbox photo next/prev feature */
+#lightbox-img {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  will-change: transform, opacity;
+  opacity: 0; /* Start hidden for fade effect */
+}
+
+/* Fade-out before new image fades in */
+.fade-out {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+/* Combined fade and slide from the right */
+.slide-in-right {
+  animation: fadeSlideInRight 0.4s ease forwards;
+}
+
+/* Combined fade and slide from the left */
+.slide-in-left {
+  animation: fadeSlideInLeft 0.4s ease forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes fadeSlideInRight {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeSlideInLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
