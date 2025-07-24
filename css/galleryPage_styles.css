@@ -193,16 +193,15 @@ html, body {
   transform: translateY(-2px);
 }
 /* Back button */
-#backHomeBtn {
-  display: inline-block;             
+#backHomeBtn {          
   padding: 10px 15px;                
   border-radius: 20px;              
   text-decoration: none;             
   /* background-color: var(--main-cold1);  */
   background-color: transparent;
-  color: var(--main-warm1); 
   border: 2px var(--main-warm1); 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  align-items: center;  
+  gap: 20px;
   /*border: none;*/
   /*outline: none;*/
   /*transition: background 0.3s, transform 0.3s; */
@@ -215,9 +214,10 @@ html, body {
   cursor: pointer;
 }
 #backHomeBtn i {
+  color: var(--main-warm1); 
   font-size: 16px;
   font-weight: 500;  
-  padding: 2px 10px 2px 10px;
+  /*padding: 2px 10px 2px 10px;*/
 }
 #backHomeBtn:hover {
   /*background-color: var(--main-warm1); /* UPDATED */
