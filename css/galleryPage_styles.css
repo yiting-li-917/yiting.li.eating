@@ -202,10 +202,11 @@ html, body {
   background-color: transparent;
   color: var(--main-warm1); 
   border: var(--main-warm1); 
-  font-weight: 550;                 
+  font-weight: 550;  
+  font-size: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   /*border: none;*/
-  outline: none;
+  /*outline: none;*/
   /*transition: background 0.3s, transform 0.3s; */
 
   position: fixed;                   
