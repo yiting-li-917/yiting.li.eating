@@ -322,6 +322,14 @@ html, body {
 #photo-desc-content.show {
   display: block;
 }
+/* COMMENT: Disable scrolling when lightbox is open */
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+  touch-action: none;       /* Prevent scrolling on touch devices */
+  -webkit-overflow-scrolling: none; /* iOS Safari fix */
+}
+
 /* scroll button */
 #scrollTopBtn {
   display: none;
