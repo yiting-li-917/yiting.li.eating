@@ -8,20 +8,20 @@ let currentPhotoIndex = 0;
 let currentDesc = '';
 let currentCamera = '';
 let activeTag = null;
+
 const backHomeBtn = document.getElementById('backHomeBtn'); // COMMENT: Back to Home button reference
-const scrollBtn = document.getElementById('scrollTopBtn'); // COMMENT: Scroll up button reference
-const rightPanel = document.getElementById('right-panel'); // COMMENT: Right panel reference
+const scrollBtn = document.getElementById('scrollTopBtn');  // COMMENT: Scroll up button reference
+const rightPanel = document.getElementById('right-panel');  // COMMENT: Right panel reference
 
 // ========== Scroll Handler =============
+// COMMENT: Always show scroll button in vertical layout
 function handleScroll() {
-  // COMMENT: Use documentElement as container in vertical mode instead of window
-  const container = document.body.classList.contains('vertical-layout') 
-    ? document.documentElement 
-    : rightPanel;
-
-  const scrollTop = container.scrollTop;
-  scrollBtn.style.display = scrollTop > 10 ? 'block' : 'none';
-  console.log("ScrollTop:", scrollTop, "Button Display:", scrollBtn.style.display);
+  if (document.body.classList.contains('vertical-layout')) {
+    scrollBtn.style.display = 'block'; // COMMENT: Vertical layout - always visible
+  } else {
+    const scrollTop = rightPanel.scrollTop;
+    scrollBtn.style.display = scrollTop > 150 ? 'block' : 'none'; // COMMENT: Horizontal - show after 150px scroll
+  }
 }
 
 function bindScrollListener() {
@@ -33,12 +33,12 @@ function bindScrollListener() {
 }
 
 function scrollToTop() {
-  // COMMENT: Use documentElement in vertical layout
-  const container = document.body.classList.contains('vertical-layout') 
-    ? document.documentElement 
-    : rightPanel;
-
-  container.scrollTo({ top: 0, behavior: 'smooth' });
+  const container = document.body.classList.contains('vertical-layout') ? window : rightPanel;
+  if (container === window) {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    rightPanel.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
 
 // ========== Layout Detection =============
@@ -51,7 +51,7 @@ function checkVerticalLayout() {
     document.documentElement.classList.remove("vertical-layout");
     document.body.classList.remove("vertical-layout");
   }
-  bindScrollListener(); // COMMENT: Always rebind after layout change
+  bindScrollListener(); // COMMENT: Always rebind scroll listener when layout changes
 }
 window.addEventListener('resize', checkVerticalLayout);
 
