@@ -497,59 +497,5 @@ html.vertical-layout, body.vertical-layout {
 }
 }
 
-/* --------------test lightbox photo next/prev feature */
-/* ========== LIGHTBOX ANIMATION CSS ============= */
-
-#lightbox-img {
-  will-change: transform, opacity;
-}
-
-/* Fade + Slide Out (Left) */
-@keyframes fadeSlideOutLeft {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-}
-
-/* Fade + Slide Out (Right) */
-@keyframes fadeSlideOutRight {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(50px);
-    opacity: 0;
-  }
-}
-
-/* Fade + Slide In (Right) */
-@keyframes fadeSlideInRight {
-  0% {
-    transform: translateX(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Fade + Slide In (Left) */
-@keyframes fadeSlideInLeft {
-  0% {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 
 
