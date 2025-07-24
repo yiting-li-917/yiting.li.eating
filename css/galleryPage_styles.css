@@ -255,9 +255,12 @@ html, body {
   display: flex;
   gap: 10px 60px; /* row-gap column-gap */
   background-color: transparent;
+  border: none;
 }
 .lightbox-controls button i {
   font-size: 1.5rem;
+  background-color: transparent;
+  color: var(--gray-black);
 }
 
 /* 2. Close button with circle background */
