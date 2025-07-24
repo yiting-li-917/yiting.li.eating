@@ -201,6 +201,16 @@ function updateLightbox() {
   }
   counter.textContent = `${currentPhotoIndex + 1} / ${currentPhotos.length}`;
   img.src = currentPhotos[currentPhotoIndex];
+
+  // ===== pre load next and prev photo  =====
+  if (currentPhotoIndex < currentPhotos.length - 1) {
+    const nextImg = new Image();
+    nextImg.src = currentPhotos[currentPhotoIndex + 1];
+  }
+  if (currentPhotoIndex > 0) {
+    const prevImg = new Image();
+    prevImg.src = currentPhotos[currentPhotoIndex - 1];
+  }
 }
 
 // COMMENT: Closes the lightbox and restores scroll
