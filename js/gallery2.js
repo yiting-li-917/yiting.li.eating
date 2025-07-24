@@ -161,8 +161,8 @@ function updateLightbox() {
     counter.style.bottom = '5%';
     counter.style.left = '50%';
     counter.style.transform = 'translateX(-50%)';
-    counter.style.color = '#fff';
-    counter.style.fontSize = '1rem';
+    counter.style.color = '#000';
+    counter.style.fontSize = '0.9rem';
     counter.style.zIndex = '220';
     const controls = document.querySelector('.lightbox-controls');
     if (controls) controls.appendChild(counter);
