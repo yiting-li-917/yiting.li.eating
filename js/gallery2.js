@@ -158,6 +158,27 @@ function bindTagEvents() {
   });
 }
 
+// ========== LIGHTBOX ANIMATION JS =============
+// COMMENT: Handles fade-out and slide-in transitions using combined keyframe animations for seamless transition
+function animatePhotoChange(direction) {
+  const img = document.getElementById('lightbox-img');
+  if (!img) return;
+
+  // Apply fade-out-slide animation before switching
+  img.style.animation = (direction === 'next')
+    ? 'fadeSlideOutLeft 0.3s ease-in-out forwards'
+    : 'fadeSlideOutRight 0.3s ease-in-out forwards';
+
+  // After fade-slide out, update image and animate fade-slide in
+  img.addEventListener('animationend', function handleFadeOut() {
+    img.style.animation = '';
+    updateLightbox();
+    img.style.animation = (direction === 'next')
+      ? 'fadeSlideInRight 0.4s ease-in-out forwards'
+      : 'fadeSlideInLeft 0.4s ease-in-out forwards';
+    img.removeEventListener('animationend', handleFadeOut);
+  });
+}
 // ========== LIGHTBOX FUNCTIONS =============
 // COMMENT: Opens the lightbox with selected album photos
 function openLightbox(photos, startIndex, desc, camera) {
@@ -216,7 +237,8 @@ function closeLightbox() {
 function nextPhoto() {
   if (currentPhotoIndex < currentPhotos.length - 1) {
     currentPhotoIndex++;
-    updateLightbox();
+    //updateLightbox();
+    animatePhotoChange('next'); //test
   }
 }
 
@@ -224,7 +246,8 @@ function nextPhoto() {
 function prevPhoto() {
   if (currentPhotoIndex > 0) {
     currentPhotoIndex--;
-    updateLightbox();
+    //updateLightbox();
+    animatePhotoChange('prev');
   }
 }
 
