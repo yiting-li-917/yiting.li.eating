@@ -253,7 +253,7 @@ html, body {
   width: 100%;
   justify-content: center;
   display: flex;
-  gap: 50px;
+  gap: 50px 50px 10px 50px;
   background-color: transparent;
 }
 .lightbox-controls button i {
