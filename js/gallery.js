@@ -158,7 +158,26 @@ function bindTagEvents() {
     });
   });
 }
+// ===== Scroll lock for mobile without disabling pinch-zoom =====
+let scrollTopPosition = 0;
 
+function disableScroll() {
+  scrollTopPosition = window.scrollY;
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${scrollTopPosition}px`;
+  document.body.style.left = '0';
+  document.body.style.right = '0';
+  document.body.style.width = '100%';
+}
+
+function enableScroll() {
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.left = '';
+  document.body.style.right = '';
+  document.body.style.width = '';
+  window.scrollTo(0, scrollTopPosition);
+}
 // ========== LIGHTBOX FUNCTIONS =============
 // COMMENT: Opens the lightbox with selected album photos
 function openLightbox(photos, startIndex, desc, camera) {
@@ -169,7 +188,7 @@ function openLightbox(photos, startIndex, desc, camera) {
   updateLightbox();
 
   lightbox.classList.add('show');
-  document.body.classList.add('no-scroll'); // COMMENT: Prevent body scroll when lightbox is open
+  disableScroll(); // Lock scroll
 
   if (backHomeBtn) backHomeBtn.style.display = 'none';
   if (scrollBtn) scrollBtn.style.display = 'none';
@@ -217,12 +236,11 @@ function updateLightbox() {
 // COMMENT: Closes the lightbox and restores scroll
 function closeLightbox() {
   lightbox.classList.remove('show');
-  document.body.classList.remove('no-scroll');
+  enableScroll(); // Restore scroll
 
   if (backHomeBtn) backHomeBtn.style.display = 'inline-block';
-  handleScroll(); // COMMENT: Reset scroll button state
+  handleScroll(); // Reset scroll button state
 }
-
 // COMMENT: Moves to the next photo in lightbox
 function nextPhoto() {
   if (currentPhotoIndex < currentPhotos.length - 1) {
