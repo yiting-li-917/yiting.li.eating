@@ -246,14 +246,18 @@ html, body {
   max-height: 85%;
   border-radius: 5px;
 }
+/* 1. Fix next/prev buttons at 5% from the bottom */
 .lightbox-controls {
-  background-color: transparent;
-  margin-top: 30px;
+  position: absolute; /* COMMENT: Fix position */
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 30px;
+  background-color: transparent;
 }
 .lightbox-controls button i {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 .photo-desc {
   position: absolute;
@@ -269,15 +273,51 @@ html, body {
   text-align: left;
   color: #333;
 }
+/* 2. Close button with circle background */
 .close-btn {
   position: absolute;
-  top: 10%;
-  right: 10%;
+  top: 5%;
+  right: 8%;
   color: var(--gray-black);
-  font-size: 3rem;
+  font-size: 2rem;
   cursor: pointer;
   z-index: 210;
+  background: rgba(0, 0, 0, 0.5); /* COMMENT: Circle background */
+  border-radius: 50%;
+  padding: 10px;
 }
+/* 3. Description toggle button */
+#photo-desc-button {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  font-size: 1.5rem;
+  background: transparent;
+  color: var(--gray-black);
+  border: none;
+  cursor: pointer;
+  z-index: 220;
+}
+/* 4. Hidden description box */
+#photo-desc-content {
+  display: none;
+  position: absolute;
+  bottom: 50px;
+  right: 5%;
+  width: 220px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  border: 1px solid #333;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.2rem;
+}
+
+#photo-desc-content.show {
+  display: block;
+}
+/* scroll button */
 #scrollTopBtn {
   display: none;
   position: fixed;
