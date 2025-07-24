@@ -24,10 +24,11 @@ function handleScroll() {
   }
   
   if (document.body.classList.contains('vertical-layout')) {
-    scrollBtn.style.display = 'block'; // COMMENT: Vertical layout - always visible
+    scrollBtn.style.display = scrollTop > 200 ? 'block' : 'none';
+    //scrollBtn.style.display = 'block'; // COMMENT: Vertical layout - always visible
   } else {
     const scrollTop = rightPanel.scrollTop;
-    scrollBtn.style.display = scrollTop > 300 ? 'block' : 'none'; // COMMENT: Horizontal - show after 150px scroll
+    scrollBtn.style.display = scrollTop > 200 ? 'block' : 'none'; // COMMENT: Horizontal - show after 150px scroll
   }
 }
 
