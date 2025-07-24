@@ -1,63 +1,82 @@
-// ========== Gallery and Layout =============
+// ========== GLOBAL STATE & CONSTANTS =============
+// COMMENT: Stores album and photo data for gallery and lightbox
 let allAlbums = [];
 let filteredAlbums = [];
 let displayedCount = 0;
-const BATCH_SIZE = 10;
+const BATCH_SIZE = 10; // COMMENT: Number of albums loaded per batch
 let currentPhotos = [];
 let currentPhotoIndex = 0;
 let currentDesc = '';
 let currentCamera = '';
 let activeTag = null;
 
-const backHomeBtn = document.getElementById('backHomeBtn'); // COMMENT: Back to Home button reference
-const scrollBtn = document.getElementById('scrollTopBtn');  // COMMENT: Scroll up button reference
-const rightPanel = document.getElementById('right-panel');  // COMMENT: Right panel reference
+// COMMENT: Cache frequently accessed DOM elements
+const backHomeBtn = document.getElementById('backHomeBtn');
+const scrollBtn = document.getElementById('scrollTopBtn');
+const rightPanel = document.getElementById('right-panel');
+const lightbox = document.getElementById('lightbox');
 
-// ========== Scroll Handler =============
-// COMMENT: Always show scroll button in vertical layout, but ensure scroll-to-top works
+// ========== SCROLL HANDLER =============
+// COMMENT: Controls visibility of scroll-to-top button based on layout & lightbox state
 function handleScroll() {
+  // COMMENT: Hide scroll button if lightbox is active
+  if (lightbox && lightbox.classList.contains('show')) {
+    scrollBtn.style.display = 'none';
+    return;
+  }
+
   if (document.body.classList.contains('vertical-layout')) {
     scrollBtn.style.display = 'block'; // COMMENT: Vertical layout - always visible
   } else {
     const scrollTop = rightPanel.scrollTop;
-    scrollBtn.style.display = scrollTop > 300 ? 'block' : 'none'; // COMMENT: Horizontal - show after 150px scroll
+    scrollBtn.style.display = scrollTop > 200 ? 'block' : 'none'; // COMMENT: Horizontal layout - show after scrolling 200px
   }
 }
 
+// COMMENT: Dynamically binds the correct scroll listener based on layout
 function bindScrollListener() {
   window.removeEventListener('scroll', handleScroll);
   rightPanel.removeEventListener('scroll', handleScroll);
+
   const container = document.body.classList.contains('vertical-layout') ? window : rightPanel;
   container.addEventListener('scroll', handleScroll);
+
   console.log("Scroll listener bound to:", container === window ? "window" : "#right-panel");
 }
 
+// COMMENT: Smoothly scrolls to the top of the page
 function scrollToTop() {
-  // COMMENT: Scroll to top of window if vertical-layout, else scroll rightPanel
   if (document.body.classList.contains('vertical-layout')) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
-    document.body.scrollTo({ top: 0, behavior: 'smooth' });    
+    document.body.scrollTo({ top: 0, behavior: 'smooth' });
   } else {
     rightPanel.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
 
-// ========== Layout Detection =============
+// ========== LAYOUT DETECTION =============
+// COMMENT: Switches between vertical and horizontal layouts based on screen size/orientation
 function checkVerticalLayout() {
   const isVertical = window.innerWidth < 900 || window.innerHeight > window.innerWidth;
   if (isVertical) {
     document.documentElement.classList.add("vertical-layout");
     document.body.classList.add("vertical-layout");
+
+    // COMMENT: Ensure scroll button is visible when switching to vertical
+    if (!(lightbox && lightbox.classList.contains('show'))) {
+      scrollBtn.style.display = 'block';
+    }
   } else {
     document.documentElement.classList.remove("vertical-layout");
     document.body.classList.remove("vertical-layout");
   }
-  bindScrollListener(); // COMMENT: Always rebind scroll listener when layout changes
+  bindScrollListener();
 }
 window.addEventListener('resize', checkVerticalLayout);
 
-// ========== Gallery Loading =============
+// ========== GALLERY LOADING =============
+// COMMENT: Fetches album data and renders gallery
 async function loadGallery() {
   try {
     const response = await fetch('https://www.yitingli.xyz/gallery.json');
@@ -71,16 +90,20 @@ async function loadGallery() {
   }
 }
 
+// COMMENT: Renders a batch of albums into the gallery
 function renderAlbums(reset = false) {
   const gallery = document.getElementById('gallery');
   const moreBtn = document.getElementById('moreButton');
   if (!gallery || !moreBtn) return;
   if (reset) gallery.innerHTML = '';
+
   const end = Math.min(displayedCount + BATCH_SIZE, filteredAlbums.length);
   for (let i = displayedCount; i < end; i++) {
     const album = filteredAlbums[i];
     const wrapper = document.createElement('div');
     wrapper.className = 'album-wrapper';
+
+    // Album cover image
     const imgContainer = document.createElement('div');
     imgContainer.className = 'album-image-container';
     const img = document.createElement('img');
@@ -88,20 +111,18 @@ function renderAlbums(reset = false) {
     img.alt = album.title;
     img.addEventListener('click', () => openLightbox(album.photos, 0, album.desc, album.camera));
     imgContainer.appendChild(img);
+
+    // Album title with optional NEW badge
     const titleDiv = document.createElement('div');
     titleDiv.className = 'album-title';
-
-    // Add NEW! badge if album.new === 1
     if (album.new === 1) {
       const newSpan = document.createElement('span');
       newSpan.innerText = 'NEW! ';
-      newSpan.className = 'new-badge'; // CSS class for glowing effect
+      newSpan.className = 'new-badge';
       titleDiv.appendChild(newSpan);
     }
+    titleDiv.appendChild(document.createTextNode(album.title || 'Untitled'));
 
-    const titleText = document.createTextNode(album.title || 'Untitled');
-    titleDiv.appendChild(titleText);
-    
     wrapper.appendChild(imgContainer);
     wrapper.appendChild(titleDiv);
     gallery.appendChild(wrapper);
@@ -110,14 +131,19 @@ function renderAlbums(reset = false) {
   moreBtn.style.display = (displayedCount < filteredAlbums.length) ? 'block' : 'none';
 }
 
-function loadMoreAlbums() { renderAlbums(); }
+// COMMENT: Loads additional albums when 'More' button is clicked
+function loadMoreAlbums() {
+  renderAlbums();
+}
 
-// ========== Tag Events =============
+// ========== TAG FILTERING =============
+// COMMENT: Binds click events to tags for album filtering
 function bindTagEvents() {
   document.querySelectorAll('#tagBar .tag').forEach(tag => {
     tag.addEventListener('click', () => {
       const tagValue = tag.dataset.tag;
       document.querySelectorAll('#tagBar .tag').forEach(t => t.classList.remove('active'));
+
       if (activeTag === tagValue) {
         activeTag = null;
         filteredAlbums = [...allAlbums];
@@ -132,30 +158,61 @@ function bindTagEvents() {
   });
 }
 
-// ========== Lightbox =============
+// ========== LIGHTBOX FUNCTIONS =============
+// COMMENT: Opens the lightbox with selected album photos
 function openLightbox(photos, startIndex, desc, camera) {
   currentPhotos = photos;
   currentPhotoIndex = startIndex;
   currentDesc = desc;
   currentCamera = camera || 'Unknown Camera';
   updateLightbox();
-  document.getElementById('lightbox').classList.add('show');
-  if (backHomeBtn) backHomeBtn.style.display = 'none'; // COMMENT: Hide Back to Home when lightbox is open
+
+  lightbox.classList.add('show');
+  document.body.classList.add('no-scroll'); // COMMENT: Prevent body scroll when lightbox is open
+
+  if (backHomeBtn) backHomeBtn.style.display = 'none';
+  if (scrollBtn) scrollBtn.style.display = 'none';
 }
 
+// COMMENT: Updates lightbox content (photo, description, and counter)
 function updateLightbox() {
   const img = document.getElementById('lightbox-img');
-  const descBox = document.getElementById('photo-desc');
-  descBox.innerHTML = `Camera: ${currentCamera}<br>${currentDesc || ''}`;
-  descBox.style.display = 'block';
+  const descContent = document.getElementById('photo-desc-content');
+  if (descContent) {
+    descContent.innerHTML = `${currentCamera}<br>${currentDesc || ''}`;
+  }
+
+  // Create or update photo counter
+  let counter = document.getElementById('photo-counter');
+  if (!counter) {
+    counter = document.createElement('span');
+    counter.id = 'photo-counter';
+    Object.assign(counter.style, {
+      position: 'absolute',
+      bottom: '5%',
+      left: '50%',
+      transform: 'translateX(-50%)',
+      color: '#000',
+      fontSize: '0.9rem',
+      zIndex: '220'
+    });
+    const controls = document.querySelector('.lightbox-controls');
+    if (controls) controls.appendChild(counter);
+  }
+  counter.textContent = `${currentPhotoIndex + 1} / ${currentPhotos.length}`;
   img.src = currentPhotos[currentPhotoIndex];
 }
 
+// COMMENT: Closes the lightbox and restores scroll
 function closeLightbox() {
-  document.getElementById('lightbox').classList.remove('show');
-  if (backHomeBtn) backHomeBtn.style.display = 'inline-block'; // COMMENT: Show Back to Home when lightbox is closed
+  lightbox.classList.remove('show');
+  document.body.classList.remove('no-scroll');
+
+  if (backHomeBtn) backHomeBtn.style.display = 'inline-block';
+  handleScroll(); // COMMENT: Reset scroll button state
 }
 
+// COMMENT: Moves to the next photo in lightbox
 function nextPhoto() {
   if (currentPhotoIndex < currentPhotos.length - 1) {
     currentPhotoIndex++;
@@ -163,6 +220,7 @@ function nextPhoto() {
   }
 }
 
+// COMMENT: Moves to the previous photo in lightbox
 function prevPhoto() {
   if (currentPhotoIndex > 0) {
     currentPhotoIndex--;
@@ -170,14 +228,23 @@ function prevPhoto() {
   }
 }
 
-// ========== Initialize =============
+// ========== DESCRIPTION BOX TOGGLE =============
+// COMMENT: Toggles visibility of the photo description box
+function toggleDescBox() {
+  const box = document.getElementById('photo-desc-content');
+  if (box) box.classList.toggle('show');
+}
+
+// ========== INITIALIZATION =============
+// COMMENT: Initialize gallery, layout, and scroll listeners on page load
 window.onload = function() {
   loadGallery();
   checkVerticalLayout();
   bindScrollListener();
-  handleScroll(); // COMMENT: Trigger initial scroll check
+  handleScroll();
 };
 
+// COMMENT: Navigates back to home page
 function goHome() {
   window.location.href = "index.html";
 }
