@@ -17,7 +17,7 @@ html, body {
 }
 .left-panel {
   flex: 0 0 60%;
-  background: url('https://gallery.yitingli.xyz/galleryBG.jpg') center/cover no-repeat;
+  background: url('https://gallery.yitingli.xyz/smallgalleryBG.jpg') center/cover no-repeat;
   color: white;
   display: flex;
   flex-direction: column;
