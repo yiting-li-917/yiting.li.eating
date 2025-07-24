@@ -20,7 +20,7 @@ function handleScroll() {
     : rightPanel;
 
   const scrollTop = container.scrollTop;
-  scrollBtn.style.display = scrollTop > 150 ? 'block' : 'none';
+  scrollBtn.style.display = scrollTop > 10 ? 'block' : 'none';
   console.log("ScrollTop:", scrollTop, "Button Display:", scrollBtn.style.display);
 }
 
