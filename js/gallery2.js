@@ -141,6 +141,7 @@ function openLightbox(photos, startIndex, desc, camera) {
   updateLightbox();
   document.getElementById('lightbox').classList.add('show');
   if (backHomeBtn) backHomeBtn.style.display = 'none'; // COMMENT: Hide Back to Home when lightbox is open
+  if (scrollBtn) scrollBtn.style.display = 'none'; // Hide scroll up when lightbox is open
 }
 
 function updateLightbox() {
@@ -149,12 +150,16 @@ function updateLightbox() {
   if (descContent) {
     descContent.innerHTML = `Camera: ${currentCamera}<br>${currentDesc || ''}`;
   }
+  // Update photo counter between next/prev
+  const counter = document.getElementById('photo-counter');
+  if (counter) counter.textContent = `${currentPhotoIndex + 1} / ${currentPhotos.length}`;
   img.src = currentPhotos[currentPhotoIndex];
 }
 
 function closeLightbox() {
   document.getElementById('lightbox').classList.remove('show');
   if (backHomeBtn) backHomeBtn.style.display = 'inline-block'; // COMMENT: Show Back to Home when lightbox is closed
+  if (scrollBtn) scrollBtn.style.display = 'block'; // Show scroll up when lightbox is closed
 }
 
 function nextPhoto() {
