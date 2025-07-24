@@ -273,28 +273,30 @@ html, body {
   right: 8%;
 }
 /* Info Button */
-.info-btn {
+#info-button {
+  position: absolute; /* COMMENT: Position it absolutely relative to #lightbox */
+  bottom: 10%;        /* COMMENT: 10% from bottom of lightbox */
+  right: 10%;         /* COMMENT: 10% from right side of lightbox */
+  z-index: 230;       /* COMMENT: Ensure it appears above the image */
   background-color: transparent;
-  color: #fff;
-  font-size: 1.5rem;
   border: none;
-  border-radius: 50%;            /* COMMENT: Perfect circle */
-  padding: 8px; /* Adjust for a clear clickable area */
+  border-radius: 50%;
+  padding: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  position: absolute;
-  right: 5%;
-  bottom: 10%;
-  transition: transform 0.2s ease;
-  z-index: 220;                  /* COMMENT: Ensure above other elements */
 }
 
-.info-btn i {
-  pointer-events: none; /* Make entire circle clickable */
+#info-button i {
+  pointer-events: none; /* COMMENT: Make the entire button clickable */
+  font-size: 1.5rem;
+  color: var(--gray-black);
 }
-.info-btn i:hover { transform: scale(1.1); }
+
+#info-button:hover {
+  transform: scale(1.1);
+}
 
 /* Description Box */
 #photo-desc-content {
