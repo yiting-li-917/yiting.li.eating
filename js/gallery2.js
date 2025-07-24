@@ -149,7 +149,7 @@ function updateLightbox() {
   const img = document.getElementById('lightbox-img');
   const descContent = document.getElementById('photo-desc-content');
   if (descContent) {
-    descContent.innerHTML = `Camera: ${currentCamera}<br>${currentDesc || ''}`;
+    descContent.innerHTML = `${currentCamera}<br>${currentDesc || ''}`;
   }
  // Ensure photo counter exists and is updated
   let counter = document.getElementById('photo-counter');
