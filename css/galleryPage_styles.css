@@ -443,8 +443,12 @@ html.vertical-layout, body.vertical-layout {
   bottom: 5%; /* Fixed 5% from bottom */
 }
 #info-button {
-  bottom: 3.7%;        /* COMMENT: 6% from bottom of lightbox */
+  bottom: 3.8%;        /* COMMENT: 6% from bottom of lightbox */
   right: 5%;         /* COMMENT: 10% from right side of lightbox */
+}
+.close-btn {
+  top: 3%;
+  right: 6%;
 }
 
 /* specific for phone */
