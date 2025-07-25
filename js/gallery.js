@@ -16,6 +16,9 @@ const scrollBtn = document.getElementById('scrollTopBtn');
 const rightPanel = document.getElementById('right-panel');
 const lightbox = document.getElementById('lightbox');
 
+// get year for copyright
+document.getElementById('year').textContent = new Date().getFullYear();
+
 // ========== FONT SPLIT UTILITY =============
 // Splits text into spans with different classes for Chinese and English
 function splitTitleWithFonts(title) {
