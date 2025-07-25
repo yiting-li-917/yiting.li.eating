@@ -371,13 +371,11 @@ html.vertical-layout, body.vertical-layout {
   overflow-y: auto;
 }
 
-/* Left & Right Panel 调整 */
 .vertical-layout .left-panel,
 .vertical-layout .right-panel {
   width: 100%;
   flex: none;
 }
-
 
 .vertical-layout .left-panel {
   padding: 1rem;
@@ -427,7 +425,7 @@ html.vertical-layout, body.vertical-layout {
 .vertical-layout .tag-bar .tag{
   font-size: 10px;
 }
-/* Right Panel 背景始终填充 */
+
 .vertical-layout .right-panel {
   background-color: var(--light-mint);
   min-height: 100vh; 
@@ -463,6 +461,7 @@ html.vertical-layout, body.vertical-layout {
   color: var(--light-green);
   font-size: 14px;
   opacity: 0.75;
+  border: var(--light-green);
 }
 
 .vertical-layout #backHomeBtn i{
