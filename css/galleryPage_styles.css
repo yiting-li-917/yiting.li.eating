@@ -545,6 +545,7 @@ html.vertical-layout, body.vertical-layout {
 }
   
 .vertical-layout .right-panel footer {
+  margin-top: 20px;
   margin-bottm: 0;
 }
 }
