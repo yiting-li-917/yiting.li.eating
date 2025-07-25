@@ -7,8 +7,8 @@
 }
 
 body, html {
-  margin: 0; /* 0px, 清除默认外边距 */
-  padding: 0; /* 0px, 清除默认内边距 */
+  margin: 0; 
+  padding: 0; 
   font-family: 'Montserrat', sans-serif;
   height: 100vh;
   overflow: hidden;
@@ -29,14 +29,14 @@ body, html {
 }
 /* move up some content, but keep updates and copyright, background at the same place */
 .content-wrapper {
-  transform: translateY(-30px); /* 只上移主要内容 */
+  transform: translateY(-30px); 
 }
 /* Yiting Li */
 header h1 {
     font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
     font-size: 66px; /* 3rem = 48px */
     font-weight: 750;
-    margin: 15px 0 12px 0; /* 上 12px，下 20px，左右 0px */
+    margin: 15px 0 12px 0; 
     color: var(--main-warm1);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* 增加立体感 */
 }
@@ -46,24 +46,24 @@ header p {
     color: var(--main-warm1);
     font-size: 28px; /* 1.2rem = 19.2px */
     font-weight: 320;
-    margin: 6px auto 40px auto; /* 上 6px，下 10px，左右 0px */
+    margin: 6px auto 40px auto; 
 }
 /* hand writing introduction sentences */
 .intro p {
-  font-family: "Waiting for the Sunrise", cursive; /* 使用 Shadows Into Light 字体 */
+  font-family: "Waiting for the Sunrise", cursive; 
   font-size: 20px; /* 1rem = 16px */
   font-weight: 250;
   /*max-width: 1500px;*/
-  margin: 2px auto 0px auto; /* 上 10px，下 20px，左右 auto */
-  /*font-style: italic;*/ /* 设置斜体 */
+  margin: 2px auto 0px auto; 
+  /*font-style: italic;*/ 
 }
 
 /* two button nagivate to modeler and photographer pages */
 .buttons a {
-  font-family: "Ubuntu", sans-serif;
-  /*font-family: "Bitcount Prop Single", system-ui; /* 使用 Bitcount Prop Single 字体 */
+  font-family: "Abril Fatface", serif;
+  /*font-family: "Bitcount Prop Single", system-ui; 
   display: inline-block;
-  margin: 60px 55px; /* 1rem = 16px 上下外边距 */
+  margin: 60px 55px; 
   padding: 10px 20px 8px 20px; /* up left bottom right */
   border-radius: 25px;
   text-decoration: none;
@@ -72,9 +72,9 @@ header p {
   background-color: var(--main-cold1); 
   color: var(--main-warm1);
   border: 1.5px solid var(--main-cold1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 按钮阴影 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   transition: all 0.3s ease;
-  -webkit-tap-highlight-color: transparent; /* 去除手机端点击高亮 */
+  -webkit-tap-highlight-color: transparent; 
 }
 
 .buttons a:hover,
@@ -89,23 +89,23 @@ header p {
   background-color: var(--main-warm1);
   color: var(--main-cold1);
   border: 1.5px solid var(--main-warm1);
-  transform: scale(0.95); /* 点击时轻微缩小反馈 */
+  transform: scale(0.95); 
   -webkit-tap-highlight-color: transparent；
 }
 /* setup button lock */
 button i {
-    color: inherit; /* 继承父元素的颜色 */
+    color: inherit; 
 }
 
 /* button lock style */
 .main-button.locked {
-    opacity: 0.6;        /* 上锁时按钮变灰 */
-    cursor: not-allowed; /* 上锁时不能点击 */
+    opacity: 0.6;        
+    cursor: not-allowed;
 }
 
 .main-button.locked i.fa-lock {
-    margin-left: 5px;    /* 图标与文字间距 */
-    /*color: var(--main-warm1);      /* 锁的颜色 */
+    margin-left: 5px;    
+    /*color: var(--main-warm1);      
 }
 
 /* updates sections : related to updates.json */
@@ -115,25 +115,25 @@ button i {
   line-height: 1.2;
   margin-top: 50px 0 25px 0; /* 上 40px，下 24px，左右 0 */
   background-color: rgba(0, 0, 0, 0.2);
-  padding: 8px 25px; /* 上下8px, 左右20px, 减少h2与边框距离 */
+  padding: 8px 25px; 
   padding: 16px; /* 1rem = 16px */
   border-radius: 12px;
   max-width: 100%;
-  font-weight: 200; /* 让更新区块文字不加粗 */
+  font-weight: 200; 
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 .updates h2 {
   font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
   font-size: 16px; /* 1.2rem = 19.2px */
-  margin-top: 0; /* 去掉顶部额外间距 */
-  font-weight: 300; /* 正常字体粗细 */
+  margin-top: 0; 
+  font-weight: 300;
 }
 
 footer {
   width: 100%;
   padding: 8px 0;
-  font-size: 12px; /* 默认字体大小略微缩小 */
+  font-size: 12px;
   color: #ddd;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
@@ -162,7 +162,7 @@ footer {
   .intro p {
     font-size: 14px;
     max-width: 90%;
-    margin: 6px auto; /* 手机端上下间距优化 */
+    margin: 6px auto; 
     line-height: 1.1;
   }
   .buttons a {
@@ -172,9 +172,9 @@ footer {
   }
   .updates {
     max-width: 90%;
-    font-size: 12px;  /* 缩小字体 */
-    margin-top: 30px; /* 增加按钮与latest updates之间的距离 */
-    background-color: rgba(0, 0, 0, 0.2); /* 手机端更轻的透明度 */
+    font-size: 12px;  
+    margin-top: 30px; 
+    background-color: rgba(0, 0, 0, 0.2);
   }
   footer {
     font-size: 10px;
