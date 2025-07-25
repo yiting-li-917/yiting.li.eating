@@ -456,6 +456,7 @@ html.vertical-layout, body.vertical-layout {
 .vertical-layout #backHomeBtn {
   color: var(--main-light-green);
   bottom: 10px;
+  font-size: 14px;
   opacity: 0.75; /* COMMENT: Make button semi-transparent */
 }
 
