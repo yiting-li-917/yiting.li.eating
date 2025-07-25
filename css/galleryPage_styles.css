@@ -219,6 +219,7 @@ html, body {
   background: transparent;
   opacity: 0.75;
   padding: 1px 0;
+  bottom: 0;
 }
 
 /* Back button */
