@@ -459,15 +459,10 @@ html.vertical-layout, body.vertical-layout {
   z-index: 9999;
 }
 
-.vertical-layout #backHomeBtn {
-  background: none;
-  border: none;
+.vertical-layout #backHomeBtn{
   color: var(--main-light-green);
   font-size: 14px;
   opacity: 0.75;
-  cursor: pointer;
-  -webkit-appearance: none;
-  appearance: none;
 }
 
 .vertical-layout #backHomeBtn i{
