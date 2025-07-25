@@ -210,16 +210,14 @@ html, body {
   transform: translateY(-2px);
 }
 
-footer {
+.right-panel footer {
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  padding: 8px 0;
   font-size: 12px; /* 默认字体大小略微缩小 */
-  color: #ddd;
+  color: #000;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  position: fixed;
-  bottom: 0;
-  left: 0;
   background: transparent;
   opacity: 0.75;
 }
