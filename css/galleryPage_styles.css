@@ -206,14 +206,11 @@ html, body {
   padding: 5px 10px;                
   border-radius: 20px;              
   text-decoration: none;             
-  /* background-color: var(--main-cold1);  */
   background-color: transparent;
   border: 1.7px solid var(--main-warm1); 
   align-items: center;  
   display: flex;                   /* Enables gap between icons */
   gap: 10px;
-  /*border: none;*/
-  /*outline: none;*/
   transition: border-color 0.3s ease, gap 0.3s ease; /* Smooth transition */
 
   position: fixed;                   
@@ -229,8 +226,6 @@ html, body {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 #backHomeBtn:hover {
-  /*background-color: var(--main-warm1); /* UPDATED */
-  /*color: var(--main-cold1);            /* UPDATED */
   gap: 12px; 
   transform: translateX(-50%) scale(1.1); /* UPDATED */
 }
