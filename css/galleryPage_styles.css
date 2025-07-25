@@ -230,10 +230,8 @@ html, body {
   border-radius: 20px;              
   text-decoration: none;             
   background-color: transparent;
-  /*color: var(--main-warm1);*/
-  /*border: 1.7px solid var(--main-warm1); */
-  color: #fff;
-  border: 1.7px solid #fff;
+  color: var(--light-mint);
+  border: 1.7px solid var(--light-mint);
   align-items: center;  
   display: flex;                   /* Enables gap between icons */
   gap: 10px;
