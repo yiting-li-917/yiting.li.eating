@@ -239,7 +239,6 @@ html, body {
   transform: translateX(-50%) scale(0.90);
 }
 
-
 #lightbox {
   display: none;
   position: fixed;
