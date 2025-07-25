@@ -218,7 +218,7 @@ html, body {
   font-family: 'Montserrat', sans-serif;
   background: transparent;
   opacity: 0.75;
-  padding: 10px 0;
+  padding: 1px 0;
 }
 
 /* Back button */
@@ -504,12 +504,12 @@ html.vertical-layout, body.vertical-layout {
 }
 
  .vertical-layout .footer {
-    position: static;  /* 让footer变为文档流的一部分 */
+    position: static;
     bottom: auto !important;
     left: auto !important;
     right: auto !important;
     width: 100%;
-    margin-top: 10px;  /* 给footer和上面内容一些间距 */
+    margin-top: 10px;
     font-size: 8px;
   }
 
