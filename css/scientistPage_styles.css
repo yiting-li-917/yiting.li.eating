@@ -251,7 +251,7 @@ p::before {
 .back-button {
     display: inline-block;
     padding: 10px 15px;
-    gap: 15px;
+    gap: 10px;
     border-radius: 22px;
     text-decoration: none;
     background-color: var(--main-cold1);
@@ -264,7 +264,7 @@ p::before {
 .back-button:hover {
     background-color: var(--main-warm1);
     color: var(--main-cold1);
-    gap: 17px;
+    gap: 12px;
     transform: scale(1.05);
 }
 
