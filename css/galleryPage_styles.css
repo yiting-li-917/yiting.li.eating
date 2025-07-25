@@ -524,7 +524,7 @@ html.vertical-layout, body.vertical-layout {
   .vertical-layout .left-panel .portfolio {
   align-items: center;   
   text-align: center;
-  margin-top: 20%;       
+  margin-top: 10%;       
 }
 
 .vertical-layout .left-panel .portfolio h1 {
