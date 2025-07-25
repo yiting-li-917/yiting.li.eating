@@ -480,6 +480,7 @@ html.vertical-layout, body.vertical-layout {
   margin-bottom: 10px;
   background-color: var(--light-green);
   color: var(--light-mint);
+  border: none;
   font-size: 14px;
   opacity: 0.75;
 }
@@ -543,7 +544,7 @@ html.vertical-layout, body.vertical-layout {
 }
   
 .vertical-layout .right-panel footer {
-  margin-top: auto;
+  margin-bottm: 0;
 }
 }
 
