@@ -257,7 +257,7 @@ p::before {
     text-decoration: none;
     background-color: var(--main-cold1);
     color:var(--main-warm1);
-    font-weight: 550;
+    font-weight: 500;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background 0.3s, transform 0.3s;
     cursor: pointer;
