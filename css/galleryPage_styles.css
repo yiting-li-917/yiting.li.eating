@@ -15,6 +15,14 @@ html, body {
   flex-direction: row;
   overflow: hidden;
 }
+.chinese-font {
+  font-family: "ZCOOL XiaoWei", sans-serif;
+}
+
+.english-font {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .left-panel {
   flex: 0 0 55%;
   background: url('https://gallery.yitingli.xyz/smallgalleryBG.jpg') center/cover no-repeat;
