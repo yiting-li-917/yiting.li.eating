@@ -118,7 +118,7 @@ window.addEventListener('resize', checkVerticalLayout);
 // COMMENT: Fetches album data and renders gallery
 async function loadGallery() {
   try {
-    const response = await fetch('https://www.yitingli.xyz/gallery.json');
+    const response = await fetch('https://yitingli.xyz/gallery.json');
     allAlbums = await response.json();
     filteredAlbums = [...allAlbums];
     displayedCount = 0;
