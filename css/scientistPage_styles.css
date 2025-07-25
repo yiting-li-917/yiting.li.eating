@@ -249,7 +249,8 @@ p::before {
     margin: 20px 0 40px 0;
 }
 .back-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     padding: 10px 15px;
     gap: 10px;
     border-radius: 22px;
@@ -259,6 +260,7 @@ p::before {
     font-weight: 550;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background 0.3s, transform 0.3s;
+    cursor: pointer;
 }
 
 .back-button:hover {
