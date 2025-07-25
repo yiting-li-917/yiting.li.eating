@@ -173,6 +173,7 @@ footer {
   .button {
     padding: 1px;
     border-radius: 22px;
+    margin-top: 50px;
   }
   .buttons a {
     padding: 5px 10px;
@@ -181,9 +182,9 @@ footer {
   }
   .updates {
     max-width: 90%;
-    font-size: 12px;  /* 缩小字体 */
-    margin-top: 30px; /* 增加按钮与latest updates之间的距离 */
-    background-color: rgba(0, 0, 0, 0.2); /* 手机端更轻的透明度 */
+    font-size: 12px;
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.2);
   }
   footer {
     font-size: 10px;
