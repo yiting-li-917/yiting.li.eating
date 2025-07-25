@@ -135,7 +135,7 @@ html, body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 35px;
-  margin-top: 40px;
+  margin-top: 35px;
 }
 .album-wrapper {
   display: flex;
@@ -426,7 +426,9 @@ html.vertical-layout, body.vertical-layout {
   justify-content: center;
   gap: 10px;
 }
-
+.vertical-layout .tag-bar .tag{
+  font-size: 10px;
+}
 /* Right Panel 背景始终填充 */
 .vertical-layout .right-panel {
   background-color: var(--light-mint);
