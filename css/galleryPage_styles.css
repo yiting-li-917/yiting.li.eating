@@ -507,8 +507,13 @@ html.vertical-layout, body.vertical-layout {
 }
 
  .vertical-layout .footer {
-    font-size: 10px;
-    padding: 6px 0;
+    position: static;  /* 让footer变为文档流的一部分 */
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100%;
+    margin-top: 10px;  /* 给footer和上面内容一些间距 */
+    font-size: 8px;
   }
 
 /* specific for phone */
