@@ -199,7 +199,7 @@ html, body {
   text-decoration: none;             
   /* background-color: var(--main-cold1);  */
   background-color: transparent;
-  border: 2px var(--main-warm1); 
+  border: 2px solid var(--main-warm1); 
   align-items: center;  
   display: flex;                   /* Enables gap between icons */
   gap: 20px;
