@@ -1,6 +1,21 @@
 [
   {
     "new": 1,
+    "title": "热气球 \u2022 Reno Ballon Race 2016",
+    "cover": "https://gallery.yitingli.xyz/201609-reno-1.jpg",
+    "desc": "我以为我可以坐热气球，其实我只能看",
+    "camera": "Sony A7",
+    "tags": ["<2020","st"],
+    "photos": [
+      "https://gallery.yitingli.xyz/201609-reno-5.jpg",
+      "https://gallery.yitingli.xyz/201609-reno-2.jpg",
+      "https://gallery.yitingli.xyz/201609-reno-3.jpg",
+      "https://gallery.yitingli.xyz/201609-reno-4.jpg",
+      "https://gallery.yitingli.xyz/201609-reno-1.jpg"
+    ]
+  },
+  {
+    "new": 0,
     "title": "偶遇 \u2022 A Girl with Red Ballon",
     "cover": "https://gallery.yitingli.xyz/202402-redballon-1.jpg",
     "desc": "拍穴小鸮时偶遇的野模",
@@ -68,11 +83,11 @@
   },
   {
     "new": 0,
-    "title": "旧金山双子峰 \u2022 Old Days @ Twin Peak SF",
+    "title": "旧金山双子峰 \u2022 Old Days 2015 @ Twin Peak SF",
     "cover": "https://gallery.yitingli.xyz/2015-oldday-1.jpg",
     "desc": "应该是2015年第一次带着相机来这里，那时候人还不多。",
     "camera": "Sony A7",
-    "tags": ["2015","st"],
+    "tags": ["<2020","st"],
     "photos": [
       "https://gallery.yitingli.xyz/2015-oldday-1.jpg",
       "https://gallery.yitingli.xyz/2015-oldday-2.jpg"
