@@ -460,6 +460,10 @@ html.vertical-layout, body.vertical-layout {
   opacity: 0.75; /* COMMENT: Make button semi-transparent */
 }
 
+.vertical-layout #backHomeBtn i{
+  color: var(--main-light-green);
+}
+
 .vertical-layout #scrollTopBtn{
   opacity: 0.7; /* COMMENT: Make button semi-transparent */
 }
