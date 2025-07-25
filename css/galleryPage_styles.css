@@ -504,13 +504,12 @@ html.vertical-layout, body.vertical-layout {
   right: 6%;
 }
 
- .vertical-layout .footer {
+ .vertical-layout .right-panel .footer {
     position: static;
     bottom: auto !important;
     left: auto !important;
     right: auto !important;
     width: 100%;
-    margin-top: 10px;
     font-size: 8px;
   }
 
@@ -538,6 +537,13 @@ html.vertical-layout, body.vertical-layout {
 .vertical-layout .left-panel {
   padding: 1rem;         
   align-items: center;   
+}
+.vertical-layout #backHomeBtn {
+  bottom: 10px;
+}
+  
+.vertical-layout .right-panel footer {
+  margin-top: auto;
 }
 }
 
