@@ -212,7 +212,8 @@ html, body {
 }
 
 .right-panel footer {
-  position: sticky;
+  position: relative;
+  margin-top: 10px;
   font-size: 12px;
   color: #000;
   text-align: center;
@@ -220,7 +221,6 @@ html, body {
   background: transparent;
   opacity: 0.75;
   padding: 5px 0;
-  bottom: 0;
 }
 
 /* Back button */
@@ -508,8 +508,8 @@ html.vertical-layout, body.vertical-layout {
 }
 
  .vertical-layout .right-panel .footer {
-    position: sticky;
-    bottom: 0px;
+    position: relative;
+    margin-bottom: 10px;
     left: auto !important;
     right: auto !important;
     width: 100%;
