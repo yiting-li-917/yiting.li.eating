@@ -440,6 +440,7 @@ footer {
         bottom: 15px;
         padding: 5px 10px;
         font-size: 14px;
+        opacity: 0.75;
         z-index: 1000;
     } 
     .footer {
