@@ -89,7 +89,7 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 15px 40px;
+  padding: 10px 15px 20px;
   position: relative;
 }
 .tag-bar {
@@ -109,7 +109,7 @@ html, body {
 .tag-row .tag {
   background-color: var(--gray-black);
   color: var(--light-mint);
-  padding: 5px 10px;
+  padding: 6px 6px;
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.2s ease;
