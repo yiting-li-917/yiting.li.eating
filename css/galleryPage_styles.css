@@ -45,7 +45,8 @@ html, body {
 }
 
 .left-panel .portfolio h1 {
-  font-size: 66px;              /* 这里要用px */
+  font-size: 48px;
+  font-weight: 500;
   color： #fff;
   text-align: left;
   margin-bottom: 2px;
@@ -54,6 +55,7 @@ html, body {
 .left-panel .portfolio p {
   font-family: "ZCOOL XiaoWei", sans-serif;
   font-size: 28px;
+  color: #fff;
   text-align: left;
   margin-top: 5px;
 }
@@ -406,6 +408,8 @@ html.vertical-layout, body.vertical-layout {
 }
 /* vertical layout set to center */
 .vertical-layout .left-panel .portfolio {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
 }
