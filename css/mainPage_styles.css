@@ -1,3 +1,4 @@
+
 :root {
     --main-warm1: #DCC9A9; /*more colorful: choose*/
     --main-warm2: #C1AB85; 
@@ -29,16 +30,16 @@ body, html {
 }
 /* move up some content, but keep updates and copyright, background at the same place */
 .content-wrapper {
-  transform: translateY(-30px); 
+  transform: translateY(-30px); /* 只上移主要内容 */
 }
 /* Yiting Li */
 header h1 {
     font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
     font-size: 66px; /* 3rem = 48px */
     font-weight: 750;
-    margin: 15px 0 12px 0; 
+    margin: 15px 0 12px 0; /* 上 12px，下 20px，左右 0px */
     color: var(--main-warm1);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* 增加立体感 */
 }
 /* Atmopsheric scientist. modeler. photographer. cat lover */
 header p {
@@ -50,20 +51,20 @@ header p {
 }
 /* hand writing introduction sentences */
 .intro p {
-  font-family: "Waiting for the Sunrise", cursive; 
+  font-family: "Waiting for the Sunrise", cursive; /* 使用 Shadows Into Light 字体 */
   font-size: 20px; /* 1rem = 16px */
   font-weight: 250;
   /*max-width: 1500px;*/
-  margin: 2px auto 0px auto; 
-  /*font-style: italic;*/ 
+  margin: 2px auto 0px auto; /* 上 10px，下 20px，左右 auto */
+  /*font-style: italic;*/ /* 设置斜体 */
 }
 
 /* two button nagivate to modeler and photographer pages */
 .buttons a {
-  font-family: "Ubuntu", sans-serif;
-  /*font-family: "Bitcount Prop Single", system-ui; 
+  /* font-family: "Special Elite", system-ui; */
+  font-family: "Bitcount Prop Single", system-ui; /* 使用 Bitcount Prop Single 字体 */
   display: inline-block;
-  margin: 60px 55px; 
+  margin: 60px 55px; /* 1rem = 16px 上下外边距 */
   padding: 10px 20px 8px 20px; /* up left bottom right */
   border-radius: 25px;
   text-decoration: none;
@@ -141,7 +142,6 @@ footer {
   bottom: 0;
   left: 0;
   background: transparent;
-  opacity: 0.75;
 }
 
 /* phone display */
@@ -187,3 +187,4 @@ footer {
     font-size: 10px;
   }
 }
+
