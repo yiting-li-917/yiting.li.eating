@@ -7,8 +7,8 @@
 }
 
 body, html {
-  margin: 0; 
-  padding: 0; 
+  margin: 0; /* 0px, 清除默认外边距 */
+  padding: 0; /* 0px, 清除默认内边距 */
   font-family: 'Montserrat', sans-serif;
   height: 100vh;
   overflow: hidden;
@@ -38,7 +38,7 @@ header h1 {
     font-weight: 750;
     margin: 15px 0 12px 0; 
     color: var(--main-warm1);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* 增加立体感 */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
 }
 /* Atmopsheric scientist. modeler. photographer. cat lover */
 header p {
@@ -46,7 +46,7 @@ header p {
     color: var(--main-warm1);
     font-size: 28px; /* 1.2rem = 19.2px */
     font-weight: 320;
-    margin: 6px auto 40px auto; 
+    margin: 6px auto 40px auto; /* 上 6px，下 10px，左右 0px */
 }
 /* hand writing introduction sentences */
 .intro p {
@@ -60,7 +60,7 @@ header p {
 
 /* two button nagivate to modeler and photographer pages */
 .buttons a {
-  font-family: "Abril Fatface", serif;
+  font-family: "Ubuntu", sans-serif;
   /*font-family: "Bitcount Prop Single", system-ui; 
   display: inline-block;
   margin: 60px 55px; 
@@ -72,9 +72,9 @@ header p {
   background-color: var(--main-cold1); 
   color: var(--main-warm1);
   border: 1.5px solid var(--main-cold1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 按钮阴影 */
   transition: all 0.3s ease;
-  -webkit-tap-highlight-color: transparent; 
+  -webkit-tap-highlight-color: transparent; /* 去除手机端点击高亮 */
 }
 
 .buttons a:hover,
@@ -89,23 +89,23 @@ header p {
   background-color: var(--main-warm1);
   color: var(--main-cold1);
   border: 1.5px solid var(--main-warm1);
-  transform: scale(0.95); 
+  transform: scale(0.95); /* 点击时轻微缩小反馈 */
   -webkit-tap-highlight-color: transparent；
 }
 /* setup button lock */
 button i {
-    color: inherit; 
+    color: inherit; /* 继承父元素的颜色 */
 }
 
 /* button lock style */
 .main-button.locked {
-    opacity: 0.6;        
-    cursor: not-allowed;
+    opacity: 0.6;        /* 上锁时按钮变灰 */
+    cursor: not-allowed; /* 上锁时不能点击 */
 }
 
 .main-button.locked i.fa-lock {
-    margin-left: 5px;    
-    /*color: var(--main-warm1);      
+    margin-left: 5px;    /* 图标与文字间距 */
+    /*color: var(--main-warm1);      /* 锁的颜色 */
 }
 
 /* updates sections : related to updates.json */
@@ -115,25 +115,25 @@ button i {
   line-height: 1.2;
   margin-top: 50px 0 25px 0; /* 上 40px，下 24px，左右 0 */
   background-color: rgba(0, 0, 0, 0.2);
-  padding: 8px 25px; 
+  padding: 8px 25px; /* 上下8px, 左右20px, 减少h2与边框距离 */
   padding: 16px; /* 1rem = 16px */
   border-radius: 12px;
   max-width: 100%;
-  font-weight: 200; 
+  font-weight: 200; /* 让更新区块文字不加粗 */
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
 }
 .updates h2 {
   font-family: 'Montserrat', sans-serif; /* Keep Montserrat */
   font-size: 16px; /* 1.2rem = 19.2px */
-  margin-top: 0; 
-  font-weight: 300;
+  margin-top: 0; /* 去掉顶部额外间距 */
+  font-weight: 300; /* 正常字体粗细 */
 }
 
 footer {
   width: 100%;
   padding: 8px 0;
-  font-size: 12px;
+  font-size: 12px; /* 默认字体大小略微缩小 */
   color: #ddd;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
@@ -162,7 +162,7 @@ footer {
   .intro p {
     font-size: 14px;
     max-width: 90%;
-    margin: 6px auto; 
+    margin: 6px auto; /* 手机端上下间距优化 */
     line-height: 1.1;
   }
   .buttons a {
@@ -172,9 +172,9 @@ footer {
   }
   .updates {
     max-width: 90%;
-    font-size: 12px;  
-    margin-top: 30px; 
-    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 12px;  /* 缩小字体 */
+    margin-top: 30px; /* 增加按钮与latest updates之间的距离 */
+    background-color: rgba(0, 0, 0, 0.2); /* 手机端更轻的透明度 */
   }
   footer {
     font-size: 10px;
@@ -187,4 +187,3 @@ footer {
     font-size: 10px;
   }
 }
-
