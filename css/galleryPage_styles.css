@@ -460,13 +460,14 @@ html.vertical-layout, body.vertical-layout {
 }
 
 .vertical-layout #backHomeBtn{
-  color: var(--main-light-green);
+  /*color: var(--main-light-green);*/
+  color: red;
   font-size: 14px;
   opacity: 0.75;
 }
 
 .vertical-layout #backHomeBtn i{
-  color: var(--main-light-green);
+  color: red;
 }
 
 .vertical-layout #scrollTopBtn{
