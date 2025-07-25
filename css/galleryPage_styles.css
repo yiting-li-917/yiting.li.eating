@@ -231,7 +231,7 @@ html, body {
 #backHomeBtn:hover {
   /*background-color: var(--main-warm1); /* UPDATED */
   /*color: var(--main-cold1);            /* UPDATED */
-  gap: 17px; 
+  gap: 12px; 
   transform: translateX(-50%) scale(1.1); /* UPDATED */
 }
 
