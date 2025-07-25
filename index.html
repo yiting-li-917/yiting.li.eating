@@ -67,25 +67,24 @@
       });
 
     // ---------------- add a lock to scientist button -----------------
-    // -------------- 全局按钮文字
-    const SCIENTIST_BTN_LABEL = "Weekday"; // 你可以在这里更改按钮文字
-    const PHOTO_BTN_LABEL = "Weekend"; // 你可以在这里更改按钮文字
+    // 
+    const SCIENTIST_BTN_LABEL = "Weekday"; // setup button name
+    const PHOTO_BTN_LABEL = "Weekend"; // setup button name
     
-    // 阻止点击时的提示
+    // 
     function preventClick(event) {
         event.preventDefault();
       // ------- change pop-up window content here!!!!
         alert('不妙，锁住了！');
     }
     
-    // 上锁
+    // lock
     // scientist button
     function lockScientistButton() {
         const btn = document.getElementById('scientistBtn');
         btn.classList.add('locked');
         btn.addEventListener('click', preventClick);
     
-        // 设置文字和锁图标
         btn.innerHTML = `${SCIENTIST_BTN_LABEL} <i class="fa-solid fa-lock fa-sm"></i>`;
     }
     // photo button
@@ -94,18 +93,16 @@
         btn.classList.add('locked');
         btn.addEventListener('click', preventClick);
     
-        // 设置文字和锁图标
         btn.innerHTML = `${PHOTO_BTN_LABEL} <i class="fa-solid fa-lock fa-sm"></i>`;
     }
     
-    // 解锁
+    // unlock
     // scientist button
     function unlockScientistButton() {
         const btn = document.getElementById('scientistBtn');
         btn.classList.remove('locked');
         btn.removeEventListener('click', preventClick);
     
-        // 恢复按钮文字
         btn.textContent = SCIENTIST_BTN_LABEL;
     }
     // photo button
@@ -114,17 +111,14 @@
         btn.classList.remove('locked');
         btn.removeEventListener('click', preventClick);
     
-        // 恢复按钮文字
         btn.textContent = PHOTO_BTN_LABEL;
     }    
     
-    // 页面加载时设置按钮
     // --------set scientist button here!!!!!
     document.addEventListener('DOMContentLoaded', () => {
         const btn = document.getElementById('scientistBtn');
-        btn.textContent = SCIENTIST_BTN_LABEL;  // 初始化文字
-    
-        // 如果默认是上锁状态
+        btn.textContent = SCIENTIST_BTN_LABEL;
+  
         lockScientistButton();
         // unlock, please uncomment below, comment above
         //unlockScientistButton();
@@ -132,9 +126,8 @@
     // --------set photo button here!!!!!
     document.addEventListener('DOMContentLoaded', () => {
         const btn = document.getElementById('photoBtn');
-        btn.textContent = PHOTO_BTN_LABEL;  // 初始化文字
+        btn.textContent = PHOTO_BTN_LABEL;
     
-        // 如果默认是上锁状态
         //lockPhotoButton();
         // unlock, please uncomment below, comment above
         unlockPhotoButton();
