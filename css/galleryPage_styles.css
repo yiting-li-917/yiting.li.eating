@@ -207,10 +207,10 @@ html, body {
   text-decoration: none;             
   /* background-color: var(--main-cold1);  */
   background-color: transparent;
-  border: 2px solid var(--main-warm1); 
+  border: 1.5px solid var(--main-warm1); 
   align-items: center;  
   display: flex;                   /* Enables gap between icons */
-  gap: 20px;
+  gap: 10px;
   /*border: none;*/
   /*outline: none;*/
   transition: border-color 0.3s ease, gap 0.3s ease; /* Smooth transition */
@@ -231,7 +231,7 @@ html, body {
 #backHomeBtn:hover {
   /*background-color: var(--main-warm1); /* UPDATED */
   /*color: var(--main-cold1);            /* UPDATED */
-  gap: 25px; 
+  gap: 17px; 
   transform: translateX(-50%) scale(1.1); /* UPDATED */
 }
 
@@ -460,6 +460,7 @@ html.vertical-layout, body.vertical-layout {
 }
 
 .vertical-layout #backHomeBtn {
+  color: var(--main-light-green);
   bottom: 10px;
   opacity: 0.75; /* COMMENT: Make button semi-transparent */
 }
