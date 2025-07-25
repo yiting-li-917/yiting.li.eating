@@ -169,10 +169,13 @@ footer {
     margin: 6px auto; /* 手机端上下间距优化 */
     line-height: 1.1;
   }
+  .button {
+    padding: 1px;
+  }
   .buttons a {
-    padding: 11px 8px;
-    margin: 15px 20px;
-    font-size: 16px;
+    padding: 5px 5px;
+    margin: 10px 20px;
+    font-size: 18px;
   }
   .updates {
     max-width: 90%;
