@@ -16,6 +16,42 @@ const scrollBtn = document.getElementById('scrollTopBtn');
 const rightPanel = document.getElementById('right-panel');
 const lightbox = document.getElementById('lightbox');
 
+// ========== FONT SPLIT UTILITY =============
+// Splits text into spans with different classes for Chinese and English
+function splitTitleWithFonts(title) {
+  const container = document.createElement('span');
+  let buffer = '';
+  let currentType = '';
+
+  function flushBuffer() {
+    if (buffer) {
+      const span = document.createElement('span');
+      span.textContent = buffer;
+      span.className = (currentType === 'chinese') ? 'chinese-font' : 'english-font';
+      container.appendChild(span);
+      buffer = '';
+    }
+  }
+
+  function getCharType(char) {
+    if (/[\u4e00-\u9fff]/.test(char)) return 'chinese';
+    if (/[\u3000-\u303F\uFF00-\uFFEF\u2022]/.test(char)) return 'chinese'; // Chinese punctuation + bullet
+    return 'english';
+  }
+
+  for (const char of title) {
+    const charType = getCharType(char);
+    if (charType !== currentType && buffer.length > 0) {
+      flushBuffer();
+    }
+    buffer += char;
+    currentType = charType;
+  }
+  flushBuffer();
+
+  return container;
+}
+
 // ========== SCROLL HANDLER =============
 // COMMENT: Controls visibility of scroll-to-top button based on layout & lightbox state
 function handleScroll() {
@@ -122,7 +158,9 @@ function renderAlbums(reset = false) {
       newSpan.className = 'new-badge';
       titleDiv.appendChild(newSpan);
     }
-    titleDiv.appendChild(document.createTextNode(album.title || 'Untitled'));
+    // Use font-split function
+    const title = album.title || 'Untitled';
+    titleDiv.appendChild(splitTitleWithFonts(title));
 
     wrapper.appendChild(imgContainer);
     wrapper.appendChild(titleDiv);
@@ -199,7 +237,19 @@ function updateLightbox() {
   const img = document.getElementById('lightbox-img');
   const descContent = document.getElementById('photo-desc-content');
   if (descContent) {
-    descContent.innerHTML = `${currentCamera}<br>${currentDesc || ''}`;
+    // Apply font split for camera + desc
+    const combinedText = `${currentCamera}<br>${currentDesc || ''}`;
+    const parts = combinedText.split('<br>');
+    descContent.innerHTML = ''; // Clear existing content
+
+    const cameraSpan = splitTitleWithFonts(parts[0]);
+    descContent.appendChild(cameraSpan);
+    descContent.appendChild(document.createElement('br'));
+
+    if (parts[1]) {
+      const descSpan = splitTitleWithFonts(parts[1]);
+      descContent.appendChild(descSpan);
+    }
   }
 
   // Create or update photo counter
