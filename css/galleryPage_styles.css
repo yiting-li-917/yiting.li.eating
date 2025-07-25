@@ -45,7 +45,8 @@ html, body {
 }
 
 .left-panel .portfolio h1 {
-  font-size: 72px;              /* 这里要用px */
+  font-size: 66px;              /* 这里要用px */
+  color： #fff;
   text-align: left;
   margin-bottom: 2px;
 }
