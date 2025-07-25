@@ -224,14 +224,16 @@ html, body {
 
 /* Back button */
 #backHomeBtn {  
-  color: var(--main-warm1);
   font-size: 16px;
   font-weight: 500; 
   padding: 5px 10px;                
   border-radius: 20px;              
   text-decoration: none;             
   background-color: transparent;
-  border: 1.7px solid var(--main-warm1); 
+  /*color: var(--main-warm1);*/
+  /*border: 1.7px solid var(--main-warm1); */
+  color: #fff;
+  border: 1.7px solid #fff;
   align-items: center;  
   display: flex;                   /* Enables gap between icons */
   gap: 10px;
