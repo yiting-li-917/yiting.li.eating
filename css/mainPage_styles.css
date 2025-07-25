@@ -60,6 +60,9 @@ header p {
 }
 
 /* two button nagivate to modeler and photographer pages */
+.buttons {
+    padding: 5px,
+}
 .buttons a {
   font-family: "Caveat", cursive;
   font-optical-sizing: auto;
