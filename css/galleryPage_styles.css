@@ -462,7 +462,7 @@ html.vertical-layout, body.vertical-layout {
   color: var(--light-green);
   font-size: 14px;
   opacity: 0.75;
-  border: var(--light-green);
+  border: 1.2px solid var(--light-green); 
 }
 
 .vertical-layout #backHomeBtn i{
