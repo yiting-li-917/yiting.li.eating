@@ -201,8 +201,9 @@ html, body {
   transform: translateY(-2px);
 }
 /* Back button */
-#backHomeBtn {          
-  padding: 10px 15px;                
+#backHomeBtn {  
+  color: var(--main-warm1);
+  padding: 5px 10px;                
   border-radius: 20px;              
   text-decoration: none;             
   /* background-color: var(--main-cold1);  */
