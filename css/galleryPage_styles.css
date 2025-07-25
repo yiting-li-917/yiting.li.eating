@@ -509,7 +509,7 @@ html.vertical-layout, body.vertical-layout {
 
  .vertical-layout .right-panel .footer {
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     left: auto !important;
     right: auto !important;
     width: 100%;
