@@ -529,6 +529,7 @@ html.vertical-layout, body.vertical-layout {
 }
 
 .vertical-layout .left-panel .portfolio h1 {
+  color: var(--light-mint);
   font-size: 2rem;       
 }
 
