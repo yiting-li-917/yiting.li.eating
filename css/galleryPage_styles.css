@@ -135,6 +135,7 @@ html, body {
   grid-template-columns: 1fr 1fr;
   gap: 35px;
   margin-top: 35px;
+  margin-bottom: 35px;
 }
 .album-wrapper {
   display: flex;
@@ -205,6 +206,21 @@ html, body {
   background-color: var(--light-mint);
   transform: translateY(-2px);
 }
+
+footer {
+  width: 100%;
+  padding: 8px 0;
+  font-size: 12px; /* 默认字体大小略微缩小 */
+  color: #ddd;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+  opacity: 0.75;
+}
+
 /* Back button */
 #backHomeBtn {  
   color: var(--main-warm1);
