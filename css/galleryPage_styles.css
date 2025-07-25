@@ -37,7 +37,7 @@ html, body {
 }
 
 .left-panel .portfolio {
-  color: var(--gray-black);
+  color: var(--light-green);
   margin-top: 20%;           
   display: flex;
   flex-direction: column;
@@ -47,7 +47,7 @@ html, body {
 .left-panel .portfolio h1 {
   font-size: 48px;
   font-weight: 500;
-  color： #fff;
+  color：var(--light-mint);
   text-align: left;
   margin-bottom: 2px;
 }
