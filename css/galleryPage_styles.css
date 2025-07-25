@@ -109,6 +109,7 @@ html, body {
 .tag-row .tag {
   background-color: var(--gray-black);
   color: var(--light-mint);
+  font-size: 12px;
   padding: 6px 6px;
   border-radius: 8px;
   cursor: pointer;
@@ -420,7 +421,7 @@ html.vertical-layout, body.vertical-layout {
 /* TAG 居中 */
 .vertical-layout .tag-bar {
   position: static;
-  margin: 15px auto 20px auto;
+  margin: 10px auto 15px auto;
   display: flex;
   justify-content: center;
   gap: 10px;
