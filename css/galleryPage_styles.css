@@ -478,14 +478,14 @@ html.vertical-layout, body.vertical-layout {
 
 .vertical-layout #backHomeBtn{
   margin-bottom: 10px;
-  color: var(--light-green);
+  background-color: var(--light-green);
+  color: var(--light-mint);
   font-size: 14px;
   opacity: 0.75;
-  border: 1.2px solid var(--light-green); 
 }
 
 .vertical-layout #backHomeBtn i{
-  color: var(--light-green);
+  color: var(--light-mint);
 }
 
 .vertical-layout #scrollTopBtn{
