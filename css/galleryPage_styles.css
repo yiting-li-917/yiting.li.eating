@@ -501,6 +501,11 @@ html.vertical-layout, body.vertical-layout {
   right: 6%;
 }
 
+ .vertical-layout .footer {
+    font-size: 10px;
+    padding: 6px 0;
+  }
+
 /* specific for phone */
 @media (max-width: 768px) {
   .vertical-layout .gallery-grid {
