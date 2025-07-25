@@ -107,7 +107,7 @@ html, body {
   gap: 10px;
 }
 .tag-row .tag {
-  background-color: var(--gray-black);
+  background-color: var(--light-green);
   color: var(--light-mint);
   font-size: 12px;
   padding: 6px 6px;
@@ -116,8 +116,6 @@ html, body {
   transition: transform 0.2s ease;
 }
 .tag-row .tag:hover {
-  color: var(--light-mint);
-  background-color: var(--light-green);  
   transform: scale(1.05);
 }
 .tag-row .tag:active {
