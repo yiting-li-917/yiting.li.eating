@@ -95,13 +95,18 @@ html, body {
 .tag-bar {
   position: relative; 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   margin: 10px auto 2px auto;    
 
 }
-.tag-bar .tag {
+.tag-row {
+  display: flex;
+  gap: 10px;
+}
+.tag-row .tag {
   background-color: var(--gray-black);
   color: var(--light-mint);
   padding: 5px 10px;
@@ -109,17 +114,17 @@ html, body {
   cursor: pointer;
   transition: transform 0.2s ease;
 }
-.tag-bar .tag:hover {
+.tag-row .tag:hover {
   color: var(--light-mint);
   background-color: var(--light-green);  
   transform: scale(1.05);
 }
-.tag-bar .tag:active {
+.tag-row .tag:active {
   color: var(--gray-black);
   background-color: var(--light-mint); 
   transform: scale(0.95);
 }
-.tag-bar .tag.active {
+.tag-row .tag.active {
   color: var(--gray-black);
   background-color: var(--light-mint);
   font-weight: bold;
