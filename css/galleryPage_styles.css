@@ -402,11 +402,11 @@ html, body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: var(--light-green);
+    background-color: var(--light-mint);
     padding-top: 20px;
 }
 .modal-content {
-    background-color: var(--light-mint),
+    background-color: var(--light-green),
     margin: 5% auto;
     padding: 20px;
     border: 1px solid var(--gray-black);
