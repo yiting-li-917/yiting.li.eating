@@ -4,12 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
-  <title>Contact Us</title>
+  <title>Message Me</title>
   <!-- font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Permanent+Marker&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
   <!-- icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    :root {
+      --light-mint: #e8e5da;  /* Define your custom light-mint color here */
+      --main-warm1: #DCC9A9; 
+      --main-cold1: #4E6851;
+      --gray-black: #4e4e4e;
+      --light-green: #8e8f6d;
+    }
+    
     body {
       font-family: 'Montserrat', sans-serif;
       margin: 0;
@@ -53,6 +61,7 @@
 
     .back-btn:hover {
       background-color: var(--light-mint);
+      transform: scale(1.1);
     }
 
     .back-btn:active {
@@ -63,12 +72,11 @@
 <body>
 
   <div class="form-container">
-    <h2>Contact Us</h2>
     <!-- Embed Google Form -->
-    <iframe src="https://forms.gle/Vr798HMAg1bwWmGXA" frameborder="0">Loading…</iframe>
+    <iframe src="https://forms.gle/LV2CKHMwc7wfQ4T6A" frameborder="0">Loading…</iframe>
 
     <!-- Back to Home Button -->
-    <button class="back-btn" onclick="window.location.href='index.html';">Back to Home</button>
+    <button class="back-btn" onclick="window.location.href='gallery.html';">Back</button>
   </div>
 
 </body>
