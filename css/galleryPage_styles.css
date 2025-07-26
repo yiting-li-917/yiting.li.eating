@@ -409,16 +409,18 @@ html, body {
 }
 .modal-content {
     background-color: var(--light-green);
-    padding: 10px;
+    padding: 20px;
     border: 1px solid var(--gray-black);
     width: 80%;  /* Make modal-content take up 80% of the width */
     max-width: 700px;  /* Max width for larger screens */
-    height: 75%;  /* Make modal-content take up 80% of the height */
+    min-width: 300px;
+    height: 70%;  /* Make modal-content take up 80% of the height */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     position: relative;
     display: flex; /* Use flexbox for inner alignment */
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .closeGF {
