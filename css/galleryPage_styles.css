@@ -409,7 +409,7 @@ html, body {
 }
 .modal-content {
     background-color: var(--light-green);
-    padding: 50px;
+    padding: 40px;
     border: 1px solid var(--gray-black);
     width: 80%;  /* Make modal-content take up 80% of the width */
     max-width: 700px;  /* Max width for larger screens */
