@@ -47,7 +47,8 @@ html, body {
 .left-panel .portfolio h1 {
   font-size: 52px;
   font-weight: 700;
-  color：var(--light-mint);
+  color: var(--light-mint);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5), 0 0 5px var(--gray-black); /* 多彩阴影 */
   text-align: left;
   margin-bottom: 5px;
 }
@@ -55,7 +56,7 @@ html, body {
 .left-panel .portfolio p {
   font-family: "ZCOOL XiaoWei", sans-serif;
   font-size: 28px;
-  color：var(--light-mint);
+  color: var(--light-mint);
   text-align: left;
   margin-top: 0;
 }
