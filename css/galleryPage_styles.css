@@ -48,7 +48,7 @@ html, body {
   font-size: 52px;
   font-weight: 700;
   color: var(--light-mint);
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5), 0 0 5px var(--gray-black); /* 多彩阴影 */
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5), 0 0 5px var(--gray-black);
   text-align: left;
   margin-bottom: 5px;
 }
@@ -57,6 +57,7 @@ html, body {
   font-family: "ZCOOL XiaoWei", sans-serif;
   font-size: 28px;
   color: var(--light-mint);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5), 0 0 2px var(--gray-black);
   text-align: left;
   margin-top: 0;
 }
