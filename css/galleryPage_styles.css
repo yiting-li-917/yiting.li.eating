@@ -37,27 +37,27 @@ html, body {
 }
 
 .left-panel .portfolio {
-  color: var(--light-green);
+  color: #fff;
   margin-top: 25%;           
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
 .left-panel .portfolio h1 {
-  font-size: 48px;
+  font-size: 52px;
   font-weight: 700;
   color：var(--light-mint);
   text-align: left;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 }
 
 .left-panel .portfolio p {
   font-family: "ZCOOL XiaoWei", sans-serif;
   font-size: 28px;
-  color: #fff;
+  color：var(--light-mint);
   text-align: left;
-  margin-top: 5px;
+  margin-top: 0;
 }
 .left-panel .buttons {
   position: absolute;
@@ -413,7 +413,7 @@ html.vertical-layout, body.vertical-layout {
   text-align: center;
 }
 .vertical-layout .left-panel .portfolio h1 {
-  font-size: 3rem; 
+  font-size: 2.5rem; 
 }
 
 .vertical-layout .left-panel .portfolio p {
