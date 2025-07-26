@@ -47,25 +47,36 @@
       border-radius: 10px;
     }
 
-    .back-btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: var(--light-green);
-      color: var(--light-mint);
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
+    /* Back button */
+    .back-container {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0 40px 0;
+    }
+    .back-button {
+        display: inline-flex;
+        align-items: center;
+        padding: 5px 10px;
+        gap: 10px;
+        border-radius: 22px;
+        text-decoration: none;
+        background-color: var(--light-green);
+        color:var(--light-mint);
+        font-weight: 500;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background 0.3s, transform 0.3s;
+        cursor: pointer;
+    }
+    
+    .back-button:hover {
+        background-color: var(--gray-black);
+        color: var(--light-green);
+        gap: 12px;
+        transform: scale(1.05);
     }
 
-    .back-btn:hover {
-      background-color: var(--light-mint);
-      transform: scale(1.1);
-    }
-
-    .back-btn:active {
-      transform: scale(0.95);
+    .back-button:active {
+        transform: scale(0.95);
     }
   </style>
 </head>
