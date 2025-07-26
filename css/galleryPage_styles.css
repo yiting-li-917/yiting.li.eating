@@ -405,7 +405,7 @@ html, body {
     height: 100%; /* Make modal take full height */
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4); /* Dark background */
-    padding-top: 60px;
+    padding-top: 30px;
 }
 .modal-content {
     background-color: var(--light-green);
@@ -420,7 +420,7 @@ html, body {
     position: relative;
     display: flex; /* Use flexbox for inner alignment */
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .closeGF {
