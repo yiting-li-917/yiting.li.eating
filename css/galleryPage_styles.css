@@ -254,8 +254,8 @@ html, body {
 
   position: fixed;                   
   bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 10%;
+  /*transform: translateX(-50%);*/
   z-index: 500;
   cursor: pointer;
 }
@@ -494,6 +494,8 @@ html.vertical-layout, body.vertical-layout {
 }
 
 .vertical-layout #backHomeBtn{
+  left: 50%;
+  transform: translateX(-50%);
   margin-bottom: 10px;
   background-color: var(--light-green);
   color: var(--light-mint);
