@@ -254,7 +254,7 @@ html, body {
 
   position: fixed;                   
   bottom: 5%;
-  left: 10%;
+  left: 5%;
   /*transform: translateX(-50%);*/
   z-index: 500;
   cursor: pointer;
