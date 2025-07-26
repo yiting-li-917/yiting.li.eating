@@ -38,10 +38,10 @@ html, body {
 
 .left-panel .portfolio {
   color: #fff;
-  margin-top: 25%;           
+  margin-top: 20%;           
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 
 .left-panel .portfolio h1 {
@@ -59,7 +59,7 @@ html, body {
   color: var(--light-mint);
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5), 0 0 2px var(--gray-black);
   text-align: left;
-  margin-top: 0;
+  margin-top: 5px;
 }
 .left-panel .buttons {
   position: absolute;
