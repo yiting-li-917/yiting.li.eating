@@ -66,9 +66,7 @@ html, body {
   display: flex;
   gap: 10px;
 }
-.left-panel .buttons a,
-.left-panel .buttons buttonGF,
-#messageBtn {
+.left-panel .buttons a {
   display: inline-block;
   padding: 0.5rem;
   /*background: rgba(0,0,0,0.6);*/
@@ -78,19 +76,13 @@ html, body {
   border-radius: 5px;
   transition: transform 0.2s ease;
 }
-.left-panel .buttons a i,
-.left-panel .buttons buttonGF i,
-#messageBtn i{
+.left-panel .buttons a i {
   font-size: 1.2rem;
 }
-.left-panel .buttons a:hover,
-.left-panel .buttons buttonGF:hover,
-#messageBtn:hover {
+.left-panel .buttons a:hover {
   transform: scale(1.1);
 }
-.left-panel .buttons a:active,
-.left-panel .buttons buttonGF:active,
-#messageBtn:active {
+.left-panel .buttons a:active {
   transform: scale(0.90);
 }
 /* right panel - gallery grid */
@@ -390,63 +382,6 @@ html, body {
 
 #scrollTopBtn:active {
   transform: scale(0.9);
-}
-
-/* ------ google form */
-#messageModal {
-    display: flex;  /* Use flexbox to center modal-content */
-    justify-content: center;  /* Center horizontally */
-    align-items: center;  /* Center vertically */
-    position: fixed;
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%;  /* Make modal take full width */
-    height: 100%; /* Make modal take full height */
-    background-color: rgba(0, 0, 0, 0.4); /* Dark background */
-    padding-top: 25px;
-}
-.modal-content {
-    background-color: var(--light-green);
-    padding: 40px 20px 20px 20px;
-    border: 1px solid var(--gray-black);
-    width: 80%; 
-    max-width: 700px;
-    min-width: 300px;
-    height: 80%;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    display: flex; /* Use flexbox for inner alignment */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.closeGF {
-    color: var(--gray-black);
-    font-size: 28px;
-    font-weight: bold;
-    position: absolute;
-    top: 4px;
-    right: 5px;
-    cursor: pointer;
-}
-.closeGF:hover,
-.closeGF:focus {
-    color: var(--gray-black);
-    text-decoration: none;
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-/* Embed iframe Styling */
-iframe {
-    border: none;
-    border-radius: 5px;
-    width: 100%;  /* Ensure iframe fills the modal-content width */
-    height: 100%;  /* Ensure iframe fills the modal-content height */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* ---------------- vertical screen change layout ---------------- */
