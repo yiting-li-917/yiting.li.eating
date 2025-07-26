@@ -405,11 +405,11 @@ html, body {
     height: 100%; /* Make modal take full height */
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4); /* Dark background */
-    padding-top: 30px;
+    padding-top: 25px;
 }
 .modal-content {
     background-color: var(--light-green);
-    padding: 40px;
+    padding: 40px 30px 20px 30px;
     border: 1px solid var(--gray-black);
     width: 80%;  /* Make modal-content take up 80% of the width */
     max-width: 700px;  /* Max width for larger screens */
@@ -428,8 +428,8 @@ html, body {
     font-size: 28px;
     font-weight: bold;
     position: absolute;
-    top: 6px;
-    right: 6px;
+    top: 5px;
+    right: 5px;
     cursor: pointer;
 }
 .closeGF:hover,
