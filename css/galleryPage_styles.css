@@ -263,8 +263,7 @@ html, body {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 #backHomeBtn:hover {
-  gap: 12px; 
-  transform: translateX(-50%) scale(1.1); /* UPDATED */
+  transform: scale(1.1); /* UPDATED */
 }
 
 #backHomeBtn:active {
