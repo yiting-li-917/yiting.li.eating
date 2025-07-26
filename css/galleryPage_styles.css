@@ -411,7 +411,7 @@ html, body {
     background-color: var(--light-green);
     padding: 20px;
     border: 1px solid var(--gray-black);
-    width: 90%;  /* Make modal-content take up 80% of the width */
+    width: 80%;  /* Make modal-content take up 80% of the width */
     max-width: 700px;  /* Max width for larger screens */
     min-width: 300px;
     height: 80%;  /* Make modal-content take up 80% of the height */
@@ -444,8 +444,8 @@ html, body {
 iframe {
     border: none;
     border-radius: 5px;
-    width: 100%;  /* Ensure iframe fills the modal-content width */
-    height: 100%;  /* Ensure iframe fills the modal-content height */
+    width: 95%;  /* Ensure iframe fills the modal-content width */
+    height: 95%;  /* Ensure iframe fills the modal-content height */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
