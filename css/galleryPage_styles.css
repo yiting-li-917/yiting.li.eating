@@ -41,7 +41,7 @@ html, body {
   margin-top: 20%;           
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
 }
 
 .left-panel .portfolio h1 {
@@ -62,13 +62,14 @@ html, body {
   margin-top: 5px;
 }
 
-/*.left-panel .buttons {
-  position: absolute;
+.left-panel .buttons {
+  /*position: absolute;
   bottom: 5%;
   left: 5%;
   display: flex;
-  gap: 10px;
-}*/
+  gap: 10px;*/
+  margin-top: 15px;
+}
 
 .left-panel .buttons a,
 .left-panel .buttons buttonGF,
