@@ -32,7 +32,7 @@
     <!-- Modal for Google Form -->
   <div id="messageModal" style="display:none;">
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span class="closeGF">&times;</span>
       <h2>Send a Message</h2>
       <!-- Embed Google Form -->
       <iframe src="https://forms.gle/Vr798HMAg1bwWmGXA?embedded=true" width="640" height="480" frameborder="0">Loading…</iframe>
@@ -88,7 +88,7 @@
     // Get the modal and the message button
     var modal = document.getElementById("messageModal");
     var btn = document.getElementById("messageBtn");
-    var span = document.getElementsByClassName("closeGF")[0];
+    var span = document.getElementsByClassName("close")[0];
 
     // When the user clicks the "Message" button, open the modal
     btn.onclick = function() {
