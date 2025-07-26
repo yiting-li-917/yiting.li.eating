@@ -61,14 +61,10 @@ html, body {
   text-align: left;
   margin-top: 5px;
 }
-.left-panel .buttons {
-  position: absolute;
-  bottom: 5%;
-  left: 5%;
-  display: flex;
-  gap: 10px;
-}
-.left-panel .buttons a {
+
+.left-panel .buttons a,
+.left-panel .buttons buttonGF,
+#messageBtn {
   display: inline-block;
   padding: 0.5rem;
   /*background: rgba(0,0,0,0.6);*/
@@ -78,13 +74,19 @@ html, body {
   border-radius: 5px;
   transition: transform 0.2s ease;
 }
-.left-panel .buttons a i {
+.left-panel .buttons a i,
+.left-panel .buttons buttonGF i,
+#messageBtn i{
   font-size: 1.2rem;
 }
-.left-panel .buttons a:hover {
+.left-panel .buttons a:hover,
+.left-panel .buttons buttonGF:hover,
+#messageBtn:hover {
   transform: scale(1.1);
 }
-.left-panel .buttons a:active {
+.left-panel .buttons a:active,
+.left-panel .buttons buttonGF:active,
+#messageBtn:active {
   transform: scale(0.90);
 }
 /* right panel - gallery grid */
