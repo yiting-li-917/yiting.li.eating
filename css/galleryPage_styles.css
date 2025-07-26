@@ -85,7 +85,7 @@ html, body {
 }
 .left-panel .buttons a i,
 .left-panel .buttons buttonGF i,
-#messageBtn i{
+#messageBtn i {
   font-size: 1.2rem;
 }
 .left-panel .buttons a:hover,
