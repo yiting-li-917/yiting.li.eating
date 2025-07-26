@@ -294,7 +294,7 @@ html, body {
   color: var(--gray-black);
 }
 
-/* 2. Close button with circle background */
+/* 2. lightbox: Close button with circle background */
 .close-btn {
   color: var(--gray-black);
   font-size: 3rem; /* Size of the icon */
@@ -306,7 +306,7 @@ html, body {
   top: 4%;
   right: 8%;
 }
-/* Info Button */
+/* lightbox: Info Button */
 #info-button {
   position: absolute; /* COMMENT: Position it absolutely relative to #lightbox */
   bottom: 5.8%;        /* COMMENT: 6% from bottom of lightbox */
@@ -336,7 +336,7 @@ html, body {
   transform: scale(0.9);
 }
 
-/* Description Box */
+/* lightbox: Description Box */
 #photo-desc-content {
   display: none;
   position: absolute;
@@ -361,7 +361,7 @@ html, body {
   display: block;
 }
 
-/* scroll button */
+/* right panel: scroll button */
 #scrollTopBtn {
   display: none;
   position: fixed;
@@ -384,6 +384,75 @@ html, body {
   transform: scale(0.9);
 }
 
+/* ------ google form */
+#messageModal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+    padding-top: 60px;
+}
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.closeGF {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.closeGF:hover,
+.closeGF:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#messageBtn {
+    background-color: #4CAF50; /* Green background */
+    border: none;
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#messageBtn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+/* Embed iframe Styling */
+iframe {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* For Responsive Design */
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+    }
+    iframe {
+        width: 100%;
+        height: 400px;
+    }
+}
 /* ---------------- vertical screen change layout ---------------- */
 html.vertical-layout, body.vertical-layout {
   flex-direction: column; 
