@@ -444,8 +444,8 @@ html, body {
 iframe {
     border: none;
     border-radius: 5px;
-    width: 100%;  /* Ensure iframe fills the modal-content width */
-    height: 100%;  /* Ensure iframe fills the modal-content height */
+    width: 90%;  /* Ensure iframe fills the modal-content width */
+    height: 90%;  /* Ensure iframe fills the modal-content height */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
