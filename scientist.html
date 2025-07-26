@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atmospheric Scientist</title>
-    <meta name="format-detection" content="telephone=no"> <!-- 禁用iOS自动检测电话号码 -->
+    <meta name="format-detection" content="telephone=no">
     <!-- font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Abril+Fatface&display=swap" rel="stylesheet">
     <!-- icon -->
@@ -232,15 +232,15 @@
         if (!cvButton) return;
     
         cvButton.addEventListener("click", function (event) {
-            event.preventDefault(); // 阻止默认下载行为
+            event.preventDefault(); 
     
             const cvUrl = cvButton.getAttribute("href");
     
-            // 检查文件是否存在
+            // check if find pdf
             fetch(cvUrl, { method: "HEAD" })
                 .then(response => {
                     if (response.ok) {
-                        // 文件存在，触发下载
+                        
                         window.location.href = cvUrl;
                     } else {
                         alert("Oops, not ready yet!");
