@@ -41,7 +41,7 @@ html, body {
   margin-top: 20%;           
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
 }
 
 .left-panel .portfolio h1 {
@@ -60,7 +60,6 @@ html, body {
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5), 0 0 2px var(--gray-black);
   text-align: left;
   margin-top: 5px;
-  margin-bottom: 10px;
 }
 
 /*.left-panel .buttons {
