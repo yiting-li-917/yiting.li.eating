@@ -267,7 +267,7 @@ html, body {
 }
 
 #backHomeBtn:active {
-  transform: translateX(-50%) scale(0.90);
+  transform: scale(0.90);
 }
 
 #lightbox {
